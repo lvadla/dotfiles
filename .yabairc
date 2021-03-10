@@ -108,9 +108,9 @@ yabai -m signal --add event=application_front_switched action="pgrep ersicht && 
 # Refresh spaces widget on when focused application changes
 yabai -m signal --add event=application_front_switched action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
 
-# hide the native macos menu bar, show simple-bar when using external monitor
+# run script when using external monitor
 yabai -m signal --add event=display_added action="~/Scripts/config-display-external.sh"
-# show the native macos menu bar, hide simple-bar when using built-in display
+# run script when using built-in display
 yabai -m signal --add event=display_removed action="~/Scripts/config-display-builtin.sh"
 
 ºecho "yabai configuration loaded.."
