@@ -334,15 +334,17 @@ alt + cmd - up     : yabai -m window --grid 1:1:0:0:1:1
 # make floating window fill middle of screen
 alt + cmd - down   : yabai -m window --grid 26:26:4:3:18:20
 
-# move floating window to left-half of screen
-# alt + cmd - left   : yabai -m window --grid 30:30:3:3:6:24
-
-# move floating window to right-half of screen
-# alt + cmd - right  : yabai -m window --grid 30:30:18:3:6:24
-
 # toggle sticky, float and resize to picture-in-picture size
-# alt - p : yabai -m window --toggle sticky;\
-#           yabai -m window --grid 5:5:4:0:1:1
+alt + ctrl + cmd - p : yabai -m window --toggle sticky;\
+                       yabai -m window --toggle topmost;\
+                       yabai -m window --toggle border;\
+                       yabai -m window --toggle pip
+
+# toggle window native fullscreen
+alt + ctrl + cmd - f : yabai -m window --toggle native-fullscreen
+
+# toggle window always on top
+alt + ctrl + cmd - t : yabai -m window --toggle topmost;
 
 ##########################################################################
 
@@ -355,22 +357,18 @@ alt - n : yabai -m window --focus next || yabai -m window --focus first
 # alt - h : yabai -m window --focus west || (yabai -m space --focus prev && yabai -m window --focus last)
 # alt - l : yabai -m window --focus east || (yabai -m space --focus next && yabai -m window --focus first)
 
-# swap window
+# swap window or move floating windows
 shift + alt - h : yabai -m window --swap west || yabai -m window --move rel:-30:0
 shift + alt - j : yabai -m window --swap south || yabai -m window --move rel:0:30
 shift + alt - k : yabai -m window --swap north || yabai -m window --move rel:0:-30
 shift + alt - l : yabai -m window --swap east || yabai -m window --move rel:30:0
 
-# toggle window always on top
-alt + shift - t : yabai -m window --toggle topmost;
-
 # float / unfloat window and center on screen
 alt - t : yabai -m window --toggle float;\
-          yabai -m window --toggle border;\
           yabai -m window --grid 20:20:5:4:10:12
 
 # balance size of windows
-shift + alt - 0 : yabai -m space --balance
+alt + shift - 0 : yabai -m space --balance
 
 # rotate tree
 alt - r : yabai -m space --rotate 90
@@ -378,25 +376,20 @@ alt - r : yabai -m space --rotate 90
 # toggle window split type
 alt - e : yabai -m window --toggle split
 
+# toggle desktop offset
+alt - p : yabai -m space --toggle padding; yabai -m space --toggle gap
+
+# toggle window borders
+alt - b : yabai -m window --toggle border
+
+# toggle window zoom fullscreen
+alt - f : yabai -m window --toggle zoom-fullscreen
+
 # mirror tree y-axis
 alt - y : yabai -m space --mirror y-axis
 
 # mirror tree x-axis
 alt - x : yabai -m space --mirror x-axis
-
-# toggle desktop offset
-alt - p : yabai -m space --toggle padding; yabai -m space --toggle gap
-
-# restore window borders
-alt - b : yabai -m config active_window_border_topmost on;\
-          yabai -m config active_window_border_color   0xff5294e2;\
-          yabai -m config normal_window_border_color   0xff7c818c;
-
-# toggle window zoom fullscreen
-alt - f : yabai -m window --toggle zoom-fullscreen
-
-# toggle window native fullscreen
-ctrl + alt - f : yabai -m window --toggle native-fullscreen
 
 # destroy the current desktop
 ctrl + alt - w : yabai -m space --destroy
@@ -409,24 +402,36 @@ ctrl + alt - n : yabai -m space --create;\
                  "$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')"
 
 # move window to the next/previous/nth desktop
-ctrl + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
-ctrl + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
-ctrl + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
-ctrl + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
-ctrl + alt - 5 : yabai -m window --space 5; yabai -m space --focus 5
-ctrl + alt - 6 : yabai -m window --space 6; yabai -m space --focus 6
-ctrl + alt - 7 : yabai -m window --space 7; yabai -m space --focus 7
-ctrl + alt - 8 : yabai -m window --space 8; yabai -m space --focus 8
-ctrl + alt - 9 : yabai -m window --space 9; yabai -m space --focus 9
-ctrl + alt - 0 : yabai -m window --space 10; yabai -m space --focus 10
-
-# move focus to the next/previous desktop
-alt - tab : yabai -m space --focus next || yabai -m space --focus first
-alt + shift - tab : yabai -m space --focus prev || yabai -m space --focus last
+ctrl + cmd - 1 : yabai -m window --space 1; yabai -m space --focus 1
+ctrl + cmd - 2 : yabai -m window --space 2; yabai -m space --focus 2
+ctrl + cmd - 3 : yabai -m window --space 3; yabai -m space --focus 3
+ctrl + cmd - 4 : yabai -m window --space 4; yabai -m space --focus 4
+ctrl + cmd - 5 : yabai -m window --space 5; yabai -m space --focus 5
+ctrl + cmd - 6 : yabai -m window --space 6; yabai -m space --focus 6
+ctrl + cmd - 7 : yabai -m window --space 7; yabai -m space --focus 7
+ctrl + cmd - 8 : yabai -m window --space 8; yabai -m space --focus 8
+ctrl + cmd - 9 : yabai -m window --space 9; yabai -m space --focus 9
 
 # move window to the next/previous desktop and follow
 ctrl + alt - h : yabai -m window --space prev; yabai -m space --focus prev
 ctrl + alt - l : yabai -m window --space next; yabai -m space --focus next
 
-# restart yabai
-shift + ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"; launchctl kickstart -k "gui/${UID}/homebrew.mxcl.spacebar"
+# move focus to the next/previous desktop
+alt - tab : yabai -m space --focus next || yabai -m space --focus first
+alt + shift - tab : yabai -m space --focus prev || yabai -m space --focus last
+
+# move focus to the specified desktop
+alt - 1  : yabai -m space --focus 1
+alt - 2  : yabai -m space --focus 2
+alt - 3  : yabai -m space --focus 3
+alt - 4  : yabai -m space --focus 4
+alt - 5  : yabai -m space --focus 5
+alt - 6  : yabai -m space --focus 6
+alt - 7  : yabai -m space --focus 7
+alt - 8  : yabai -m space --focus 8
+alt - 9  : yabai -m space --focus 9
+alt - 0  : yabai -m space --focus 10
+
+# restart wm or bar
+ctrl + alt + cmd - r : ~/Scripts/refresh-wm.sh
+shift + ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai";

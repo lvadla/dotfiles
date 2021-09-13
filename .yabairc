@@ -1,8 +1,4 @@
-#!/bin/zsh
-
-# bar settings
-SPACEBAR_HEIGHT=$(spacebar -m config height)
-yabai -m config external_bar all:$SPACEBAR_HEIGHT:0
+#!/bin/bash
 
 # global settings
 yabai -m config mouse_follows_focus          off
@@ -13,16 +9,17 @@ yabai -m config window_opacity               on
 yabai -m config window_opacity_duration      0.16
 yabai -m config window_shadow                float
 yabai -m config window_border                on
-yabai -m config window_border_width          6
-yabai -m config window_border_radius         3
-yabai -m config window_border_placement      inset # exterior
-yabai -m config active_window_border_topmost on
-yabai -m config active_window_border_color   0xff65B84D # green
+# yabai -m config window_border_width          3
+
+## note: colors are handled in refresh-wm.sh found below
+# yabai -m config active_window_border_color   0xff65B84D # green
 # yabai -m config active_window_border_color   0xff78327C # purple
 # yabai -m config active_window_border_color   0xffED609C # pink
 # yabai -m config active_window_border_color   0xff5294e2 # blue
-yabai -m config normal_window_border_color   0xff7c818c
-yabai -m config insert_feedback_color        0xffd75f5f
+# yabai -m config active_window_border_color   0xffE49C6A # orange
+# yabai -m config normal_window_border_color   0x00ffffff # transparent
+# yabai -m config insert_feedback_color        0xffd75f5f # red
+
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        1.0
 yabai -m config split_ratio                  0.50
@@ -32,56 +29,49 @@ yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config layout                       bsp
 
-# external display space settings
-# yabai -m config top_padding                  25
-# yabai -m config bottom_padding               25
-# yabai -m config left_padding                 75
-# yabai -m config right_padding                75
-# yabai -m config window_gap                   25
-
-# built-in display space settings
-yabai -m config top_padding                  5
-yabai -m config bottom_padding               5
-yabai -m config left_padding                 5
-yabai -m config right_padding                5
-yabai -m config window_gap                   5
-
-# specific space settings
-# yabai -m config --space 7 layout             float
-
 # window rules
 yabai -m rule --add app="^Activity Monitor$" manage=off border=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off border=off
 yabai -m rule --add app="^App Store$" manage=off border=off
 yabai -m rule --add app="^Archive Utility$" manage=off border=off
 yabai -m rule --add app="^Bitwarden$" manage=off border=off
-yabai -m rule --add app="^Dictionary$" manage=off border=off
+yabai -m rule --add app="^Cypress$" space=^2
+yabai -m rule --add app="^Dictionary$" manage=off border=off layer=above
+yabai -m rule --add app="^DiskImages UI Agent$" manage=off border=off
 yabai -m rule --add app="^Digital Colou?r Meter$" manage=off border=off layer=above
 yabai -m rule --add app="^Finder$" manage=off border=off
-yabai -m rule --add app="^Firefox$" title=".*Opening.*" manage=off border=off
 yabai -m rule --add app="^Firefox$" title=".*Launch Application.*" manage=off border=off
+yabai -m rule --add app="^Firefox$" title=".*Opening.*" manage=off border=off
+yabai -m rule --add app="^Firefox$" title="Picture-in-Picture" manage=off border=off
+# for pseudo-pip positioning use grid=50:120:90:0:20:48
+yabai -m rule --add app="^Firefox$" title="Extension: (Tree Style Tab) - Close tabs?" manage=off border=off
 yabai -m rule --add app="^Flux$" title="f.lux preferences" manage=off border=off
 yabai -m rule --add app="^GifCapture$" manage=off border=off
 yabai -m rule --add app="^Gifski$" manage=off border=off layer=above
 yabai -m rule --add app="^Installer$" manage=off border=off
 yabai -m rule --add app="^IVPN$" title="IVPN" manage=off border=off
 yabai -m rule --add app="^Logi Options$" manage=off border=off
-yabai -m rule --add app="^LuLu Helper$" manage=off border=off
+yabai -m rule --add app="^LuLu Helper$" title="LuLu Alert" manage=off border=off layer=above
+yabai -m rule --add app="^BlockBlock Helper$" title="BlockBlock Alert" manage=off border=off layer=above
 yabai -m rule --add app="^NextDNS$" manage=off border=off
 yabai -m rule --add app="^Mail$" title=".* — lance.vadla@pexip.com.*" manage=off border=off
 yabai -m rule --add app="^Mail$" title=".*New Message.*" manage=off border=off
 yabai -m rule --add app="^Mail$" title=".*Re: .*" manage=off border=off
 yabai -m rule --add app="^Mail$" title="" manage=off border=off
 yabai -m rule --add app="^Mail$" title="General" manage=off border=off
-yabai -m rule --add app="^mpv$" label="mpv" manage=off border=off layer=above
+yabai -m rule --add app="^Maps$" space=^7
+yabai -m rule --add app="^mpv$" label="mpv" manage=off
 yabai -m rule --add app="^Music$" title="MiniPlayer" manage=off border=off
 yabai -m rule --add app="^Audio MIDI Setup$" title="Audio Devices" manage=off border=off
 yabai -m rule --add app="^OverSight Helper$" manage=off border=off
+yabai -m rule --add app="^OverSight$" title="^OverSight Preferences$" manage=off border=off
 yabai -m rule --add app="^Safari$" title="Websites" manage=off border=off
 yabai -m rule --add app="^Safari$" title="Privacy Report" manage=off border=off
+yabai -m rule --add app="^Scroll Reverser$" title="Scroll Reverser" manage=off border=off layer=above
 yabai -m rule --add app="^Spotify$" manage=off border=off
 yabai -m rule --add app="^System Information$" title="About This Mac" manage=off border=off layer=above
 yabai -m rule --add app="^System Preferences$" manage=off border=off layer=above
+yabai -m rule --add app="^Talkie$" manage=off border=off layer=above
 yabai -m rule --add app="^TextEdit$" title="userSettings.json" manage=off border=off
 yabai -m rule --add app="^Transmission$" manage=off border=off
 yabai -m rule --add app="^Vimari$" manage=off border=off
@@ -89,28 +79,32 @@ yabai -m rule --add app="^Wireless Diagnostics$" manage=off border=off
 
 ## signals
 # refocus the next window when the previous is hidden, minimized, etc
-yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus first"
 yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus first"
 yabai -m signal --add event=application_hidden action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus first"
 yabai -m signal --add event=window_minimized action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus first"
-# Refresh process widget when current window title changes
-yabai -m signal --add event=window_title_changed action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
-# Refresh spaces widget on space change
-yabai -m signal --add event=space_changed action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
-# Refresh process widget on space change
-yabai -m signal --add event=space_changed action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
-# Refresh process widget on when focused application changes
-yabai -m signal --add event=window_focused action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
-# Refresh spaces widget on when focused application changes
-yabai -m signal --add event=window_focused action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
-# Refresh process widget on when focused application changes
-yabai -m signal --add event=application_front_switched action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
-# Refresh spaces widget on when focused application changes
-yabai -m signal --add event=application_front_switched action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
-
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 # run script when using external monitor
-yabai -m signal --add event=display_added action="~/Scripts/config-display-external.sh"
+# yabai -m signal --add event=display_added action="~/Scripts/config-display-on-change.sh"
 # run script when using built-in display
-yabai -m signal --add event=display_removed action="~/Scripts/config-display-builtin.sh"
+# yabai -m signal --add event=display_removed action="~/Scripts/config-display-on-change.sh"
+
+# # Refresh process widget when current window title changes
+# yabai -m signal --add event=window_title_changed action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
+# # Refresh spaces widget on space change
+# yabai -m signal --add event=space_changed action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
+# # Refresh process widget on space change
+# yabai -m signal --add event=space_changed action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
+# # Refresh process widget on when focused application changes
+# yabai -m signal --add event=window_focused action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
+# # Refresh spaces widget on when focused application changes
+# yabai -m signal --add event=window_focused action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
+# # Refresh data widget on when focused application changes
+# yabai -m signal --add event=window_focused action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-data-jsx\"'"
+# # Refresh process widget on when focused application changes
+# yabai -m signal --add event=application_front_switched action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
+# # Refresh spaces widget on when focused application changes
+# yabai -m signal --add event=application_front_switched action="pgrep ersicht && osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
+
+~/Scripts/refresh-wm.sh
 
 ºecho "yabai configuration loaded.."
