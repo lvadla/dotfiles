@@ -1,0 +1,45 @@
+{
+  "$schema": "https://app.linearmouse.org/schema/0.7.5",
+  "schemes": [
+    {
+      "buttons": {
+        "universalBackForward": true
+      },
+      "if": {
+        "device": {
+          "productName": "MX Master 2S",
+          "serialNumber": "488E4D06DC41A9E1",
+          "productID": "0xb019",
+          "category": "mouse",
+          "vendorID": "0x46d"
+        }
+      },
+      "pointer": {
+        "disableAcceleration": true
+      },
+      "scrolling": {
+        "modifiers": {}
+      }
+    },
+    {
+      "if": {
+        "device": {
+          "productName": "USB Optical Mouse",
+          "productID": "0xc077",
+          "category": "mouse",
+          "vendorID": "0x46d"
+        }
+      },
+      "pointer": {
+        "acceleration": 0,
+        "speed": 0.1103,
+        "disableAcceleration": false
+      },
+      "scrolling": {
+        "reverse": {
+          "vertical": true
+        }
+      }
+    }
+  ]
+}
