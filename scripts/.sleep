@@ -1,0 +1,7 @@
+#!/bin/bash
+
+    echo '----------'
+    date
+    echo 'System is sleeping.'
+    /usr/local/bin/blueutil -p 0
+    echo 'Turning bluetooth off...'

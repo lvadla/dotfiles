@@ -1,0 +1,31 @@
+#!/bin/bash
+
+AIRPORT="en0"; #may be en0, use networksetup -listallhardwareports to check
+HOME_WIFI_NETWORK_NAME="GNX0F92A4"
+WORK_WIFI_NETWORK_NAME="pexip-sec"
+
+echo '----------'
+date
+echo 'System is waking up.'
+
+# home
+if networksetup -getairportnetwork $AIRPORT | grep -i -a $HOME_WIFI_NETWORK_NAME ; then
+    /usr/local/bin/blueutil -p 1
+    echo 'Turning bluetooth on...'
+    exit 0
+# home
+elif ipconfig getifaddr en11 | grep -i -a "192.168." ; then
+    /usr/local/bin/blueutil -p 1
+    echo 'Turning bluetooth on...'
+    exit 0
+# office
+elif networksetup -getairportnetwork $AIRPORT | grep -i -a $WORK_WIFI_NETWORK_NAME ; then
+    /usr/local/bin/blueutil -p 0
+    echo 'Turning bluetooth off...'
+    exit 0
+# unknown, turn bluetooth off as a precaution
+else
+    /usr/local/bin/blueutil -p 0
+    echo 'Turning bluetooth off...'
+    exit 0
+fi
