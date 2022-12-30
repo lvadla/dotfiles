@@ -1,0 +1,23 @@
+use_nerdfont = true
+backend = "portaudio"
+audio_cache = true
+audio_cache_size = 250
+volnorm = true
+notify = true
+bitrate = 320
+album_column = false
+gapless = true
+
+[theme]
+playing = "green"
+playing_selected = "green"
+highlight = "light white"
+highlight_bg = "light black"
+statusbar = "black"
+statusbar_progress = "green"
+statusbar_bg = "light green"
+
+[keybindings]
+"F10" = "focus queue"
+"F11" = "focus library"
+"F12" = "focus search"

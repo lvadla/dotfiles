@@ -6,17 +6,32 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.bracketPairColorization.enabled": false,
-  "editor.minimap.maxColumn": 75,
   "editor.minimap.showSlider": "always",
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.maxColumn": 80,
+  "editor.minimap.scale": 2,
   "editor.scrollBeyondLastLine": false,
-  "editor.scrollbar.verticalScrollbarSize": 10,
-  "editor.scrollbar.vertical": "visible",
+  "editor.scrollbar.verticalScrollbarSize": 6,
+  "editor.scrollbar.vertical": "hidden",
   "editor.guides.bracketPairs": true,
   "editor.renderLineHighlightOnlyWhenFocus": true,
   "editor.accessibilitySupport": "off",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
   "editor.cursorBlinking": "phase",
   "editor.find.cursorMoveOnType": false,
   "editor.cursorStyle": "block",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "comments",
+        "scope": ["comment", "punctuation.definition.comment"],
+        "settings": {
+          // "fontStyle": "italic"
+        }
+      }
+    ]
+  },
   "files.associations": {
     ".skhdrc": "shellscript",
     ".yabairc": "shellscript"
@@ -25,20 +40,6 @@
   "files.trimTrailingWhitespace": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "explorer.autoReveal": "focusNoScroll",
-  "window.titleBarStyle": "native",
-  "window.autoDetectColorScheme": true,
-  "workbench.preferredLightColorTheme": "GitHub Light",
-  "workbench.preferredDarkColorTheme": "GitHub Dark",
-  "workbench.editor.tabCloseButton": "off",
-  "workbench.editor.pinnedTabSizing": "compact",
-  "workbench.editor.highlightModifiedTabs": true,
-  "workbench.tree.indent": 10,
-  "workbench.startupEditor": "none",
-  "workbench.activityBar.visible": false,
-  "workbench.colorCustomizations": {
-    // "tab.activeBackground": "#0fd9e3"
-  },
   "search.actionsPosition": "right",
   "search.exclude": {
     "**/dist": true
@@ -61,33 +62,34 @@
   "gitlens.views.showRelativeDateMarkers": false,
   "gitlens.changes.locations": ["gutter"],
   "scm.diffDecorationsGutterWidth": 2,
+  "cSpell.diagnosticLevel": "Information",
   "cSpell.userWords": [
     "adhoc",
     "discoverability",
-    "fastmail",
     "frameless",
     "hocs",
     "Interactor",
     "jsdelivr",
+    "Kustomization",
+    "kustomize",
     "lvadla",
     "mantine",
-    "mediapipe",
     "Menlo",
     "Meslo",
     "Multiselect",
-    "pexip",
-    "preso",
     "SGMT",
+    "skhdrc",
     "spacebar",
     "stylelint",
-    "tabbable",
     "tabler",
     "testid",
+    "typecheck",
     "unstaged",
     "vadla",
     "visx",
     "vite",
-    "wirelessly"
+    "wirelessly",
+    "yabairc"
   ],
   "eslint.codeAction.showDocumentation": {
     "enable": true
@@ -97,7 +99,6 @@
   "eslint.debug": true,
   "eslint.run": "onSave",
   "eslint.packageManager": "yarn",
-  "workbench.colorTheme": "GitHub Dark",
   "testing.defaultGutterClickAction": "contextMenu",
   "gitlens.views.repositories.showStashes": false,
   "gitlens.views.repositories.showTags": false,
@@ -111,8 +112,31 @@
   "stylelint.snippet": ["css", "less", "postcss", "scss"],
   "stylelint.reportNeedlessDisables": true,
   "customizeUI.titleBar": "frameless",
-  "editor.minimap.renderCharacters": false,
-  "editor.minimap.side": "left",
   "audioCues.taskCompleted": "on",
-  "audioCues.taskFailed": "on"
+  "audioCues.taskFailed": "on",
+  "window.titleBarStyle": "native",
+  "window.autoDetectColorScheme": true,
+  "workbench.activityBar.visible": false,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.preferredLightColorTheme": "GitHub Light",
+  "workbench.preferredDarkColorTheme": "GitHub Dark",
+  "workbench.preferredHighContrastColorTheme": "GitHub Dark High Contrast",
+  "workbench.preferredHighContrastLightColorTheme": "GitHub Light High Contrast",
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 10,
+  "workbench.colorCustomizations": {
+    "tab.activeBorderTop": "#0000",
+    "tab.activeBorder": "#f39c84",
+    "minimapSlider.background": "#526f9429",
+    "scrollbarSlider.background": "#526f9429",
+    "editorOverviewRuler.errorForeground": "#0000",
+    "editorOverviewRuler.warningForeground": "#0000",
+    "editorOverviewRuler.bracketMatchForeground": "#0000",
+    "editorOverviewRuler.addedForeground": "#0000",
+    "editorOverviewRuler.modifiedForeground": "#0000",
+    "editorOverviewRuler.deletedForeground": "#0000"
+  },
+  "workbench.colorTheme": "GitHub Light"
 }
