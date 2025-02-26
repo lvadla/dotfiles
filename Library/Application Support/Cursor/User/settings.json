@@ -1,11 +1,22 @@
 {
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "cursor.cmdk.useThemedDiffBackground": true,
   "cursor.composer.renderPillsInsteadOfBlocks": true,
   "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
   "editor.cursorBlinking": "expand",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": false,
   "editor.fontSize": 12.6,
+  "editor.guides.bracketPairs": "active",
   "editor.lineHeight": 20.1667,
   "editor.minimap.enabled": true,
   "editor.minimap.maxColumn": 76,
@@ -47,6 +58,7 @@
     "**/build": true
   },
   "explorer.sortOrder": "filesFirst",
+  "extensions.autoUpdate": false,
   "material-icon-theme.activeIconPack": "none",
   "material-icon-theme.folders.color": "#F9B423",
   "material-icon-theme.saturation": 0.75,
@@ -64,8 +76,6 @@
   "update.mode": "start",
   "window.autoDetectColorScheme": true,
   "window.confirmBeforeClose": "keyboardOnly",
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
   "workbench.colorCustomizations": {
     "[GitHub Dark Dimmed]": {
       "minimap.findMatchHighlight": "#eac55fe2",
@@ -74,9 +84,9 @@
     "[GitHub Dark]": {
       "editor.wordHighlightBorder": "#17e6e697",
       "editor.wordHighlightStrongBorder": "#17e5e6",
-      "minimap.selectionOccurrenceHighlight": "#17e6e6f0",
       "editorOverviewRuler.wordHighlightForeground": "#17e6e697",
       "editorOverviewRuler.wordHighlightStrongForeground": "#17e5e6",
+      "minimap.selectionOccurrenceHighlight": "#17e6e6f0",
       "minimapSlider.background": "#6a737d49"
     },
     "[GitHub Light]": {
@@ -90,7 +100,6 @@
       "minimap.selectionOccurrenceHighlight": "#34d058e9",
       "minimapSlider.background": "#2189ff10"
     },
-    "minimap.findMatchHighlight": "#ffdf5dfa",
     "editorGutter.addedBackground": "#5fcd65",
     "editorGutter.deletedBackground": "#ff5a52",
     "editorGutter.modifiedBackground": "#ecaa1c",
@@ -103,6 +112,7 @@
     "editorOverviewRuler.selectionHighlightForeground": "#0000",
     "editorOverviewRuler.warningForeground": "#0000",
     "editorOverviewRuler.wordHighlightForeground": "#0000",
+    "minimap.findMatchHighlight": "#ffdf5dfa",
     // "minimap.infoHighlight": "#0000",
     "minimapGutter.addedBackground": "#5fcd65",
     "minimapGutter.deletedBackground": "#ff5a52",
@@ -112,17 +122,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.preferredDarkColorTheme": "GitHub Dark",
   "workbench.preferredLightColorTheme": "GitHub Light",
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.sideBar.location": "right",
-  "extensions.autoUpdate": false,
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "workbench.sideBar.location": "right"
 }
 // {
 //   "editor.glyphMargin": false,
