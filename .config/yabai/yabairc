@@ -43,15 +43,6 @@ yabai -m rule --add app="^Amphetamine$" title="Settings" manage=off
 yabai -m rule --add app="^Quick Access — 1Password$" manage=off
 yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add app="Arc" manage=off
-# yabai -m rule --add app="^Arc$" title="^$" manage=off mouse_follows_focus=off
-# yabai -m rule --add app="Arc" title='^$' role='AXSheet' manage=off mouse_follows_focus=off
-# yabai -m rule --add app="Arc" title='^$' role='AXWindow' subrole='AXSystemDialog' manage=off mouse_follows_focus=off
-# yabai -m rule --add app="Arc" role='AXGroup'  subrole='AXHostingView'  manage=on mouse_follows_focus=off
-# yabai -m rule --add role='AXGroup'  subrole='AXHostingView'    mouse_follows_focus=off
-# yabai -m rule --add role='AXWindow' subrole="^AXSystemDialog$" mouse_follows_focus=off
-# yabai -m rule --add app="Arc" title="George" manage=off mouse_follows_focus=off
-# yabai -m rule --add app="Arc" title="^Space [0-9]+" manage=on
-# yabai -m rule --add app="Arc" title="Space 1" manage=off grid=9:16:3:2:10:5
 yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^Bitwarden$" manage=off
 yabai -m rule --add app="^Camera Preview$" title="Camera Preview" manage=off
@@ -82,14 +73,11 @@ yabai -m rule --add app="^Raycast$" manage=off
 yabai -m rule --add app="^Safari$" manage=off
 yabai -m rule --add app="^Safari$" title="Start Page" manage=on
 yabai -m rule --add app="^SecurityAgent$" manage=off
-yabai -m rule --add app="^Signal$" manage=off
 yabai -m rule --add app="^System Information$" title="About This Mac" manage=off
 yabai -m rule --add app="^System Information$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Tailscale$" title="About Tailscale" manage=off
-yabai -m rule --add app="^Weather$" manage=off
 yabai -m rule --add app="^Wireless Diagnostics$" manage=off
-yabai -m rule --add app="^Yubico Authenticator$" manage=off
 yabai -m rule --add app="^Zen Browser$" manage=off
 
 ## signals
