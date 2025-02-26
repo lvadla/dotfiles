@@ -1,0 +1,39 @@
+[includeIf "gitdir:~/Dev/github/"]
+  path = ~/.gitconfig-github
+[includeIf "gitdir:~/Dev/gitlab/"]
+  path = ~/.gitconfig-gitlab
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[core]
+    pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 && echo dark-mode || echo light-mode)"
+	editor = nvim
+
+[interactive]
+    diffFilter = delta --features "$(defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 && echo dark-mode || echo light-mode)"
+
+[delta]
+    navigate = true    # n and N navigation
+    side-by-side = false
+    syntax-theme = ansi
+
+[delta "light-mode"]
+    light = true
+    syntax-theme = GitHub_Dark
+
+[delta "dark-mode"]
+    light = false
+    syntax-theme = GitHub_Light
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[push]
+	autoSetupRemote = true
