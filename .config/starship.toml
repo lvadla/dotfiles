@@ -1,0 +1,283 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$package\
+$vcsh\
+$fossil_branch\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$aws\
+$openstack\
+$azure\
+$cmd_duration\
+$jobs\
+$time\
+$status\
+$os\
+$container\
+$shell\
+$character"""
+
+[cmd_duration]
+format = "took [$duration](fg) "
+show_notifications = true
+min_time_to_notify = 60000
+min_time = 5000
+
+[username]
+disabled = true
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](bold blue)[<$hostname> ](bold white)'
+trim_at = '.'
+disabled = false
+
+[character]
+success_symbol = '[ ](bold red)'
+error_symbol = '[✖ ](red)'
+
+[directory]
+read_only = ""
+style ="yellow bold"
+format ="[$read_only](244)[$path ]($style)"
+truncate_to_repo = true
+truncation_length = 2
+
+[battery]
+charging_symbol = ''
+discharging_symbol = ''
+empty_symbol = ''
+format = '[$symbol]($style) '
+
+[[battery.display]]
+threshold = 33
+style = 'yellow'
+
+[[battery.display]]
+threshold = 20
+style = 'red'
+discharging_symbol = ''
+
+[gcloud]
+symbol = "️ "
+format = "(as [$symbol$account(@$domain)]($style) )"
+style = "bold blue"
+
+[gcloud.region_aliases]
+us-central1 = 'uc1'
+asia-northeast1 = 'an1'
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+disabled = true
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+always_show_remote = false
+ignore_branches = ["main"]
+truncation_length = 20
+
+[git_status]
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = "⌘ "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[meson]
+symbol = "喝 "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+version_format = "v${major}.${minor}"
+not_capable_style = "bold red"
+style = "040 bold"
+format = '[\($symbol($version)\)]($style) '
+
+[os.symbols]
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "﯑ "
+Gentoo = " "
+HardenedBSD = "ﲊ "
+Illumos = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = " "
+openSUSE = " "
+OracleLinux = " "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = " "
+Solus = "ﴱ "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = " "
+
+[package]
+symbol = "📦 "
+disabled = false
+style = "6 bold"
+format = "[$symbol$version]($style) "
+
+[localip]
+ssh_only = true
+format = '[{$localipv4}](bold red) '
+disabled = false
+
+
+[pijul_channel]
+symbol = "🪺 "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "ﳒ "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+version_format = "v${major}.${minor}"
+style = "202 bold"
+format = '[\($symbol($version)\)]($style) '
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "

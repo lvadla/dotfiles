@@ -1,0 +1,196 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5",
+  "schemes" : [
+    {
+      "buttons" : {
+        "universalBackForward" : true,
+        "mappings" : [
+          {
+            "command" : true,
+            "option" : false,
+            "control" : false,
+            "button" : 2,
+            "shift" : false,
+            "action" : "lookUpAndDataDetectors"
+          }
+        ]
+      },
+      "scrolling" : {
+        "speed" : 10,
+        "acceleration" : 0.75,
+        "reverse" : {
+          "vertical" : true
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.5,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "productID" : "0xb019",
+          "productName" : "MX Master 2S",
+          "serialNumber" : "488E4D06DC41A9E1",
+          "category" : "mouse"
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "productName" : "PRO X 2",
+          "serialNumber" : "57B9B704",
+          "category" : "mouse",
+          "productID" : "0xc09b"
+        }
+      },
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 5.67,
+          "horizontal" : 0
+        },
+        "distance" : {
+          "horizontal" : "24px",
+          "vertical" : "auto"
+        },
+        "acceleration" : {
+          "horizontal" : 1,
+          "vertical" : 0.65
+        },
+        "reverse" : {
+          "horizontal" : false,
+          "vertical" : true
+        }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "button" : 2,
+            "control" : false,
+            "option" : false,
+            "command" : true,
+            "shift" : false,
+            "action" : "lookUpAndDataDetectors"
+          },
+          {
+            "option" : true,
+            "action" : "mouse.wheel.scrollRight",
+            "control" : false,
+            "scroll" : "up",
+            "shift" : false,
+            "command" : false
+          },
+          {
+            "shift" : false,
+            "command" : false,
+            "scroll" : "down",
+            "option" : true,
+            "action" : "mouse.wheel.scrollLeft",
+            "control" : false
+          }
+        ],
+        "universalBackForward" : true
+      },
+      "pointer" : {
+        "speed" : 0.5,
+        "disableAcceleration" : false,
+        "acceleration" : 0
+      }
+    },
+    {
+      "buttons" : {
+        "mappings" : [
+          {
+            "shift" : false,
+            "control" : false,
+            "button" : 2,
+            "command" : true,
+            "option" : false,
+            "action" : "lookUpAndDataDetectors"
+          },
+          {
+            "scroll" : "up",
+            "command" : false,
+            "option" : true,
+            "control" : false,
+            "action" : "mouse.wheel.scrollLeft",
+            "shift" : false
+          },
+          {
+            "scroll" : "down",
+            "option" : true,
+            "shift" : false,
+            "action" : "mouse.wheel.scrollRight",
+            "command" : false,
+            "control" : false
+          }
+        ],
+        "universalBackForward" : true
+      },
+      "pointer" : {
+        "speed" : 0.5,
+        "disableAcceleration" : false,
+        "acceleration" : 0
+      },
+      "scrolling" : {
+        "distance" : "auto",
+        "reverse" : {
+          "vertical" : true
+        },
+        "acceleration" : 0.75,
+        "speed" : 10
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "productID" : "0xc54d",
+          "serialNumber" : "396438653232",
+          "productName" : "USB Receiver",
+          "category" : "mouse"
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0xc077",
+          "vendorID" : "0x46d",
+          "productName" : "USB Optical Mouse",
+          "category" : "mouse"
+        }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "shift" : false,
+            "command" : false,
+            "control" : false,
+            "action" : "mouse.wheel.scrollLeft",
+            "option" : true,
+            "scroll" : "up"
+          },
+          {
+            "shift" : false,
+            "action" : "mouse.wheel.scrollRight",
+            "option" : true,
+            "control" : false,
+            "scroll" : "down",
+            "command" : false
+          }
+        ]
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.667
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        }
+      }
+    }
+  ]
+}

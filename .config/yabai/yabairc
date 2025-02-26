@@ -1,0 +1,95 @@
+#!/usr/bin/env sh
+
+#
+# for this to work you must configure sudo such that
+# it will be able to run the command without password
+#
+# see this wiki page for information:
+#  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
+#
+# yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+# sudo yabai --load-sa
+
+# global settings
+yabai -m config                                 \
+    external_bar                 off:40:0       \
+    menubar_opacity              1.0            \
+    mouse_follows_focus          on             \
+    focus_follows_mouse          off            \
+    window_origin_display        default        \
+    window_placement             second_child   \
+    window_zoom_persist          on             \
+    window_shadow                on             \
+    window_opacity               off            \
+    window_border                off            \
+    insert_feedback_color        0xffd75f5f     \
+    split_ratio                  0.50           \
+    split_type                   auto           \
+    auto_balance                 off            \
+    top_padding                  12             \
+    bottom_padding               12             \
+    left_padding                 12             \
+    right_padding                12             \
+    window_gap                   08             \
+    layout                       bsp            \
+    mouse_modifier               fn             \
+    mouse_action1                move           \
+    mouse_action2                resize         \
+    mouse_drop_action            swap
+
+## app rules
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^Amphetamine$" title="Settings" manage=off
+yabai -m rule --add app="^Quick Access — 1Password$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="Arc" manage=off
+yabai -m rule --add app="^Archive Utility$" manage=off
+yabai -m rule --add app="^Bitwarden$" manage=off
+yabai -m rule --add app="^Camera Preview$" title="Camera Preview" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Calendar$" manage=off
+yabai -m rule --add app="^Calendar$" title="Calendar" manage=on
+yabai -m rule --add app="^Dictionary$" manage=off
+yabai -m rule --add app="^DiskImages UI Agent$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Firefox$" title!=".+" manage=off
+yabai -m rule --add app="^Firefox$" title=".*Sharing Indicator.*" manage=off
+yabai -m rule --add app="^Firefox$" title=".*Launch Application.*" manage=off
+yabai -m rule --add app="^Firefox$" title=".*Opening.*" manage=off
+yabai -m rule --add app="^Firefox$" title="Picture-in-Picture" manage=off grid=50:120:60:0:25:48
+yabai -m rule --add app="^Installer$" manage=off
+yabai -m rule --add app="^LinearMouse$" manage=off
+yabai -m rule --add app="^Linear$" native-fullscreen=on
+yabai -m rule --add app="^Maps$" native-fullscreen=on
+yabai -m rule --add app="^Mail$" title=".*— Google.*" manage=off
+yabai -m rule --add app="^Mail$" title=".*— Gmail.*" manage=off
+yabai -m rule --add app="^Mail$" title=".*— Inbox.*" manage=off
+yabai -m rule --add app="^Mail$" title=".*New Message.*" manage=off
+yabai -m rule --add app="^Mail$" title=".*Re: .*" manage=off
+yabai -m rule --add app="Microsoft Defender" title="Microsoft Defender" manage=off
+yabai -m rule --add app="Company Portal" manage=off
+yabai -m rule --add app="^mpv$" manage=off
+yabai -m rule --add app="^Raycast$" manage=off
+yabai -m rule --add app="^Safari$" manage=off
+yabai -m rule --add app="^Safari$" title="Start Page" manage=on
+yabai -m rule --add app="^SecurityAgent$" manage=off
+yabai -m rule --add app="^System Information$" title="About This Mac" manage=off
+yabai -m rule --add app="^System Information$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Tailscale$" title="About Tailscale" manage=off
+yabai -m rule --add app="^Wireless Diagnostics$" manage=off
+yabai -m rule --add app="^Zen Browser$" manage=off
+
+## signals
+yabai -m rule --add app="^(coreautha|universalAccessAuthWarn)$" manage=off
+yabai -m signal --add event=window_created app="^(coreautha|universalAccessAuthWarn)$" action='yabai -m window --focus ${YABAI_WINDOW_ID}'
+yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
+yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
+
+## note: refocus the next window when the previous is hidden, minimized, etc
+# yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus first"
+# yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+# yabai -m signal --add event=application_hidden action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus first"
+# yabai -m signal --add event=window_minimized action="yabai -m window --focus prev || yabai -m window --focus next || yabai -m window --focus last"
+
+echo "yabai configuration loaded.."

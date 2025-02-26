@@ -1,0 +1,407 @@
+{
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[typescript]": {
+    "path-autocomplete.extensionOnImport": true
+  },
+  "accessibility.signalOptions.volume": 90,
+  "accessibility.signals.noInlayHints": {
+    "sound": "on"
+  },
+  "accessibility.signals.taskCompleted": {
+    "sound": "on"
+  },
+  "accessibility.signals.taskFailed": {
+    "sound": "on"
+  },
+  "accessibility.signals.terminalCommandFailed": {
+    "sound": "on"
+  },
+  "accessibility.underlineLinks": true,
+  "breadcrumbs.symbolPath": "last",
+  "cSpell.enableFiletypes": ["sql", "toml"],
+  "cSpell.language": "en,en-US,en-GB,lorem",
+  "cSpell.userWords": [
+    "aker",
+    "alacritty",
+    "artifactregistry",
+    "caskaydia",
+    "clickoutside",
+    "clsx",
+    "codegen",
+    "cognite",
+    "dagre",
+    "dagrejs",
+    "daisyui",
+    "datamodels",
+    "effectivenesses",
+    "endlines",
+    "esbenp",
+    "esbuild",
+    "Fileupload",
+    "flowbite",
+    "focusoutside",
+    "formsnap",
+    "gcloud",
+    "graphiql",
+    "grayscale",
+    "gridline",
+    "gridlines",
+    "healthz",
+    "hitbox",
+    "icdf",
+    "kaniko",
+    "killchain",
+    "killchains",
+    "layercake",
+    "layerchart",
+    "layouted",
+    "lucide",
+    "maplibre",
+    "mdsvex",
+    "menlo",
+    "mouseclick",
+    "nord",
+    "odesa",
+    "omny",
+    "omnysec",
+    "omnysecurity",
+    "openapi",
+    "opentelemetry",
+    "pgaudit",
+    "pino",
+    "PKCE",
+    "pnpm",
+    "pnpx",
+    "postgraphile",
+    "prismjs",
+    "publint",
+    "quantile",
+    "restapi",
+    "rgba",
+    "shadcn",
+    "Sikringshåndboken",
+    "siri",
+    "skhdrc",
+    "sonner",
+    "substep",
+    "substeps",
+    "superforms",
+    "superjson",
+    "svelvet",
+    "tailwindcss",
+    "tanstack",
+    "topbar",
+    "traceparent",
+    "TRPC",
+    "tseslint",
+    "tsup",
+    "untaint",
+    "upsert",
+    "upserts",
+    "userapis",
+    "vadla",
+    "xsmall",
+    "xxsmall",
+    "xyflow",
+    "yabairc"
+  ],
+  "css.format.newlineBetweenSelectors": true,
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.renderMarginRevertIcon": false,
+  "editor.accessibilitySupport": "off",
+  "editor.cursorBlinking": "phase",
+  "editor.fontFamily": "JetBrains Mono, CaskaydiaCove Nerd Font Mono, Menlo",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 12.6,
+  "editor.glyphMargin": false,
+  "editor.inlayHints.enabled": "on",
+  "editor.inlayHints.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "editor.inlayHints.padding": true,
+  "editor.lineHeight": 20.1667,
+  "editor.linkedEditing": true,
+  "editor.minimap.maxColumn": 82,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.scale": 2,
+  "editor.minimap.showSlider": "always",
+  "editor.overviewRulerBorder": false,
+  "editor.renderWhitespace": "selection",
+  "editor.rulers": [82],
+  "editor.scrollBeyondLastLine": false,
+  "editor.scrollbar.horizontalScrollbarSize": 0,
+  "editor.scrollbar.vertical": "visible",
+  "editor.scrollbar.verticalScrollbarSize": 12,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.semanticTokenColorCustomizations": {
+    "[GitHub Dark Dimmed]": {
+      "enabled": true,
+      "rules": {
+        "function": {},
+        "type": {
+          "bold": true
+        }
+      }
+    },
+    "[GitHub Light]": {
+      "enabled": true,
+      "rules": {
+        "function": {},
+        "type": {
+          "bold": true
+        }
+      }
+    },
+    "[GitLab Dark]": {
+      "enabled": true,
+      "rules": {
+        "function": {},
+        "type": {
+          "bold": true
+        }
+      }
+    },
+    "[GitLab Light]": {
+      "enabled": true,
+      "rules": {
+        "function": {},
+        "type": {
+          "bold": true
+        }
+      }
+    }
+  },
+  "editor.showFoldingControls": "always",
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.preview": true,
+  "editor.suggest.showStatusBar": true,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "entity.name.function.ts",
+        "settings": {
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  },
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
+  "emmet.useInlineCompletions": true,
+  "errorLens.editorHoverPartsEnabled": {
+    "buttonsEnabled": false
+  },
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
+  "errorLens.enabledInMergeConflict": false,
+  // "errorLens.exclude": ["Merge conflict marker encountered."],
+  "errorLens.excludeBySource": ["cSpell"],
+  "errorLens.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "errorLens.fontSize": "70%",
+  "errorLens.fontStyleItalic": true,
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.margin": "2ch",
+  "errorLens.messageEnabled": true,
+  "errorLens.messageMaxChars": 100,
+  "errorLens.onSave": true,
+  // "errorLens.messageTemplate": "$source: $message",
+  // "errorLens.enableOnDiffView": true,
+  // "errorLens.statusBarColorsEnabled": true,
+  "errorLens.scrollbarHackEnabled": true,
+  "eslint.rules.customizations": [
+    {
+      "rule": "prettier",
+      "severity": "warn"
+    }
+  ],
+  "eslint.run": "onSave",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "svelte"
+  ],
+  "explorer.autoRevealExclude": {
+    "**/.gql/types": true,
+    "**/.svelte-kit": true,
+    "**/bower_components": false,
+    "**/build": true
+  },
+  "explorer.sortOrder": "filesFirst",
+  "extensions.autoUpdate": false,
+  "files.associations": {
+    "skhdrc": "shellscript",
+    "yabairc": "shellscript"
+  },
+  "files.autoSave": "onWindowChange",
+  "files.trimTrailingWhitespace": true,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.currentLine.format": " ",
+  "gitlens.currentLine.uncommittedChangesFormat": " ",
+  "gitlens.fileAnnotations.command": "blame",
+  "gitlens.hovers.annotations.over": "annotation",
+  "gitlens.hovers.avatarSize": 24,
+  "gitlens.plusFeatures.enabled": false,
+  "gitlens.telemetry.enabled": false,
+  "gitlens.views.commitDetails.files.layout": "tree",
+  "gitlens.views.commits.showBranchComparison": "branch",
+  "gitlens.views.showRelativeDateMarkers": false,
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "liveshare.sharedTerminalHeight": 700,
+  "material-icon-theme.activeIconPack": "none",
+  "material-icon-theme.folders.color": "#F9B423",
+  "material-icon-theme.saturation": 0.75,
+  "package-json-upgrade.decorationString": "(%s)",
+  "package-json-upgrade.ignorePatterns": [
+    "^@omnysec/.+$",
+    "^prettier.*$",
+    "^eslint.*$"
+  ],
+  "package-json-upgrade.majorUpgradeColorOverwrite": "#ff5a52",
+  "package-json-upgrade.minorUpgradeColorOverwrite": "#ecaa1c",
+  "package-json-upgrade.msUntilRowLoading": 500,
+  "package-json-upgrade.patchUpgradeColorOverwrite": "#eac55f6d",
+  "path-autocomplete.extensionOnImport": false,
+  "postcss.validate": false,
+  "prettier.documentSelectors": ["**/*.svelte"],
+  "problems.defaultViewMode": "table",
+  "scm.diffDecorationsGutterWidth": 4,
+  "search.exclude": {
+    "**/.gql/*": true,
+    "**/.svelte-kit/*": true,
+    "**/.turbo/*": true,
+    "**/dist/*": true,
+    "pnpm-lock.yaml": true
+  },
+  "search.showLineNumbers": true,
+  "security.promptForLocalFileProtocolHandling": false,
+  "security.workspace.trust.banner": "always",
+  "security.workspace.trust.startupPrompt": "always",
+  "svelte.enable-ts-plugin": true,
+  "telemetry.telemetryLevel": "off",
+  "terminal.external.osxExec": "Alacritty.app",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono, CaskaydiaCove Nerd Font Mono",
+  "terminal.integrated.fontSize": 11,
+  "terminal.integrated.suggest.quickSuggestions": false,
+  "terminal.integrated.tabs.description": "${task}${separator}${local}",
+  "terminal.integrated.tabs.enabled": false,
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.svelte-kit/**"
+  ],
+  "todohighlight.include": [
+    "**/*.md",
+    "**/*.js",
+    "**/*.ts",
+    "**/*.html",
+    "**/*.css",
+    "**/*.svelte"
+  ],
+  "todohighlight.keywords": [
+    {
+      "backgroundColor": "#ffbd2a",
+      "color": "#fff",
+      "overviewRulerColor": "rgba(255,189,42,0.8)",
+      "text": "TODO"
+    },
+    {
+      "backgroundColor": "#f06292",
+      "color": "#fff",
+      "overviewRulerColor": "rgba(240,98,146,0.8)",
+      "text": "FIXME"
+    }
+  ],
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "update.mode": "start",
+  "window.autoDetectColorScheme": true,
+  "window.commandCenter": true,
+  "window.confirmBeforeClose": "keyboardOnly",
+  "workbench.activityBar.location": "top",
+  "workbench.colorCustomizations": {
+    "[GitHub Dark Dimmed]": {
+      "minimap.findMatchHighlight": "#eac55fe2",
+      "minimap.selectionOccurrenceHighlight": "#ffffff95"
+    },
+    "[GitHub Light]": {
+      "editorHoverWidget.background": "#FFF8E0",
+      "editorHoverWidget.foreground": "#1A1D22",
+      "editorOverviewRuler.background": "#fff",
+      "editorSuggestWidget.background": "#FFFBEF",
+      "editorSuggestWidget.foreground": "#1A1D22",
+      "editorSuggestWidget.selectedBackground": "#E0D9C2",
+      "editorSuggestWidget.selectedForeground": "#000",
+      "minimap.findMatchHighlight": "#ffdf5dfa",
+      "minimap.selectionOccurrenceHighlight": "#34d058e9",
+      "minimapSlider.background": "#2189ff10"
+    },
+    "[GitLab Dark]": {
+      "minimap.findMatchHighlight": "#725698ee",
+      "minimap.selectionOccurrenceHighlight": "#CFC1FAcb",
+      "minimapSlider.background": "#ad95e918"
+    },
+    "[GitLab Light]": {
+      "editor.selectionBackground": "#ad95e944",
+      "editorHoverWidget.background": "#FFF8E0",
+      "editorSuggestWidget.background": "#FFFBEF",
+      "editorSuggestWidget.foreground": "#1A1D22",
+      "editorSuggestWidget.selectedBackground": "#E0D9C2",
+      "editorSuggestWidget.selectedForeground": "#000",
+      "minimap.findMatchHighlight": "#725698ee",
+      "minimap.selectionHighlight": "#ad95e9ab",
+      "minimap.selectionOccurrenceHighlight": "#5F33F0cb",
+      "minimapSlider.background": "#ad95e929"
+    },
+    "[Vercel 2024 Light]": {
+      "editorHoverWidget.background": "#fffbee",
+      "editorSuggestWidget.background": "#fffbee"
+    },
+    "editorGutter.addedBackground": "#5fcd65",
+    "editorGutter.deletedBackground": "#ff5a52",
+    "editorGutter.modifiedBackground": "#ecaa1c",
+    "editorOverviewRuler.addedForeground": "#5fcd65",
+    "editorOverviewRuler.bracketMatchForeground": "#0000",
+    "editorOverviewRuler.deletedForeground": "#ff5a52",
+    "editorOverviewRuler.errorForeground": "#0000",
+    "editorOverviewRuler.findMatchForeground": "#0000",
+    "editorOverviewRuler.modifiedForeground": "#ecaa1c",
+    "editorOverviewRuler.selectionHighlightForeground": "#0000",
+    "editorOverviewRuler.warningForeground": "#0000",
+    "editorOverviewRuler.wordHighlightForeground": "#0000",
+    "minimap.infoHighlight": "#0000",
+    "minimapGutter.addedBackground": "#5fcd65",
+    "minimapGutter.deletedBackground": "#ff5a52",
+    "minimapGutter.modifiedBackground": "#ecaa1c"
+  },
+  "workbench.colorTheme": "GitHub Light",
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.tabActionCloseVisibility": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
+  "workbench.preferredLightColorTheme": "GitHub Light",
+  "workbench.startupEditor": "none",
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.stickyScrollMaxItemCount": 10,
+  "continue.telemetryEnabled": false,
+  "continue.enableTabAutocomplete": true,
+  "continue.showInlineTip": false,
+  "betterOpenEditors.PackagePatterns": "**/src/routes/\\[project\\]/*\n**/src/routes/\\[project\\]/risk/\\[workspace\\]/*\n**/src/routes/\\[project\\]/risk/\\[workspace\\]/threat/*",
+  "betterOpenEditors.HidePackagePath": true,
+  "betterOpenEditors.InsertSpacesAroundSlashes": true,
+  "breadcrumbs.icons": false,
+  "workbench.editor.pinnedTabSizing": "compact"
+}
