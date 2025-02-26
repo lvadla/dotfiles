@@ -1,0 +1,121 @@
+# NOTE(koekeishiya):
+# A list of all built-in modifier and literal keywords can
+# be found at https://github.com/koekeishiya/skhd/issues/1
+
+# Global hotkeys
+
+# default                      < cmd - return          : open -a iTerm        # Launch iTerm
+# default                      < shift + cmd - return  : open -a Firefox      # Launch Firefox
+
+##########################################################################
+
+# Apple Internal Keyboard remap - Spotlight -> Raycast
+0xB1 : skhd -k "cmd - space"
+# Apple Internal Keyboard remap - Dictation -> Mutekey
+0xB0 : skhd -k "f15"
+
+# focus window
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# focus windows wasd
+# alt - s : yabai -m window --focus west
+# alt - d : yabai -m window --focus south
+# alt - e : yabai -m window --focus north
+# alt - f : yabai -m window --focus east
+
+# focus next display
+alt - n : yabai -m display --focus next || yabai -m display --focus prev || yabai -m display --focus first
+
+# move window to the next display and follow
+shift + alt - n : yabai -m window --display next || yabai -m window --display prev || yabai -m window --display first;\
+                  yabai -m display --focus next || yabai -m display --focus prev || yabai -m display --focus first
+
+# move window to the next/previous desktop and follow
+# ctrl + cmd - h : yabai -m window --space prev; yabai -m space --focus prev
+# ctrl + cmd - l : yabai -m window --space next; yabai -m space --focus next
+
+# swap window or move floating windows
+shift + alt - h : yabai -m window --focus west && yabai -m window --swap east && yabai -m window --focus west || yabai -m window --move rel:-8:0
+shift + alt - j : yabai -m window --focus south && yabai -m window --swap north && yabai -m window --focus south || yabai -m window --move rel:0:8
+shift + alt - k : yabai -m window --focus north && yabai -m window --swap south && yabai -m window --focus north || yabai -m window --move rel:0:-8
+shift + alt - l : yabai -m window --focus east && yabai -m window --swap west && yabai -m window --focus east || yabai -m window --move rel:8:0
+
+# float / unfloat window and center on screen
+alt - t : yabai -m window --toggle float;\
+          yabai -m window --grid 9:16:3:1:10:7
+
+# balance size of windows
+alt + shift - 0 : yabai -m space --balance
+
+# toggle split
+alt - e : yabai -m window --toggle split
+
+# rotate tree
+alt - r : yabai -m space --rotate 90
+
+# toggle window padding for the space
+alt - p : yabai -m config top_padding 16;\
+          yabai -m config right_padding 16;\
+          yabai -m config bottom_padding 16;\
+          yabai -m config left_padding 16;\
+          yabai -m space --toggle padding;\
+          yabai -m space --toggle gap
+
+# toggle large/small window padding for the space
+shift + alt - p : yabai -m config top_padding 128;\
+                  yabai -m config right_padding 128;\
+                  yabai -m config bottom_padding 128;\
+                  yabai -m config left_padding 128;
+
+# toggle window zoom fullscreen
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# mirror tree y-axis
+alt - y : yabai -m space --mirror y-axis
+
+# mirror tree x-axis
+alt - x : yabai -m space --mirror x-axis
+
+# create a new desktop
+# ctrl + alt - n : yabai -m space --create;\
+#                  yabai -m window --space last;\
+#                  sleep 0.5;\
+#                  yabai -m space --focus last;
+
+# toggle on top and resize to picture-in-picture size
+# alt + ctrl + cmd - p : yabai -m window --toggle pip;
+
+# toggle window space stickiness
+# alt + ctrl + cmd - s : yabai -m window --toggle sticky;
+
+# toggle window native fullscreen
+alt + cmd - f : yabai -m window --toggle native-fullscreen;
+
+# toggle window always on top
+# alt + ctrl + cmd - t : yabai -m window --toggle topmost;
+
+# move focus to the next/previous desktop
+# cmd - pagedown : yabai -m space --focus next
+# cmd - pageup : yabai -m space --focus prev
+
+# move focus to the specified desktop
+# alt - 1  : yabai -m space --focus 1
+# alt - 2  : yabai -m space --focus 2
+# alt - 3  : yabai -m space --focus 3
+# alt - 4  : yabai -m space --focus 4
+# alt - 5  : yabai -m space --focus 5
+
+# hyper application shortcuts
+# shift + ctrl + alt + cmd - b: open -a Bitwarden
+# shift + ctrl + alt + cmd - c: open -a Calendar
+# shift + ctrl + alt + cmd - f: open -a Firefox
+# shift + ctrl + alt + cmd - m: open -a Mail
+# shift + ctrl + alt + cmd - s: open -a Slack
+# shift + ctrl + alt + cmd - v: open -a Visual\ Studio\ Code
+# shift + ctrl + alt + cmd - y: open -a Yubico\ Authenticator
+
+# restart wm
+shift + ctrl + alt + cmd - r : yabai --restart-service;
