@@ -1,0 +1,23 @@
+theme=RetroLegends
+font-family = "Maple Mono NF"
+font-feature = zero ss01 cv11
+font-size = 12
+bold-is-bright = true
+
+mouse-hide-while-typing = true
+focus-follows-mouse = true
+
+shell-integration-features = true
+
+window-padding-x = 1 
+window-padding-y = 1
+window-padding-balance = true
+
+clipboard-read = allow
+clipboard-write = allow
+clipboard-trim-trailing-spaces = true
+copy-on-select = false
+
+macos-icon = custom-style
+macos-icon-ghost-color = 44EB44
+macos-icon-screen-color = 000000
