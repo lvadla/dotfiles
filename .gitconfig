@@ -35,5 +35,11 @@
 [diff]
     colorMoved = default
 
+[pull]
+	rebase = true
+
 [push]
 	autoSetupRemote = true
+
+[remote]
+	pushDefault = origin
