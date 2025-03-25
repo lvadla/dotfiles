@@ -123,7 +123,6 @@
   "editor.fontSize": 12.6,
   "editor.glyphMargin": false,
   "editor.inlayHints.enabled": "on",
-  "editor.inlayHints.fontFamily": "CaskaydiaCove Nerd Font Mono",
   "editor.inlayHints.padding": true,
   "editor.lineHeight": 20.1667,
   "editor.linkedEditing": true,
