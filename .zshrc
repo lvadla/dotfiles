@@ -38,3 +38,5 @@ fi
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+defaults write dev.warp.Warp-Stable ApplePressAndHoldEnabled -bool false

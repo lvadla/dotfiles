@@ -9,7 +9,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cursor.cmdk.useThemedDiffBackground": true,
-  "cursor.composer.renderPillsInsteadOfBlocks": true,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.cursorBlinking": "expand",
@@ -59,6 +58,12 @@
   },
   "explorer.sortOrder": "filesFirst",
   "extensions.autoUpdate": false,
+  "files.associations": {
+    "skhdrc": "shellscript",
+    "yabairc": "shellscript"
+  },
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
   "material-icon-theme.activeIconPack": "none",
   "material-icon-theme.folders.color": "#F9B423",
   "material-icon-theme.saturation": 0.75,
@@ -71,6 +76,7 @@
   "security.promptForLocalFileProtocolHandling": false,
   "security.workspace.trust.startupPrompt": "always",
   "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.defaultScriptLanguage": "ts",
   "terminal.integrated.fontFamily": "Maple Mono NF",
   "terminal.integrated.fontSize": 11,
   "update.mode": "start",
@@ -121,21 +127,5 @@
   "workbench.editor.pinnedTabSizing": "compact",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.preferredDarkColorTheme": "GitHub Dark",
-  "workbench.preferredLightColorTheme": "GitHub Light",
-  "workbench.sideBar.location": "right"
+  "workbench.preferredLightColorTheme": "GitHub Light"
 }
-// {
-//   "editor.glyphMargin": false,
-//   "editor.linkedEditing": true,
-//   "eslint.run": "onSave",
-//   "eslint.validate": [
-//     "javascript",
-//     "javascriptreact",
-//     "typescript",
-//     "typescriptreact",
-//     "svelte"
-//   ],
-//   "files.associations": { "skhdrc": "shellscript", "yabairc": "shellscript" },
-//   "files.autoSave": "onWindowChange",
-//   "files.trimTrailingWhitespace": true,
-// }
