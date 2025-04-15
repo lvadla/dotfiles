@@ -1,20 +1,15 @@
 {
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "cursor.cmdk.useThemedDiffBackground": true,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.cursorBlinking": "expand",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": false,
   "editor.fontSize": 12.6,
+  "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
   "editor.lineHeight": 20.1667,
   "editor.minimap.enabled": true,
@@ -67,6 +62,7 @@
   "material-icon-theme.activeIconPack": "none",
   "material-icon-theme.folders.color": "#F9B423",
   "material-icon-theme.saturation": 0.75,
+  "prettier.documentSelectors": ["**/*.svelte"],
   "search.exclude": {
     "**/.svelte-kit/*": true,
     "**/.turbo/*": true,
@@ -127,5 +123,6 @@
   "workbench.editor.pinnedTabSizing": "compact",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.preferredDarkColorTheme": "GitHub Dark",
-  "workbench.preferredLightColorTheme": "GitHub Light"
+  "workbench.preferredLightColorTheme": "GitHub Light",
+  "workbench.sideBar.location": "right"
 }
