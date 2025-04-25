@@ -1,257 +1,320 @@
 {
-	"file_scan_exclusions": [
-		"**/.git",
-		"**/.DS_Store",
-		"**/.settings",
-		"**/raw-data/**",
-		"**/node_modules/**",
-		"**/build/**",
-		"**/dist/**"
-	],
-	"format_on_save": "on",
-	"diagnostics": {
-		"include_warnings": true,
-		"inline": {
-			"enabled": true,
-			"update_debounce_ms": 150,
-			"min_column": 0
-		},
-		"update_with_cursor": true,
-		"primary_only": true,
-		"use_rendered": true
-	},
-	"git": {
-		"git_gutter": null,
-		"gutter_debounce": null,
-		"inline_blame": {
-			"show_commit_summary": false,
-			"min_column": 0
-		},
-		"hunk_style": "unstaged_hollow"
-	},
-	"inlay_hints": {
-		"enabled": false,
-		"edit_debounce_ms": 700,
-		"show_background": true,
-		"scroll_debounce_ms": 50,
-		"show_other_hints": true
-	},
-	"project_panel": {
-		"dock": "right",
-		"default_width": 300
-	},
-	"outline_panel": {
-		"dock": "right",
-		"default_width": 320
-	},
-	"assistant": {
-		"default_width": 600,
-		"default_profile": "ask",
-		"dock": "left",
-		"default_model": {
-			"model": "gemini-2.5-pro-exp-03-25",
-			"provider": "google"
-		},
-		"version": "2"
-	},
-	"code_actions_on_format": {
-		"source.fixAll.biome": true
-	},
-	"autosave": "off",
-	"auto_update": false,
-	"buffer_font_family": "Zed Plex Mono",
-	"buffer_font_size": 13,
-	"buffer_line_height": "comfortable",
-	"confirm_quit": true,
-	"current_line_highlight": "all",
-	"edit_predictions": {
-		"disabled_globs": [".env"],
-		"mode": "eager"
-	},
-	"features": {
-		"edit_prediction_provider": "zed"
-	},
-	"hard_tabs": true,
-	"indent_guides": {
-		"enabled": true,
-		"line_width": 1,
-		"active_line_width": 3
-	},
-	"languages": {
-		"Python": {
-			"language_servers": ["ruff"]
-		},
-		"Svelte": {
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true
-			}
-		},
-		"TypeScript": {
-			"code_actions_on_format": {
-				"source.fixAll.eslint": true
-			}
-		}
-	},
-	"line_height": "comfortable",
-	"performance.show_in_status_bar": true,
-	"preferred_line_length": 81,
-	"preview_tabs": {
-		"enable_preview_from_code_navigation": false,
-		"enable_preview_from_file_finder": false,
-		"enabled": true
-	},
-	"redact_private_values": true,
-	"restore_on_startup": "none",
-	"scroll_beyond_last_line": "off",
-	"scrollbar": {
-		"cursors": true,
-		"diagnostics": "all",
-		"git_diff": true,
-		"search_results": true,
-		"selected_symbol": true,
-		"selections": true,
-		"show": "always",
-		"symbols_selections": true
-	},
-	"show_completion_documentation": true,
-	"show_completions_on_input": false,
-	"show_line_numbers": true,
-	"show_whitespaces": "selection",
-	"show_wrap_guides": true,
-	"telemetry": {
-		"diagnostics": false,
-		"metrics": false
-	},
-	"lsp": {
-		"svelte-language-server": {
-			"initialization_options": {
-				"configuration": {
-					"typescript": {
-						"inlayHints": {
-							"parameterNames": {
-								"enabled": "all",
-								"suppressWhenArgumentMatchesName": true
-							},
-							"parameterTypes": {
-								"enabled": true,
-								"suppressWhenTypeMatchesName": true
-							},
-							"variableTypes": {
-								"enabled": false,
-								"suppressWhenTypeMatchesName": true
-							},
-							"propertyDeclarationTypes": {
-								"enabled": false
-							},
-							"functionLikeReturnTypes": {
-								"enabled": false
-							},
-							"enumMemberValues": {
-								"enabled": true
-							}
-						}
-					},
-					"javascript": {
-						"inlayHints": {
-							"parameterNames": {
-								"enabled": "all",
-								"suppressWhenArgumentMatchesName": true
-							},
-							"parameterTypes": {
-								"enabled": true,
-								"suppressWhenTypeMatchesName": true
-							},
-							"variableTypes": {
-								"enabled": false,
-								"suppressWhenTypeMatchesName": true
-							},
-							"propertyDeclarationTypes": {
-								"enabled": false
-							},
-							"functionLikeReturnTypes": {
-								"enabled": false
-							},
-							"enumMemberValues": {
-								"enabled": true
-							}
-						}
-					}
-				}
-			}
-		},
-		"vtsls": {
-			"settings": {
-				"javascript": {
-					"inlayHints": {
-						"parameterNames": {
-							"enabled": "all",
-							"suppressWhenArgumentMatchesName": true
-						},
-						"parameterTypes": {
-							"enabled": true,
-							"suppressWhenTypeMatchesName": true
-						},
-						"variableTypes": {
-							"enabled": false
-						},
-						"propertyDeclarationTypes": {
-							"enabled": false
-						},
-						"functionLikeReturnTypes": {
-							"enabled": false
-						},
-						"enumMemberValues": {
-							"enabled": false
-						}
-					}
-				},
-				"typescript": {
-					"inlayHints": {
-						"parameterNames": {
-							"enabled": "all",
-							"suppressWhenArgumentMatchesName": true
-						},
-						"parameterTypes": {
-							"enabled": true,
-							"suppressWhenTypeMatchesName": true
-						},
-						"variableTypes": {
-							"enabled": false
-						},
-						"propertyDeclarationTypes": {
-							"enabled": false
-						},
-						"functionLikeReturnTypes": {
-							"enabled": false
-						},
-						"enumMemberValues": {
-							"enabled": false
-						}
-					}
-				}
-			}
-		}
-	},
-	"terminal": {
-		"blinking": "on",
-		"copy_on_select": false,
-		"font_family": "Maple Mono NF",
-		"font_size": 12,
-		"scrollbar": {
-			"show": null
-		},
-		"toolbar": {
-			"breadcrumbs": true
-		},
-		"working_directory": "current_project_directory"
-	},
-	"theme": {
-		"dark": "Vercel Dark",
-		"light": "Vercel Light",
-		"mode": "system"
-	},
-	"ui_font_size": 14,
-	"unnecessary_code_fade": 0.25,
-	"use_tabs": true,
-	"wrap_guides": [80]
+  "formatter": {
+    "external": {
+      "command": "prettier",
+      "arguments": ["--stdin-filepath", "{buffer_path}"]
+    }
+  },
+  "context_servers": {
+    "mcp-server-linear": {
+      "settings": {
+        "linear_api_key": "<LINEAR_API_KEY>"
+      }
+    }
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.DS_Store",
+    "**/.settings",
+    "**/raw-data/**",
+    "**/node_modules/**",
+    "**/build/**",
+    "**/dist/**"
+  ],
+  "format_on_save": "on",
+  "diagnostics": {
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "min_column": 0
+    },
+    "update_with_cursor": true,
+    "primary_only": true,
+    "use_rendered": true
+  },
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "show_commit_summary": false,
+      "min_column": 0
+    },
+    "hunk_style": "unstaged_hollow"
+  },
+  "git_panel": { "default_width": 465, "dock": "left" },
+  "inlay_hints": {
+    "enabled": false,
+    "edit_debounce_ms": 700,
+    "show_background": true,
+    "scroll_debounce_ms": 50,
+    "show_other_hints": true
+  },
+  // "tab_bar": { "show": false },
+  "chat_panel": {
+    "dock": "right",
+    "default_width": 300
+  },
+  "collaboration_panel": {
+    "dock": "right",
+    "default_width": 300
+  },
+  "notification_panel": {
+    "dock": "right",
+    "default_width": 300
+  },
+  "project_panel": {
+    "dock": "right",
+    "default_width": 300
+  },
+  "outline_panel": {
+    "dock": "right",
+    "default_width": 300
+  },
+  "assistant": {
+    "inline_assistant_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash-preview-04-17"
+    },
+    "profiles": {
+      "write": {
+        "name": "Write",
+        "tools": {
+          "open": true,
+          "create_directory": true,
+          "terminal": false,
+          "batch_tool": true,
+          "code_actions": true,
+          "code_symbols": true,
+          "contents": true,
+          "copy_path": false,
+          "create_file": true,
+          "delete_path": false,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "move_path": false,
+          "now": true,
+          "path_search": true,
+          "read_file": true,
+          "grep": true,
+          "rename": false,
+          "symbol_info": true,
+          "thinking": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {}
+      }
+    },
+    "default_width": 465,
+    "default_profile": "write",
+    "dock": "left",
+    "default_model": {
+      "model": "gemini-2.5-pro-preview-03-25",
+      "provider": "google"
+    },
+    "version": "2"
+  },
+  "code_actions_on_format": {
+    "source.fixAll.biome": true
+  },
+  "soft_wrap": "preferred_line_length",
+  "autosave": "off",
+  "auto_update": false,
+  "buffer_font_family": "Zed Plex Mono",
+  "buffer_font_size": 12,
+  "buffer_line_height": "comfortable",
+  "confirm_quit": true,
+  "current_line_highlight": "all",
+  "edit_predictions": {
+    "disabled_globs": [".env"],
+    "mode": "subtle"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "hard_tabs": true,
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 3
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff"]
+    },
+    "Svelte": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    }
+  },
+  "line_height": "comfortable",
+  "performance.show_in_status_bar": true,
+  "preferred_line_length": 80,
+  "preview_tabs": {
+    "enable_preview_from_code_navigation": false,
+    "enable_preview_from_file_finder": false,
+    "enabled": true
+  },
+  "redact_private_values": true,
+  "restore_on_startup": "none",
+  "scroll_beyond_last_line": "off",
+  "scrollbar": {
+    "cursors": true,
+    "diagnostics": "all",
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true,
+    "selections": true,
+    "show": "always",
+    "symbols_selections": true
+  },
+  "show_completion_documentation": true,
+  "show_completions_on_input": false,
+  "show_line_numbers": true,
+  "show_whitespaces": "selection",
+  "show_wrap_guides": true,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "lsp": {
+    "svelte-language-server": {
+      "initialization_options": {
+        "configuration": {
+          "typescript": {
+            "inlayHints": {
+              "parameterNames": {
+                "enabled": "all",
+                "suppressWhenArgumentMatchesName": true
+              },
+              "parameterTypes": {
+                "enabled": true,
+                "suppressWhenTypeMatchesName": true
+              },
+              "variableTypes": {
+                "enabled": false,
+                "suppressWhenTypeMatchesName": true
+              },
+              "propertyDeclarationTypes": {
+                "enabled": false
+              },
+              "functionLikeReturnTypes": {
+                "enabled": false
+              },
+              "enumMemberValues": {
+                "enabled": true
+              }
+            }
+          },
+          "javascript": {
+            "inlayHints": {
+              "parameterNames": {
+                "enabled": "all",
+                "suppressWhenArgumentMatchesName": true
+              },
+              "parameterTypes": {
+                "enabled": true,
+                "suppressWhenTypeMatchesName": true
+              },
+              "variableTypes": {
+                "enabled": false,
+                "suppressWhenTypeMatchesName": true
+              },
+              "propertyDeclarationTypes": {
+                "enabled": false
+              },
+              "functionLikeReturnTypes": {
+                "enabled": false
+              },
+              "enumMemberValues": {
+                "enabled": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "vtsls": {
+      "settings": {
+        "javascript": {
+          "inlayHints": {
+            "parameterNames": {
+              "enabled": "all",
+              "suppressWhenArgumentMatchesName": true
+            },
+            "parameterTypes": {
+              "enabled": true,
+              "suppressWhenTypeMatchesName": true
+            },
+            "variableTypes": {
+              "enabled": false
+            },
+            "propertyDeclarationTypes": {
+              "enabled": false
+            },
+            "functionLikeReturnTypes": {
+              "enabled": false
+            },
+            "enumMemberValues": {
+              "enabled": false
+            }
+          }
+        },
+        "typescript": {
+          "inlayHints": {
+            "parameterNames": {
+              "enabled": "all",
+              "suppressWhenArgumentMatchesName": true
+            },
+            "parameterTypes": {
+              "enabled": true,
+              "suppressWhenTypeMatchesName": true
+            },
+            "variableTypes": {
+              "enabled": false
+            },
+            "propertyDeclarationTypes": {
+              "enabled": false
+            },
+            "functionLikeReturnTypes": {
+              "enabled": false
+            },
+            "enumMemberValues": {
+              "enabled": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "terminal": {
+    "dock": "bottom",
+    "blinking": "on",
+    "copy_on_select": false,
+    "font_family": "Maple Mono NF",
+    "font_size": 11,
+    "scrollbar": {
+      "show": null
+    },
+    "toolbar": {
+      "breadcrumbs": true
+    },
+    "working_directory": "current_project_directory"
+  },
+  "theme": {
+    "dark": "Vercel Dark",
+    "light": "Vercel Light",
+    "mode": "system"
+  },
+  "ui_font_size": 13,
+  "unnecessary_code_fade": 0.25,
+  "use_tabs": true,
+  "wrap_guides": [80]
 }
