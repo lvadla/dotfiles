@@ -42,7 +42,6 @@ yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^Amphetamine$" title="Settings" manage=off
 yabai -m rule --add app="^Quick Access — 1Password$" manage=off
 yabai -m rule --add app="^App Store$" manage=off
-yabai -m rule --add app="Arc" manage=off
 yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^Bitwarden$" manage=off
 yabai -m rule --add app="^Camera Preview$" title="Camera Preview" manage=off
@@ -59,8 +58,6 @@ yabai -m rule --add app="^Firefox$" title=".*Opening.*" manage=off
 yabai -m rule --add app="^Firefox$" title="Picture-in-Picture" manage=off grid=50:120:60:0:25:48
 yabai -m rule --add app="^Installer$" manage=off
 yabai -m rule --add app="^LinearMouse$" manage=off
-yabai -m rule --add app="^Linear$"
-yabai -m rule --add app="^Maps$" native-fullscreen=on
 yabai -m rule --add app="^Mail$" manage=off
 yabai -m rule --add app="^Mail$" title=".*Inbox — Google.*" manage=on
 yabai -m rule --add app="Microsoft Defender" title="Microsoft Defender" manage=off
@@ -69,7 +66,6 @@ yabai -m rule --add app="^mpv$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
 yabai -m rule --add app="^Safari$" manage=off
 yabai -m rule --add app="^Safari$" title="Start Page" manage=on
-yabai -m rule --add app="^Slack$" native-fullscreen=on
 yabai -m rule --add app="^SecurityAgent$" manage=off
 yabai -m rule --add app="^System Information$" title="About This Mac" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
