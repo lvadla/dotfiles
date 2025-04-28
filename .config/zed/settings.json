@@ -139,6 +139,10 @@
     "line_width": 1,
     "active_line_width": 3
   },
+  "deno": {
+    "enable": false,
+    "unstable": false
+  },
   "languages": {
     "Python": {
       "language_servers": ["ruff"]
@@ -185,6 +189,13 @@
     "metrics": false
   },
   "lsp": {
+    "deno": {
+      "settings": {
+        "deno": {
+          "enable": false
+        }
+      }
+    },
     "svelte-language-server": {
       "initialization_options": {
         "configuration": {
