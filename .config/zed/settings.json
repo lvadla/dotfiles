@@ -116,7 +116,7 @@
     "version": "2"
   },
   "code_actions_on_format": {
-    "source.fixAll.biome": true
+    "source.fixAll.biome": false
   },
   "soft_wrap": "preferred_line_length",
   "autosave": "off",
@@ -143,6 +143,7 @@
     "enable": false,
     "unstable": false
   },
+  "ensure_final_newline_on_save": true,
   "languages": {
     "Python": {
       "language_servers": ["ruff"]
@@ -180,7 +181,8 @@
     "symbols_selections": true
   },
   "show_completion_documentation": true,
-  "show_completions_on_input": false,
+  "show_completions_on_input": true,
+  "lsp_highlight_debounce": 50,
   "show_line_numbers": true,
   "show_whitespaces": "selection",
   "show_wrap_guides": true,
@@ -188,12 +190,23 @@
     "diagnostics": false,
     "metrics": false
   },
+  "remove_trailing_whitespace_on_save": true,
   "lsp": {
     "deno": {
       "settings": {
         "deno": {
           "enable": false
         }
+      }
+    },
+    "eslint": {
+      "settings": {
+        "problems": {
+          "shortenToSingleLine": true
+        },
+        "rulesCustomizations": [
+          { "rule": "prettier/prettier", "severity": "off" }
+        ]
       }
     },
     "svelte-language-server": {
