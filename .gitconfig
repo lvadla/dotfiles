@@ -11,7 +11,7 @@
 
 [core]
     pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 && echo dark-mode || echo light-mode)"
-	editor = nvim
+	editor = hx
 
 [interactive]
     diffFilter = delta --features "$(defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 && echo dark-mode || echo light-mode)"
@@ -23,11 +23,9 @@
 
 [delta "light-mode"]
     light = true
-    syntax-theme = GitHub_Dark
 
 [delta "dark-mode"]
     light = false
-    syntax-theme = GitHub_Light
 
 [merge]
     conflictstyle = diff3
