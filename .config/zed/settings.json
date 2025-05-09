@@ -183,51 +183,39 @@
           "typescript": {
             "inlayHints": {
               "parameterNames": {
-                "enabled": "all",
+                "enabled": "literals",
                 "suppressWhenArgumentMatchesName": true
               },
               "parameterTypes": {
-                "enabled": true,
+                "enabled": false,
                 "suppressWhenTypeMatchesName": true
               },
               "variableTypes": {
-                "enabled": true,
+                "enabled": false,
                 "suppressWhenTypeMatchesName": true
               },
-              "propertyDeclarationTypes": {
-                "enabled": false
-              },
-              "functionLikeReturnTypes": {
-                "enabled": false
-              },
-              "enumMemberValues": {
-                "enabled": true
-              }
+              "propertyDeclarationTypes": { "enabled": false },
+              "functionLikeReturnTypes": { "enabled": false },
+              "enumMemberValues": { "enabled": false }
             }
           },
           "javascript": {
             "inlayHints": {
               "parameterNames": {
-                "enabled": "all",
+                "enabled": "literals",
                 "suppressWhenArgumentMatchesName": true
               },
               "parameterTypes": {
-                "enabled": true,
+                "enabled": false,
                 "suppressWhenTypeMatchesName": true
               },
               "variableTypes": {
-                "enabled": true,
+                "enabled": false,
                 "suppressWhenTypeMatchesName": true
               },
-              "propertyDeclarationTypes": {
-                "enabled": false
-              },
-              "functionLikeReturnTypes": {
-                "enabled": false
-              },
-              "enumMemberValues": {
-                "enabled": true
-              }
+              "propertyDeclarationTypes": { "enabled": false },
+              "functionLikeReturnTypes": { "enabled": false },
+              "enumMemberValues": { "enabled": false }
             }
           }
         }
@@ -238,51 +226,39 @@
         "javascript": {
           "inlayHints": {
             "parameterNames": {
-              "enabled": "all",
+              "enabled": false,
               "suppressWhenArgumentMatchesName": true
             },
             "parameterTypes": {
-              "enabled": true,
+              "enabled": false,
               "suppressWhenTypeMatchesName": true
             },
             "variableTypes": {
-              "enabled": true,
+              "enabled": false,
               "suppressWhenTypeMatchesName": true
             },
-            "propertyDeclarationTypes": {
-              "enabled": false
-            },
-            "functionLikeReturnTypes": {
-              "enabled": false
-            },
-            "enumMemberValues": {
-              "enabled": false
-            }
+            "propertyDeclarationTypes": { "enabled": false },
+            "functionLikeReturnTypes": { "enabled": false },
+            "enumMemberValues": { "enabled": false }
           }
         },
         "typescript": {
           "inlayHints": {
             "parameterNames": {
-              "enabled": "all",
+              "enabled": false,
               "suppressWhenArgumentMatchesName": true
             },
             "parameterTypes": {
-              "enabled": true,
+              "enabled": false,
               "suppressWhenTypeMatchesName": true
             },
             "variableTypes": {
-              "enabled": true,
+              "enabled": false,
               "suppressWhenTypeMatchesName": true
             },
-            "propertyDeclarationTypes": {
-              "enabled": false
-            },
-            "functionLikeReturnTypes": {
-              "enabled": false
-            },
-            "enumMemberValues": {
-              "enabled": false
-            }
+            "propertyDeclarationTypes": { "enabled": false },
+            "functionLikeReturnTypes": { "enabled": false },
+            "enumMemberValues": { "enabled": false }
           }
         }
       }
