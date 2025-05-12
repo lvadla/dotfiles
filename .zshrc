@@ -39,4 +39,6 @@ fi
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+if [[ $(uname) == "Darwin" ]]; then
 defaults write dev.warp.Warp-Stable ApplePressAndHoldEnabled -bool false
+fi
