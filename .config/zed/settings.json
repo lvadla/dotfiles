@@ -46,8 +46,8 @@
     "enabled": false,
     "edit_debounce_ms": 700,
     "show_background": true,
-    "scroll_debounce_ms": 50,
-    "toggle_on_modifiers_press": { "alt": true }
+    "scroll_debounce_ms": 100,
+    "toggle_on_modifiers_press": { "alt": true, "control": true }
   },
   // "tab_bar": { "show": false },
   "chat_panel": {
