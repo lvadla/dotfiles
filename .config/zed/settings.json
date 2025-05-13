@@ -121,6 +121,8 @@
       }
     },
     "TypeScript": {
+      // "formatter": "language_server",
+      "language_servers": ["!typescript-language-server", "vtsls"],
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
@@ -168,9 +170,6 @@
     },
     "eslint": {
       "settings": {
-        "problems": {
-          "shortenToSingleLine": true
-        },
         "rulesCustomizations": [
           { "rule": "prettier/prettier", "severity": "off" }
         ]
