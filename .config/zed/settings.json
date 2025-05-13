@@ -134,7 +134,7 @@
   "preview_tabs": {
     "enable_preview_from_code_navigation": false,
     "enable_preview_from_file_finder": false,
-    "enabled": true
+    "enabled": false
   },
   "redact_private_values": true,
   "restore_on_startup": "none",
