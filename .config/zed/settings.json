@@ -46,10 +46,9 @@
     "enabled": false,
     "edit_debounce_ms": 700,
     "show_background": true,
-    "scroll_debounce_ms": 50,
-    "toggle_on_modifiers_press": { "alt": true }
+    "scroll_debounce_ms": 100,
+    "toggle_on_modifiers_press": { "alt": true, "control": true }
   },
-  // "tab_bar": { "show": false },
   "chat_panel": {
     "dock": "right",
     "default_width": 300
@@ -70,7 +69,7 @@
     "dock": "right",
     "default_width": 300
   },
-  "assistant": {
+  "agent": {
     "inline_assistant_model": {
       "provider": "google",
       "model": "gemini-2.5-flash-preview-04-17"
@@ -86,7 +85,7 @@
   "code_actions_on_format": {
     "source.fixAll.biome": false
   },
-  "soft_wrap": "preferred_line_length",
+  "soft_wrap": "none",
   "autosave": "off",
   "auto_update": false,
   "buffer_font_family": "Zed Plex Mono",
@@ -122,6 +121,8 @@
       }
     },
     "TypeScript": {
+      // "formatter": "language_server",
+      "language_servers": ["!typescript-language-server", "vtsls"],
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
@@ -129,11 +130,11 @@
   },
   "line_height": "comfortable",
   "performance.show_in_status_bar": true,
-  "preferred_line_length": 80,
+  "preferred_line_length": 85,
   "preview_tabs": {
     "enable_preview_from_code_navigation": false,
     "enable_preview_from_file_finder": false,
-    "enabled": true
+    "enabled": false
   },
   "redact_private_values": true,
   "restore_on_startup": "none",
@@ -146,11 +147,13 @@
     "selected_symbol": true,
     "selections": true,
     "show": "always",
-    "symbols_selections": true
+    "symbols_selections": true,
+    "selected_text": true
   },
   "show_completion_documentation": true,
   "show_completions_on_input": true,
   "lsp_highlight_debounce": 50,
+  "hide_mouse": "on_typing",
   "show_line_numbers": true,
   "show_whitespaces": "selection",
   "show_wrap_guides": true,
@@ -169,9 +172,6 @@
     },
     "eslint": {
       "settings": {
-        "problems": {
-          "shortenToSingleLine": true
-        },
         "rulesCustomizations": [
           { "rule": "prettier/prettier", "severity": "off" }
         ]
@@ -183,51 +183,39 @@
           "typescript": {
             "inlayHints": {
               "parameterNames": {
-                "enabled": "all",
+                "enabled": "literals",
                 "suppressWhenArgumentMatchesName": true
               },
               "parameterTypes": {
-                "enabled": true,
+                "enabled": false,
                 "suppressWhenTypeMatchesName": true
               },
               "variableTypes": {
-                "enabled": true,
+                "enabled": false,
                 "suppressWhenTypeMatchesName": true
               },
-              "propertyDeclarationTypes": {
-                "enabled": false
-              },
-              "functionLikeReturnTypes": {
-                "enabled": false
-              },
-              "enumMemberValues": {
-                "enabled": true
-              }
+              "propertyDeclarationTypes": { "enabled": false },
+              "functionLikeReturnTypes": { "enabled": false },
+              "enumMemberValues": { "enabled": false }
             }
           },
           "javascript": {
             "inlayHints": {
               "parameterNames": {
-                "enabled": "all",
+                "enabled": "literals",
                 "suppressWhenArgumentMatchesName": true
               },
               "parameterTypes": {
-                "enabled": true,
+                "enabled": false,
                 "suppressWhenTypeMatchesName": true
               },
               "variableTypes": {
-                "enabled": true,
+                "enabled": false,
                 "suppressWhenTypeMatchesName": true
               },
-              "propertyDeclarationTypes": {
-                "enabled": false
-              },
-              "functionLikeReturnTypes": {
-                "enabled": false
-              },
-              "enumMemberValues": {
-                "enabled": true
-              }
+              "propertyDeclarationTypes": { "enabled": false },
+              "functionLikeReturnTypes": { "enabled": false },
+              "enumMemberValues": { "enabled": false }
             }
           }
         }
@@ -238,51 +226,39 @@
         "javascript": {
           "inlayHints": {
             "parameterNames": {
-              "enabled": "all",
+              "enabled": false,
               "suppressWhenArgumentMatchesName": true
             },
             "parameterTypes": {
-              "enabled": true,
+              "enabled": false,
               "suppressWhenTypeMatchesName": true
             },
             "variableTypes": {
-              "enabled": true,
+              "enabled": false,
               "suppressWhenTypeMatchesName": true
             },
-            "propertyDeclarationTypes": {
-              "enabled": false
-            },
-            "functionLikeReturnTypes": {
-              "enabled": false
-            },
-            "enumMemberValues": {
-              "enabled": false
-            }
+            "propertyDeclarationTypes": { "enabled": false },
+            "functionLikeReturnTypes": { "enabled": false },
+            "enumMemberValues": { "enabled": false }
           }
         },
         "typescript": {
           "inlayHints": {
             "parameterNames": {
-              "enabled": "all",
+              "enabled": false,
               "suppressWhenArgumentMatchesName": true
             },
             "parameterTypes": {
-              "enabled": true,
+              "enabled": false,
               "suppressWhenTypeMatchesName": true
             },
             "variableTypes": {
-              "enabled": true,
+              "enabled": false,
               "suppressWhenTypeMatchesName": true
             },
-            "propertyDeclarationTypes": {
-              "enabled": false
-            },
-            "functionLikeReturnTypes": {
-              "enabled": false
-            },
-            "enumMemberValues": {
-              "enabled": false
-            }
+            "propertyDeclarationTypes": { "enabled": false },
+            "functionLikeReturnTypes": { "enabled": false },
+            "enumMemberValues": { "enabled": false }
           }
         }
       }
@@ -295,7 +271,7 @@
     "font_family": "Maple Mono NF",
     "font_size": 11,
     "scrollbar": {
-      "show": null
+      "show": "never"
     },
     "toolbar": {
       "breadcrumbs": true

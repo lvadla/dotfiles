@@ -204,7 +204,7 @@ symbol = " "
 
 [nodejs]
 symbol = " "
-version_format = "v${major}.${minor}"
+version_format = "v${major}"
 not_capable_style = "bold red"
 style = "040 bold"
 format = '[\($symbol($version)\)]($style) '

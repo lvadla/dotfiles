@@ -5,6 +5,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 alias cat="bat"
 alias ls="eza --group-directories-first"
 alias ll="eza --group-directories-first -lah"
+alias helix="hx"
 
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -40,5 +41,5 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 if [[ $(uname) == "Darwin" ]]; then
-defaults write dev.warp.Warp-Stable ApplePressAndHoldEnabled -bool false
+	defaults write dev.warp.Warp-Stable ApplePressAndHoldEnabled -bool false
 fi

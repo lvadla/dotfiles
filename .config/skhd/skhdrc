@@ -9,10 +9,9 @@
 
 ##########################################################################
 
-# Apple Internal Keyboard remap - Spotlight -> Raycast
-0xB1 : skhd -k "cmd - space"
-# Apple Internal Keyboard remap - Dictation -> Mutekey
-0xB0 : skhd -k "f15"
+# KeyRemapping.plist remaps internal Spotlight key -> F20
+# skhd then remaps F20 -> Raycast
+0x5A : skhd -k "cmd - space"
 
 # focus window
 alt - h : yabai -m window --focus west
