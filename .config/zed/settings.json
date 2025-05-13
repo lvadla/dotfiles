@@ -85,7 +85,7 @@
   "code_actions_on_format": {
     "source.fixAll.biome": false
   },
-  "soft_wrap": "preferred_line_length",
+  "soft_wrap": "none",
   "autosave": "off",
   "auto_update": false,
   "buffer_font_family": "Zed Plex Mono",
@@ -128,7 +128,7 @@
   },
   "line_height": "comfortable",
   "performance.show_in_status_bar": true,
-  "preferred_line_length": 80,
+  "preferred_line_length": 85,
   "preview_tabs": {
     "enable_preview_from_code_navigation": false,
     "enable_preview_from_file_finder": false,
