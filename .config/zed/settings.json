@@ -153,6 +153,7 @@
   "show_completion_documentation": true,
   "show_completions_on_input": true,
   "lsp_highlight_debounce": 50,
+  "hide_mouse": "on_typing",
   "show_line_numbers": true,
   "show_whitespaces": "selection",
   "show_wrap_guides": true,
