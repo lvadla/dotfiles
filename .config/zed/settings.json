@@ -147,7 +147,8 @@
     "selected_symbol": true,
     "selections": true,
     "show": "always",
-    "symbols_selections": true
+    "symbols_selections": true,
+    "selected_text": true
   },
   "show_completion_documentation": true,
   "show_completions_on_input": true,
@@ -269,7 +270,7 @@
     "font_family": "Maple Mono NF",
     "font_size": 11,
     "scrollbar": {
-      "show": null
+      "show": "never"
     },
     "toolbar": {
       "breadcrumbs": true
