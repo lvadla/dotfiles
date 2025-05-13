@@ -49,7 +49,6 @@
     "scroll_debounce_ms": 100,
     "toggle_on_modifiers_press": { "alt": true, "control": true }
   },
-  // "tab_bar": { "show": false },
   "chat_panel": {
     "dock": "right",
     "default_width": 300
@@ -70,7 +69,7 @@
     "dock": "right",
     "default_width": 300
   },
-  "assistant": {
+  "agent": {
     "inline_assistant_model": {
       "provider": "google",
       "model": "gemini-2.5-flash-preview-04-17"
