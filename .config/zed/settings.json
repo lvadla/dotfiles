@@ -12,6 +12,9 @@
       }
     }
   },
+  "file_finder": {
+    "modal_max_width": "medium"
+  },
   "file_scan_exclusions": [
     "**/.git",
     "**/.DS_Store",
@@ -264,12 +267,20 @@
       }
     }
   },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "errors"
+  },
   "terminal": {
     "dock": "bottom",
     "blinking": "on",
     "copy_on_select": false,
     "font_family": "Maple Mono NF",
     "font_size": 11,
+    "env": {
+      "EDITOR": "zed --wait"
+    },
     "scrollbar": {
       "show": "never"
     },
