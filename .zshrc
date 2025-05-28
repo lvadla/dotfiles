@@ -5,7 +5,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 alias cat="bat"
 alias ls="eza --group-directories-first"
 alias ll="eza --group-directories-first -lah"
-alias helix="hx"
+if [[ $(uname) == "Darwin" ]]; then
+  alias helix="hx"
+fi;
 
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -23,18 +25,24 @@ setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a dupl
 setopt SHARE_HISTORY          # Share history between all sessions.
 
 if [[ $(uname) == "Darwin" ]]; then
-    source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 else
-    source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
 
 if [[ $(uname) == "Darwin" ]]; then
 	bindkey "^[[1;3C" forward-word
 	bindkey "^[[1;3D" backward-word
 else
-    bindkey "^[[1;5C" forward-word
-    bindkey "^[[1;5D" backward-word
-    bindkey "^H" backward-kill-word
+  bindkey "^[[1;5C" forward-word
+  bindkey "^[[1;5D" backward-word
+  bindkey "^H" backward-kill-word
 fi
 
 bindkey '^[[A' history-substring-search-up
