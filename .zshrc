@@ -25,18 +25,18 @@ setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a dupl
 setopt SHARE_HISTORY          # Share history between all sessions.
 
 if [[ $(uname) == "Darwin" ]]; then
-    source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 else
-    source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 
 if [[ $(uname) == "Darwin" ]]; then
 	bindkey "^[[1;3C" forward-word
 	bindkey "^[[1;3D" backward-word
 else
-    bindkey "^[[1;5C" forward-word
-    bindkey "^[[1;5D" backward-word
-    bindkey "^H" backward-kill-word
+  bindkey "^[[1;5C" forward-word
+  bindkey "^[[1;5D" backward-word
+  bindkey "^H" backward-kill-word
 fi
 
 bindkey '^[[A' history-substring-search-up
