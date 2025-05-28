@@ -5,7 +5,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 alias cat="bat"
 alias ls="eza --group-directories-first"
 alias ll="eza --group-directories-first -lah"
-alias helix="hx"
+if [[ $(uname) == "Darwin" ]]; then
+  alias helix="hx"
+fi;
 
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
