@@ -32,6 +32,10 @@ else
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+
 if [[ $(uname) == "Darwin" ]]; then
 	bindkey "^[[1;3C" forward-word
 	bindkey "^[[1;3D" backward-word
