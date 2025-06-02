@@ -153,6 +153,12 @@
     "symbols_selections": true,
     "selected_text": true
   },
+  "minimap": {
+    "current_line_highlight": "all",
+    "show": "always",
+    "thumb": "always",
+    "thumb_border": "none"
+  },
   "show_completion_documentation": true,
   "show_completions_on_input": true,
   "lsp_highlight_debounce": 50,
