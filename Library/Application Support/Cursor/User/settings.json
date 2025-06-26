@@ -1,5 +1,4 @@
 {
-  "cursor.cmdk.useThemedDiffBackground": true,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "editor.accessibilitySupport": "off",
@@ -126,11 +125,30 @@
   "workbench.preferredLightColorTheme": "GitHub Light",
   "workbench.sideBar.location": "right",
   "cSpell.userWords": [
-    "Cognite",
+    "axiomhq",
+    "codegen",
+    "cognite",
     "cytoscape",
+    "dagre",
+    "dagrejs",
+    "fcose",
+    "kysely",
+    "layercake",
+    "layerchart",
+    "maplibre",
+    "mdsvex",
+    "msal",
     "omny",
     "omnysec",
+    "paneforge",
     "Pilcrow",
-    "publint"
+    "publint",
+    "sandboxjs",
+    "shiki",
+    "sonner",
+    "sqlocal",
+    "supabase",
+    "vaul",
+    "xyflow"
   ]
 }
