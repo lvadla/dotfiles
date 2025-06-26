@@ -81,13 +81,13 @@
     "default_width": 465,
     "dock": "left",
     "default_model": {
-      "model": "gemini-2.5-pro-preview-03-25",
+      "model": "gemini-2.5-pro",
       "provider": "google"
     },
     "version": "2"
   },
   "code_actions_on_format": {
-    "source.fixAll.biome": false
+    "source.fixAll.biome": true
   },
   "soft_wrap": "none",
   "autosave": "off",
@@ -183,7 +183,7 @@
     "eslint": {
       "settings": {
         "rulesCustomizations": [
-          { "rule": "prettier/prettier", "severity": "off" }
+          { "rule": "prettier/prettier", "severity": "error" }
         ]
       }
     },
