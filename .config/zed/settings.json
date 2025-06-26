@@ -12,6 +12,9 @@
       }
     }
   },
+  "file_finder": {
+    "modal_max_width": "medium"
+  },
   "file_scan_exclusions": [
     "**/.git",
     "**/.DS_Store",
@@ -70,6 +73,7 @@
     "default_width": 300
   },
   "agent": {
+    "default_profile": "ask",
     "inline_assistant_model": {
       "provider": "google",
       "model": "gemini-2.5-flash-preview-04-17"
@@ -149,6 +153,12 @@
     "show": "always",
     "symbols_selections": true,
     "selected_text": true
+  },
+  "minimap": {
+    "current_line_highlight": "all",
+    "show": "always",
+    "thumb": "always",
+    "thumb_border": "none"
   },
   "show_completion_documentation": true,
   "show_completions_on_input": true,
@@ -264,12 +274,20 @@
       }
     }
   },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "errors"
+  },
   "terminal": {
     "dock": "bottom",
     "blinking": "on",
     "copy_on_select": false,
     "font_family": "Maple Mono NF",
     "font_size": 11,
+    "env": {
+      "EDITOR": "zed --wait"
+    },
     "scrollbar": {
       "show": "never"
     },

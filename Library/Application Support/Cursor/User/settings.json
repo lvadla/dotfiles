@@ -124,5 +124,13 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.preferredDarkColorTheme": "GitHub Dark",
   "workbench.preferredLightColorTheme": "GitHub Light",
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "cSpell.userWords": [
+    "Cognite",
+    "cytoscape",
+    "omny",
+    "omnysec",
+    "Pilcrow",
+    "publint"
+  ]
 }
