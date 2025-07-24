@@ -5,24 +5,24 @@ export PYENV_ROOT="$HOME/.pyenv"
 alias cat="bat"
 alias ls="eza --group-directories-first"
 alias ll="eza --group-directories-first -lah"
-if [[ $(uname) == "Darwin" ]]; then
-  alias helix="hx"
-fi;
 
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(starship init zsh)"
 
 HOMEBREW_NO_INSTALL_UPGRADE=1
+HISTORY_IGNORE="(ls|cd|pwd|exit)*"
 HISTFILE=$HOME/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000000
+SAVEHIST=1000000
 setopt INC_APPEND_HISTORY     # Immediately append to history file.
 setopt EXTENDED_HISTORY       # Record timestamp in history.
 setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
 setopt HIST_IGNORE_DUPS       # Dont record an entry that was just recorded again.
+setopt HIST_IGNORE_SPACE      # Do not record an event starting with a space.
 setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate.
 setopt SHARE_HISTORY          # Share history between all sessions.
+setopt HIST_REDUCE_BLANKS     # Remove superfluous blanks from each command line being added to the history.
 
 if [[ $(uname) == "Darwin" ]]; then
   source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -32,6 +32,14 @@ else
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' file-patterns '%p:globbed-files' '*(-/):directories'
+zstyle ':completion:*' completer _complete _correct _approximate
+zstyle ':completion:*:correct:*' max-errors 2
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=*' 'l:|=*'
+zstyle ':completion:*' menu select
+fpath=(~/.zsh $fpath)
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
