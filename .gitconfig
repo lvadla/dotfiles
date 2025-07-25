@@ -10,7 +10,7 @@
 	required = true
 
 [core]
-    pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 && echo dark-mode || echo light-mode)"
+    pager = delta --paging=never --line-numbers --hyperlinks --features "$(defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 && echo dark-mode || echo light-mode)"
 	editor = hx
 
 [interactive]
@@ -31,7 +31,8 @@
     conflictstyle = diff3
 
 [diff]
-    colorMoved = default
+    colorMoved = zebra
+    external = delta
 
 [pull]
 	rebase = true
@@ -41,12 +42,3 @@
 
 [remote]
 	pushDefault = origin
-
-[gpg]
-	format = ssh
-
-[user]
-	signingkey = ~/.ssh/id_ed25519_sk.pub
-
-[commit]
-	gpgsign = true
