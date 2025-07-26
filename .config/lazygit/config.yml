@@ -184,7 +184,7 @@ git:
     # diff-so-fancy
     # delta --dark --paging=never
     # ydiff -p cat -s --wrap --width={{columnWidth}}
-    pager: delta --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}" --features "$(defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 && echo dark-mode || echo light-mode)"
+    pager: delta --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}" --features "$((defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 || grep -q '^LookAndFeelPackage=.*[dD]ark' ~/.config/kdeglobals) && echo dark-mode || echo light-mode)"
     # If true, Lazygit will use whatever pager is specified in `$GIT_PAGER`, `$PAGER`, or your *git config*. If the pager ends with something like ` | less` we will strip that part out, because less doesn't play nice with our rendering approach. If the custom pager uses less under the hood, that will also break rendering (hence the `--paging=never` flag for the `delta` pager).
     useConfig: false
     # e.g. 'difft --color=always'
@@ -208,7 +208,6 @@ git:
     squashMergeMessage: Squash merge {{selectedRef}} into {{currentBranch}}
   # list of branches that are considered 'main' branches, used when displaying commits
   mainBranches:
-    - master
     - main
   # Prefix to use when skipping hooks. E.g. if set to 'WIP', then pre-commit hooks will be skipped when the commit message starts with 'WIP'
   skipHookPrefix: WIP
@@ -264,7 +263,7 @@ update:
 refresher:
   # File/submodule refresh interval in seconds.
   # Auto-refresh can be disabled via option 'git.autoRefresh'.
-  refreshInterval: 10
+  refreshInterval: 5
   # Re-fetch interval in seconds.
   # Auto-fetch can be disabled via option 'git.autoFetch'.
   fetchInterval: 60
@@ -274,46 +273,8 @@ confirmOnQuit: false
 quitOnTopLevelReturn: false
 # Config relating to things outside of Lazygit like how files are opened, copying to clipboard, etc
 os:
-  # Command for editing a file. Should contain "{{filename}}".
-  edit: ""
-  # Command for editing a file at a given line number. Should contain
-  # "{{filename}}", and may optionally contain "{{line}}".
-  editAtLine: ""
-  # Same as EditAtLine, except that the command needs to wait until the
-  # window is closed.
-  editAtLineAndWait: ""
   # Whether lazygit suspends until an edit process returns
   editInTerminal: false
-  # For opening a directory in an editor
-  openDirInEditor: ""
-  # A built-in preset that sets all of the above settings. Supported presets
-  # are defined in the getPreset function in editor_presets.go.
-  editPreset: ""
-  # Command for opening a file, as if the file is double-clicked. Should
-  # contain "{{filename}}", but doesn't support "{{line}}".
-  open: ""
-  # Command for opening a link. Should contain "{{link}}".
-  openLink: ""
-  # EditCommand is the command for editing a file.
-  # Deprecated: use Edit instead. Note that semantics are different:
-  # EditCommand is just the command itself, whereas Edit contains a
-  # "{{filename}}" variable.
-  editCommand: ""
-  # EditCommandTemplate is the command template for editing a file
-  # Deprecated: use EditAtLine instead.
-  editCommandTemplate: ""
-  # OpenCommand is the command for opening a file
-  # Deprecated: use Open instead.
-  openCommand: ""
-  # OpenLinkCommand is the command for opening a link
-  # Deprecated: use OpenLink instead.
-  openLinkCommand: ""
-  # CopyToClipboardCmd is the command for copying to clipboard.
-  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#custom-command-for-copying-to-and-pasting-from-clipboard
-  copyToClipboardCmd: ""
-  # ReadFromClipboardCmd is the command for reading the clipboard.
-  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#custom-command-for-copying-to-and-pasting-from-clipboard
-  readFromClipboardCmd: ""
 # If true, don't display introductory popups upon opening Lazygit.
 disableStartupPopups: false
 # What to do when opening Lazygit outside of a git repo.
