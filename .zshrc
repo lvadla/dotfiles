@@ -51,7 +51,12 @@ if [[ $(uname) == "Darwin" ]]; then
 else
   bindkey "^[[1;5C" forward-word
   bindkey "^[[1;5D" backward-word
-  bindkey "^H" backward-kill-word
+  backward-kill-word-break() {
+    local WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+    zle backward-kill-word
+  }
+  zle -N backward-kill-word-break
+  bindkey "^H" backward-kill-word-break
 fi
 
 bindkey '^[[A' history-substring-search-up
