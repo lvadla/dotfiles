@@ -125,16 +125,16 @@
 		"mode": "system"
 	},
 	"experimental.theme_overrides": {
-		"border": "#C9C9CA",
-		"panel.background": "#EBEBEC",
-		"status_bar.background": "#EBEBEC",
-		"syntax": {
-			// "keyword": { "color": "#ec6262" }
-			// "comment": { "color": "#999999" }
-		},
-		"tab_bar.background": "#EBEBEC",
-		"tab.inactive_background": "#EBEBEC",
-		"title_bar.background": "#DCDCDD"
+		// "border": "#C9C9CA",
+		// "panel.background": "#EBEBEC",
+		// "status_bar.background": "#EBEBEC",
+		// "syntax": {
+		// "keyword": { "color": "#ec6262" }
+		// "comment": { "color": "#999999" }
+		// }
+		// "tab_bar.background": "#EBEBEC",
+		// "tab.inactive_background": "#EBEBEC",
+		// "title_bar.background": "#DCDCDD"
 	},
 	"unnecessary_code_fade": 0.5,
 	"wrap_guides": [80]
