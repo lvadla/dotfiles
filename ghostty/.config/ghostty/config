@@ -1,4 +1,4 @@
-theme = light:GruvboxLightHard,dark:GruvboxDarkHard
+theme = GruvboxDarkHard
 font-family = "Maple Mono NF"
 font-feature = zero ss01 cv11
 font-size = 12
@@ -16,7 +16,6 @@ window-padding-balance = true
 clipboard-read = allow
 clipboard-write = allow
 clipboard-trim-trailing-spaces = true
-copy-on-select = false
 
 macos-titlebar-style = tabs
 macos-icon = custom-style
