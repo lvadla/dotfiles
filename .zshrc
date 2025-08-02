@@ -1,17 +1,18 @@
-export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@22/bin:$HOME/.local/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export PYENV_ROOT="$HOME/.pyenv"
 
 alias cat="bat"
 alias ls="eza --group-directories-first"
 alias ll="eza --group-directories-first -lah"
+alias zed="zeditor"
 
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(starship init zsh)"
 
 HOMEBREW_NO_INSTALL_UPGRADE=1
-HISTORY_IGNORE="(ls|cd|pwd|exit)*"
+HISTORY_IGNORE="(ls|pwd|exit)*"
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
