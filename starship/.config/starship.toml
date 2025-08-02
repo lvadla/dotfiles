@@ -97,7 +97,7 @@ disabled = true
 
 [hostname]
 ssh_only = false
-format = '[$ssh_symbol](bold blue)[<$hostname> ](bold white)'
+format = '[$ssh_symbol](blue)[<$hostname> ](white)'
 trim_at = '.'
 disabled = false
 
@@ -107,7 +107,7 @@ error_symbol = '[✖ ](red)'
 
 [directory]
 read_only = ""
-style ="yellow bold"
+style ="yellow"
 format ="[$read_only](244)[$path ]($style)"
 truncate_to_repo = true
 truncation_length = 2
@@ -130,7 +130,7 @@ discharging_symbol = ''
 [gcloud]
 symbol = "️ "
 format = "(as [$symbol$account(@$domain)]($style) )"
-style = "bold blue"
+style = "blue"
 
 [gcloud.region_aliases]
 us-central1 = 'uc1'
@@ -206,7 +206,7 @@ symbol = " "
 symbol = " "
 version_format = "v${major}"
 not_capable_style = "bold red"
-style = "040 bold"
+style = "040"
 format = '[\($symbol($version)\)]($style) '
 
 [os.symbols]
@@ -250,12 +250,12 @@ Windows = " "
 [package]
 symbol = "📦 "
 disabled = false
-style = "6 bold"
+style = "6"
 format = "[$symbol$version]($style) "
 
 [localip]
 ssh_only = true
-format = '[{$localipv4}](bold red) '
+format = '[{$localipv4}](red) '
 disabled = false
 
 
@@ -274,7 +274,7 @@ symbol = " "
 [rust]
 symbol = " "
 version_format = "v${major}.${minor}"
-style = "202 bold"
+style = "202"
 format = '[\($symbol($version)\)]($style) '
 
 [scala]
