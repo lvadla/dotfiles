@@ -1,0 +1,298 @@
+{
+	"layer": "bottom",
+	"position": "left",
+	"margin-left": 2,
+	"spacing": 0,
+	"width": 30,
+	"reload_style_on_change": true,
+	"modules-left": [
+		"hyprland/workspaces",
+		"memory",
+		"disk",
+		"cpu",
+		"custom/gpu",
+		"temperature",
+		"custom/brightness",
+	],
+
+	"modules-center": [],
+
+	"modules-right": [
+		"custom/weather",
+		"bluetooth",
+		"custom/updates",
+		"custom/steam",
+		"custom/spotify",
+		"custom/uptime",
+		"network",
+		"privacy",
+		"wireplumber",
+		"wireplumber#source",
+		"custom/power",
+		"clock#time",
+		"clock#date",
+	],
+	"hyprland/workspaces": {
+		"format": "<sub> {name}</sub>\n{windows}",
+		"format-icons": {
+			"active": "",
+			"default": "",
+		},
+		"format-window-separator": "\n",
+		"window-rewrite-default": "",
+		"window-rewrite": {
+			"class<.*ghostty.*>": "",
+			"title<.*youtube.*>": "",
+			"class<zen>": "",
+			"class<zen> title<.*Picture-in-Picture.*>": "󰹙",
+			"class<zen> title<.*github.*>": "",
+			"foot": "",
+			"zed": "󰨞",
+			"class<steam> title<>": "",
+			"class<steam> title<Steam>": "",
+		},
+	},
+
+	"bluetooth": {
+		"format": "󰂲",
+		"format-on": "{icon}",
+		"format-off": "{icon}",
+		"format-connected": "{icon}",
+		"format-icons": {
+			"on": "󰂯",
+			"off": "󰂲",
+			"connected": "󰂱",
+		},
+		"on-click": "systemsettings kcm_bluetooth",
+		"tooltip": true,
+		"tooltip-format": "{num_connections} devices connected to {controller_alias} ({controller_address})",
+		"tooltip-format-connected": "{num_connections} device connected to {controller_alias} ({controller_address})\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias} ({device_battery_percentage}%)\t{device_address}",
+	},
+
+	"custom/music": {
+		"format": "  {}",
+		"escape": true,
+		"interval": 5,
+		"tooltip": false,
+		"exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
+		"on-click": "playerctl play-pause",
+		"max-length": 50,
+	},
+
+	"clock#date": {
+		"timezone": "Europe/Oslo",
+		"format": "{:%a\n%d}",
+		"interval": 60,
+		"tooltip": true,
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"format": {
+				"months": "<span color='#ffead3'><b>{}</b></span>",
+				"today": "<span color='#ff6699'><b>{}</b></span>",
+			},
+		},
+	},
+
+	"clock#time": {
+		"timezone": "Europe/Oslo",
+		"format": "{:%H\n%M}",
+		"interval": 60,
+		"tooltip": false,
+	},
+
+	"network": {
+		"format": "{icon}",
+		"interface": "eno1",
+		"format-icons": {
+			"disabled": ["󰈀"],
+			"disconnected": ["󰤮"],
+			"ethernet": ["󰈀"],
+			"linked": ["󰈀"],
+			"wifi": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		},
+		"tooltip-format-disabled": "Disabled!",
+		"tooltip-format-disconnected": "Disconnected!",
+		"tooltip-format-ethernet": "{ifname} at {ipaddr} ",
+		"tooltip-format-wifi": "{essid} {frequency} ({signalStrength}%)",
+		"on-click": "systemsettings kcm_networkmanagement",
+	},
+
+	"cpu": {
+		"interval": 5,
+		"format": "   {usage:>2}%",
+		"tooltip": false,
+	},
+
+	"disk": {
+		"interval": 30,
+		"format": "   {percentage_used}%",
+		"path": "/",
+	},
+
+	"memory": {
+		"interval": 15,
+		"format": "   {percentage}%",
+		"tooltip": false,
+	},
+
+	"custom/gpu": {
+		"interval": 5,
+		"exec": "cat /sys/class/hwmon/hwmon7/device/gpu_busy_percent",
+		"format": "󰘚   {}%",
+		"return-type": "",
+		"tooltip": false,
+	},
+
+	"temperature": {
+		"interval": 2,
+		"thermal-zone": 2,
+		"hwmon-path": "/sys/class/hwmon/hwmon8/temp1_input",
+		"critical-threshold": 80,
+		"format": "  {temperatureC}C",
+	},
+
+	"custom/brightness": {
+		"format": "<span size='11000'>{icon}</span>   {percentage}%",
+		"format-icons": ["\uDB80\uDCDE", "\uDB80\uDCDF", "\uDB80\uDCE0"],
+		"return-type": "json",
+		"exec": "CACHE_FILE='/tmp/waybar-brightness-buses'; CACHE_MAX_AGE=300; if [[ ! -f \"$CACHE_FILE\" ]] || [[ $(($(date +%s) - $(stat -c %Y \"$CACHE_FILE\"))) -gt $CACHE_MAX_AGE ]]; then ddcutil detect --brief 2>/dev/null | grep -B1 -A1 'card1-DP-3\\|card0-DP-4' | grep 'I2C bus' | grep -o '[0-9]\\+$' > \"$CACHE_FILE\"; fi; total=0; count=0; while read -r bus_num; do if [[ -n \"$bus_num\" ]]; then brightness=$(ddcutil --bus \"$bus_num\" getvcp 10 2>/dev/null | grep -oP 'current value =\\s*\\K[0-9]+' || echo '0'); if [[ \"$brightness\" != '0' ]]; then total=$((total + brightness)); count=$((count + 1)); fi; fi; done < \"$CACHE_FILE\"; if [[ $count -gt 0 ]]; then avg=$((total / count)); else avg=50; fi; echo '{\"percentage\":'$avg'}';",
+		"on-scroll-up": "$HOME/.config/waybar/scripts/brightness-up.sh",
+		"on-scroll-down": "$HOME/.config/waybar/scripts/brightness-down.sh",
+		"on-click": "$HOME/.config/waybar/scripts/brightness-set.sh 10",
+		"on-click-middle": "$HOME/.config/waybar/scripts/brightness-set.sh 50",
+		"on-click-right": "$HOME/.config/waybar/scripts/brightness-set.sh 90",
+		"signal": 5,
+		"tooltip": false,
+		"interval": 10,
+	},
+
+	"custom/uptime": {
+		"format": "",
+		"tooltip": true,
+		"tooltip-format": "Uptime {}",
+		"interval": 60,
+		"exec": "$HOME/.config/waybar/scripts/uptime.sh",
+	},
+
+	"custom/updates": {
+		"format": "{icon}",
+		"return-type": "json",
+		"format-icons": {
+			"has-updates": "󰣇",
+			"updated": "󰣇",
+			// "updated": "󰂪",
+		},
+		"exec-if": "which waybar-module-pacman-updates",
+		"exec": "waybar-module-pacman-updates --interval-seconds 15 --network-interval-seconds 120 --tooltip-align-columns --no-zero-output",
+		"on-click": "nohup ghostty -e paru",
+	},
+
+	"custom/steam": {
+		"format": "",
+		"tooltip": true,
+		"tooltip-format": "Launch Steam",
+		"on-click": "nohup steam >/dev/null 2>&1 &",
+	},
+
+	"custom/spotify": {
+		"exec": "python $HOME/.config/waybar/scripts/mediaplayer.py",
+		"format": "",
+		"tooltip": true,
+		"tooltip-format": "{}",
+		"return-type": "json",
+		"on-click": "playerctl play-pause",
+		"on-click-right": "playerctl next",
+	},
+
+	"privacy": {
+		"icon-spacing": 4,
+		"icon-size": 18,
+		"transition-duration": 250,
+		"modules": [
+			{
+				"type": "screenshare",
+				"tooltip": true,
+			},
+			{
+				"type": "audio-out",
+				"tooltip": true,
+			},
+			{
+				"type": "audio-in",
+				"tooltip": true,
+			},
+		],
+		"ignore-monitor": true,
+		"ignore": [
+			{
+				"type": "audio-in",
+				"name": "cava",
+			},
+		],
+	},
+
+	"pulseaudio": {
+		"format": "{icon}",
+		"format-muted": "",
+		"format-icons": {
+			"default": ["", "", ""],
+		},
+		"on-click": "pavucontrol",
+		"tooltip": true,
+		"tooltip-format": "{desc} ({volume}%)",
+		"scroll-step": 2,
+	},
+
+	"wireplumber": {
+		"format": "{icon}",
+		"format-muted": "",
+		"format-icons": ["", "", ""],
+		"on-click": "pavucontrol",
+		"tooltip": true,
+		"tooltip-format": "{node_name} ({volume}%)",
+		"scroll-step": 5,
+		"max-volume": 100,
+		"restart-interval": 10,
+	},
+
+	"wireplumber#source": {
+		"node-type": "Audio/Source",
+		"format": "󰍬",
+		"format-muted": "󰍭",
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+		"tooltip": true,
+		"tooltip-format": "{node_name} ({volume}%)",
+		"scroll-step": 0,
+		"max-volume": 100,
+		"restart-interval": 10,
+	},
+
+	"custom/weather": {
+		"exec": "${HOME}/.config/waybar/scripts/get-weather.sh Oslo+Norway",
+		"return-type": "json",
+		"format": "{}",
+		"tooltip": true,
+		"interval": 3600,
+	},
+
+	"custom/media": {
+		"format": "{icon} {}",
+		"escape": true,
+		"return-type": "json",
+		"max-length": 40,
+		"on-click": "playerctl play-pause",
+		"on-click-right": "playerctl stop",
+		"smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+		"on-scroll-up": "playerctl next",
+		"on-scroll-down": "playerctl previous",
+		"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+	},
+
+	"custom/power": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "nwg-bar",
+	},
+}
