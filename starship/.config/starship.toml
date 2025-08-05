@@ -91,6 +91,7 @@ format = "took [$duration](fg) "
 show_notifications = true
 min_time_to_notify = 60000
 min_time = 5000
+disabled = true
 
 [username]
 disabled = true
