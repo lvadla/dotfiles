@@ -43,6 +43,7 @@
 		"window-rewrite": {
 			"class<.*ghostty.*>": "",
 			"title<.*youtube.*>": "",
+			"class<chromium>": "󰊯",
 			"class<zen>": "",
 			"class<zen> title<.*Picture-in-Picture.*>": "󰹙",
 			"class<zen> title<.*github.*>": "",
