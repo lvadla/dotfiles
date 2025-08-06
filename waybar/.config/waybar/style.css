@@ -136,6 +136,10 @@
 	color: #2196f3;
 }
 
+#custom-spotify.playing {
+	color: #1db954;
+}
+
 tooltip {
 	background-color: #1a1b26;
 	color: #dddddd;
