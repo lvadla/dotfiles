@@ -247,6 +247,7 @@
 	},
 
 	"wireplumber": {
+		"node-type": "Audio/Sink",
 		"format": "{icon}",
 		"format-muted": "",
 		"format-icons": ["", "", ""],
@@ -254,8 +255,6 @@
 		"tooltip": true,
 		"tooltip-format": "{node_name} ({volume}%)",
 		"scroll-step": 5,
-		"max-volume": 100,
-		"restart-interval": 10,
 	},
 
 	"wireplumber#source": {
@@ -266,8 +265,6 @@
 		"tooltip": true,
 		"tooltip-format": "{node_name} ({volume}%)",
 		"scroll-step": 0,
-		"max-volume": 100,
-		"restart-interval": 10,
 	},
 
 	"custom/weather": {
