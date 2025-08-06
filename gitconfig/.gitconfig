@@ -1,6 +1,6 @@
-[includeIf "gitdir:~/Dev/github/"]
+[includeIf "gitdir:~/dev/github/"]
   path = ~/.gitconfig-github
-[includeIf "gitdir:~/Dev/gitlab/"]
+[includeIf "gitdir:~/dev/gitlab/"]
   path = ~/.gitconfig-gitlab
 
 [filter "lfs"]
@@ -41,3 +41,6 @@
 
 [remote]
 	pushDefault = origin
+
+[init]
+	defaultBranch = main

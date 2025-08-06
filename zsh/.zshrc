@@ -1,6 +1,7 @@
 export PATH="/opt/homebrew/opt/node@22/bin:$HOME/.local/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export PYENV_ROOT="$HOME/.pyenv"
+export HYPRSHOT_DIR="$HOME/pictures/screenshots"
 
 alias cat="bat"
 alias ls="eza --group-directories-first"
@@ -35,7 +36,7 @@ fi
 
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 zstyle ':completion:*' accept-exact '*(N)'
-zstyle ':completion:*' file-patterns '%p:globbed-files' '*(-/):directories'
+zstyle ':completion:*' file-patterns '%p(D):globbed-files *(D-/):directories' '*:all-files'
 zstyle ':completion:*' completer _complete _correct _approximate
 zstyle ':completion:*:correct:*' max-errors 2
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=*' 'l:|=*'
