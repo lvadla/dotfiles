@@ -104,7 +104,6 @@
 
 	"network": {
 		"format": "{icon}",
-		"interface": "eno1",
 		"format-icons": {
 			"disabled": ["󰈀"],
 			"disconnected": ["󰤮"],
@@ -112,9 +111,9 @@
 			"linked": ["󰈀"],
 			"wifi": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 		},
-		"tooltip-format-disabled": "Disabled!",
-		"tooltip-format-disconnected": "Disconnected!",
-		"tooltip-format-ethernet": "{ifname} at {ipaddr} ",
+		"tooltip-format-disabled": "Ethernet or wifi is disabled",
+		"tooltip-format-disconnected": "Network is disconnected",
+		"tooltip-format-ethernet": "{ifname} at {ipaddr}  ",
 		"tooltip-format-wifi": "{essid} {frequency} ({signalStrength}%)",
 		"on-click": "systemsettings kcm_networkmanagement",
 	},
