@@ -19,17 +19,47 @@ def return_truncated_string(string, max_size=30):
 def write_output(text, player):
     logger.info('Writing output')
 
+    # Check if this is Spotify content using multiple methods
+    is_spotify = False
+    
+    # Method 1: Check if native Spotify player
+    if player.props.player_name == 'spotify':
+        is_spotify = True
+    
+    # Method 2: Check xesam:url for spotify.com (web Spotify)
+    if not is_spotify and player.props.metadata:
+        try:
+            if 'xesam:url' in player.props.metadata.keys():
+                url = str(player.props.metadata['xesam:url'])
+                if 'spotify.com' in url.lower():
+                    is_spotify = True
+        except (KeyError, TypeError, AttributeError):
+            pass
+    
+    # Method 3: Check mpris:trackid for spotify identifier
+    if not is_spotify and player.props.metadata:
+        try:
+            if 'mpris:trackid' in player.props.metadata.keys():
+                trackid = str(player.props.metadata['mpris:trackid'])
+                if 'spotify' in trackid.lower():
+                    is_spotify = True
+        except (KeyError, TypeError, AttributeError):
+            pass
+
+    # Create class name based on player and status
+    class_name = 'custom-' + player.props.player_name
+    if is_spotify and player.props.status == 'Playing':
+        class_name = 'playing'
+
     output = {'text': return_truncated_string(text),
-              'class': 'custom-' + player.props.player_name,
+              'class': class_name,
               'alt': player.props.player_name}
 
     sys.stdout.write(json.dumps(output) + '\n')
     sys.stdout.flush()
 
 
-def on_play(player, status, manager):
-    logger.info('Received new playback status')
-    on_metadata(player, player.props.metadata, manager)
+
 
 
 def on_metadata(player, metadata, manager):
@@ -47,10 +77,9 @@ def on_metadata(player, metadata, manager):
     else:
         track_info = player.get_title()
 
-    if player.props.status != 'Playing' and track_info:
-        track_info = ' ' + track_info
 
-    if player.props.status == "Playing":
+
+    if track_info:
         write_output(track_info, player)
 
 
@@ -70,7 +99,7 @@ def on_player_vanished(manager, player):
 def init_player(manager, name):
     logger.debug('Initialize player: {player}'.format(player=name.name))
     player = Playerctl.Player.new_from_name(name)
-    player.connect('playback-status', on_play, manager)
+    player.connect('playback-status', on_metadata, manager)
     player.connect('metadata', on_metadata, manager)
     manager.manage_player(player)
     on_metadata(player, player.props.metadata, manager)
@@ -80,7 +109,6 @@ def signal_handler(sig, frame):
     logger.debug('Received signal to stop, exiting')
     sys.stdout.write('\n')
     sys.stdout.flush()
-    # loop.quit()
     sys.exit(0)
 
 
