@@ -151,6 +151,7 @@
 		"hwmon-path": "/sys/class/hwmon/hwmon8/temp1_input",
 		"critical-threshold": 80,
 		"format": "  {temperatureC}C",
+		"tooltip": false,
 	},
 
 	"custom/brightness": {
