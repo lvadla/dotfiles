@@ -138,8 +138,8 @@
 	},
 
 	"custom/gpu": {
-		"interval": 5,
-		"exec": "cat /sys/class/hwmon/hwmon7/device/gpu_busy_percent",
+		"interval": 2,
+		"exec": "cat /sys/class/drm/card1/device/gpu_busy_percent",
 		"format": "󰘚   {}%",
 		"return-type": "",
 		"tooltip": false,
