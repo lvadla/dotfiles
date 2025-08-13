@@ -28,6 +28,7 @@ setopt HIST_REDUCE_BLANKS     # Remove superfluous blanks from each command line
 
 if [[ $(uname) == "Darwin" ]]; then
   source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 else
   source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
   source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
