@@ -10,11 +10,11 @@
 	required = true
 
 [core]
-	pager = delta --features "$((defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 || grep -q '^LookAndFeelPackage=.*[dD]ark' ~/.config/kdeglobals) && echo dark-mode || echo light-mode)"
+	pager = delta --features "$((defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 || grep -q '^LookAndFeelPackage=.*[dD]ark' ~/.config/kdeglobals 2>/dev/null) && echo dark-mode || echo light-mode)"
 	editor = hx
 
 [interactive]
-	diffFilter = delta --line-numbers --features "$((defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 || grep -q '^LookAndFeelPackage=.*[dD]ark' ~/.config/kdeglobals) && echo dark-mode || echo light-mode)"
+	diffFilter = delta --line-numbers --features "$((defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 || grep -q '^LookAndFeelPackage=.*[dD]ark' ~/.config/kdeglobals 2>/dev/null) && echo dark-mode || echo light-mode)"
 
 [delta]
     navigate = true    # n and N navigation
