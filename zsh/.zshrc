@@ -1,7 +1,11 @@
 export PATH="/opt/homebrew/opt/node@22/bin:$HOME/.local/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_PICTURES_DIR="$HOME/pictures"
 export PYENV_ROOT="$HOME/.pyenv"
-export HYPRSHOT_DIR="$HOME/pictures/screenshots"
+export BROWSER=zen-browser
+export EDITOR=zed
+export SSH_ASKPASS=/usr/bin/ksshaskpass
+export QT_STYLE_OVERRIDE=breeze
 
 alias cat="bat"
 alias ls="eza --group-directories-first"
@@ -88,4 +92,3 @@ function smite() {
             fc -p $HISTFILE $HISTSIZE $SAVEHIST
         done
 }
-
