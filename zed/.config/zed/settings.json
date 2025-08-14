@@ -67,7 +67,10 @@
 		"toggle_on_modifiers_press": { "alt": true, "control": true }
 	},
 	"languages": {
-		"Svelte": { "inlay_hints": { "enabled": false } },
+		"Svelte": {
+			"inlay_hints": { "enabled": false },
+			"language_servers": ["!biome", "..."]
+		},
 		"TypeScript": {
 			"inlay_hints": { "enabled": false },
 			"language_servers": ["vtsls"] // "tsgo"
