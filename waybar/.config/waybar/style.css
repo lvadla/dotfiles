@@ -3,6 +3,8 @@
 		"SF Pro Text", "Inter", "Segoe UI, NotoSans Nerd Font", sans-serif;
 	font-size: 13px;
 	min-height: 0;
+	border: none;
+	border-radius: 0;
 	padding-right: 0px;
 	padding-left: 0px;
 	padding-bottom: 0px;
@@ -17,12 +19,12 @@
 }
 
 /* --- Left Modules (Individual, Fully Rounded Blocks - With Horizontal Spacing & Simple Hover) --- */
-#workspaces,
 #memory,
-#cpu,
 #disk,
+#cpu,
+#custom-gpu,
 #temperature,
-#custom-gpu {
+#custom-brightness {
 	background-color: #1a1b26;
 	padding: 0.3rem 0.7rem;
 	margin: 3px 0px;
@@ -35,36 +37,45 @@
 		color 0.2s ease-in-out;
 }
 
-#workspaces {
-	padding: 2px;
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+	transition: all 0.3s ease;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+	color: white;
+	transition: all 0.3s ease;
+	animation: colored-gradient 10s ease infinite;
 }
 
 #workspaces button {
-	color: #babbf1;
-	border-radius: 5px;
-	/* Workspaces buttons are always rounded */
-	padding: 0.3rem 0.6rem;
-	background: transparent;
-	transition: all 0.2s ease-in-out;
-	border: none;
-	outline: none;
+	all: initial;
+	padding: 0 6px;
+	margin: 0 1.5px;
+	min-width: 9px;
+	background-color: transparent;
+	color: lightgray;
+	transition: all 0.3s ease;
 }
 
-#workspaces button.active {
-	color: #99d1db;
-	background-color: rgba(153, 209, 219, 0.1);
-	box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2);
+#workspaces button.empty {
+	opacity: 0.3;
 }
 
-#workspaces button:hover {
-	background: rgb(41, 42, 53);
+#workspaces button.urgent {
+	background-color: indianred;
+	color: red;
+	transition: all 0.3s ease;
 }
 
 /* --- Right Modules (Single, Seamless Bar ) --- */
 #bluetooth,
 #clock.date,
 #clock.time,
-#custom-brightness,
+#custom-nightlight,
+#custom-audioinput,
 #custom-lock,
 #custom-power,
 #custom-quit,
@@ -93,7 +104,8 @@
 
 #bluetooth:hover,
 #clock.date:hover,
-#clock.time:hover,
+#custom-nightlight:hover,
+#custom-audioinput:hover,
 #custom-brightness:hover,
 #custom-lock:hover,
 #custom-power:hover,
@@ -112,25 +124,16 @@
 	background-color: rgb(41, 42, 53);
 }
 
-.not-power {
-}
-
 #temperature.critical,
+#network.disabled,
 #network.disconnected {
 	color: #e78284;
 }
 
-#wireplumber.source,
-#bluetooth {
-	font-size: 16px;
-	padding: 0.2rem;
-	margin-left: 0;
-}
-
-#wireplumber {
-	/*marg-left: -0.4rem;*/
-}
-
+#network.linked,
+#network.ethernet,
+#network.wifi,
+#custom-steam.running,
 #custom-updates.has-updates,
 #bluetooth.connected {
 	color: #2196f3;
@@ -140,6 +143,7 @@
 	color: #1db954;
 }
 
+/* biome-ignore lint/correctness/noUnknownTypeSelector: waybar module's tooltips */
 tooltip {
 	background-color: #1a1b26;
 	color: #dddddd;
