@@ -1,6 +1,5 @@
 {
 	"agent": {
-		"always_allow_tool_actions": true,
 		"default_model": {
 			"model": "gemini-2.5-pro",
 			"provider": "google"
@@ -82,7 +81,7 @@
 		"eslint": {
 			"settings": {
 				"rulesCustomizations": [
-					{ "rule": "prettier/prettier", "severity": "info" }
+					{ "rule": "prettier/prettier", "severity": "off" }
 				]
 			}
 		},
@@ -142,6 +141,6 @@
 		// "tab.inactive_background": "#EBEBEC",
 		// "title_bar.background": "#DCDCDD"
 	},
-	"unnecessary_code_fade": 0.5,
+	"unnecessary_code_fade": 0.7,
 	"wrap_guides": [80]
 }
