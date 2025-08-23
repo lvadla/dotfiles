@@ -61,18 +61,20 @@
 		"enabled": true,
 		"line_width": 1
 	},
-	"inlay_hints": {
-		"enabled": false,
-		"show_background": true,
-		"toggle_on_modifiers_press": { "alt": true, "control": true }
-	},
+	"inlay_hints": { "show_background": true },
 	"languages": {
 		"Svelte": {
-			"inlay_hints": { "enabled": false },
+			"inlay_hints": {
+				"enabled": false,
+				"toggle_on_modifiers_press": { "alt": true, "control": true }
+			},
 			"language_servers": ["!biome", "..."]
 		},
 		"TypeScript": {
-			"inlay_hints": { "enabled": false },
+			"inlay_hints": {
+				"enabled": false,
+				"toggle_on_modifiers_press": { "alt": true, "control": true }
+			},
 			"language_servers": ["vtsls"] // "tsgo"
 		}
 	},
