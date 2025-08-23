@@ -6,7 +6,7 @@
 			"provider": "google"
 		},
 		"default_profile": "ask",
-		"default_width": 690,
+		"default_width": 600,
 		"inline_assistant_model": {
 			"model": "gemini-2.5-flash",
 			"provider": "google"
@@ -17,8 +17,8 @@
 	"autosave": "off",
 	"buffer_font_family": "Zed Plex Mono",
 	"buffer_line_height": "comfortable",
-	"chat_panel": { "default_width": 300 },
-	"collaboration_panel": { "default_width": 300 },
+	"chat_panel": { "default_width": 250 },
+	"collaboration_panel": { "default_width": 250 },
 	"confirm_quit": true,
 	"context_servers": {
 		"mcp-server-linear": {
@@ -53,7 +53,7 @@
 		"hunk_style": "unstaged_hollow",
 		"inline_blame": { "enabled": false, "show_commit_summary": false }
 	},
-	"git_panel": { "default_width": 690, "dock": "right" },
+	"git_panel": { "default_width": 600, "dock": "right" },
 	"hard_tabs": true,
 	"hide_mouse": "on_typing",
 	"indent_guides": {
@@ -96,9 +96,9 @@
 		}
 	},
 	"lsp_highlight_debounce": 25,
-	"notification_panel": { "default_width": 300, "dock": "left" },
-	"outline_panel": { "default_width": 300 },
-	"project_panel": { "default_width": 300 },
+	"notification_panel": { "default_width": 250, "dock": "left" },
+	"outline_panel": { "default_width": 250 },
+	"project_panel": { "default_width": 250 },
 	"scroll_beyond_last_line": "off",
 	"show_completion_documentation": true,
 	"show_completions_on_input": true,
