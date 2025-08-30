@@ -6,7 +6,7 @@
 	},
 	{
 		"label": "Suspend",
-		"exec": "$(sleep 2; systemctl suspend-then-hibernate) & exec hyprlock --immediate",
+		"exec": "systemctl suspend",
 		"icon": "/usr/share/nwg-bar/images/system-suspend.svg"
 	},
 	{
