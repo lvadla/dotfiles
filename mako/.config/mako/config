@@ -1,0 +1,37 @@
+sort=-time
+layer=overlay
+margin=20
+background-color=#2e3440
+width=500
+height=110
+border-size=2
+border-color=#88c0d0
+border-radius=4
+padding=8
+max-icon-size=48
+default-timeout=5000
+ignore-timeout=1
+font=Noto Sans 13
+text-color=#eceff4
+group-by=app-name
+max-visible=10
+actions=1
+progress-color=#5e81ac
+on-notify=exec mpv --no-video --volume=200 /usr/share/sounds/ocean/stereo/bell-window-system.oga
+
+[urgency=low]
+border-color=#cccccc
+on-notify=exec mpv --no-video --volume=200 /usr/share/sounds/ocean/stereo/dialog-information.oga
+
+[urgency=normal]
+border-color=#33ccff
+on-notify=exec mpv --no-video --volume=250 /usr/share/sounds/ocean/stereo/bell-window-system.oga
+
+[urgency=high]
+border-color=#bf616a
+default-timeout=0
+on-notify=exec mpv --no-video --volume=300 /usr/share/sounds/ocean/stereo/dialog-warning.oga
+
+[category=mpd]
+default-timeout=2000
+group-by=category
