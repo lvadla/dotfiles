@@ -10,7 +10,7 @@ adjust-underline-position = 3
 adjust-underline-thickness = 2
 
 mouse-scroll-multiplier = 2.0
-mouse-hide-while-typing = true
+mouse-hide-while-typing = false
 focus-follows-mouse = true
 
 shell-integration-features = no-cursor
