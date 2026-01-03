@@ -1,0 +1,98 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Glob(**)",
+      "Grep(**)",
+      "LS(**)",
+      "TodoRead",
+      "TodoWrite(**)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git --no-pager diff:*)",
+      "Bash(git show:*)",
+      "Bash(git blame:*)",
+      "Bash(git config --get:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(less:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(grep:*)",
+      "Bash(tree:*)",
+      "Bash(pwd:*)",
+      "Bash(wc:*)",
+      "Bash(diff:*)",
+      "Bash(cut:*)",
+      "Bash(sort:*)",
+      "Bash(uniq:*)",
+      "Bash(basename:*)",
+      "Bash(dirname:*)",
+      "Bash(realpath:*)",
+      "Bash(readlink:*)",
+      "Bash(jq:*)",
+      "Bash(yq eval:*)",
+      "Bash(pnpm list:*)",
+      "Bash(man:*)",
+      "Bash(which:*)",
+      "Bash(type:*)",
+      "Bash(echo:*)"
+    ],
+    "deny": [
+      "Read(**/.ssh/**)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/credentials.json)",
+      "Write(**/.ssh/**)",
+      "Write(//etc/**)",
+      "Write(//usr/**)",
+      "Write(//System/**)",
+      "Bash(su:*)",
+      "Bash(sudo:*)",
+      "Bash(env:*)",
+      "Bash(printenv:*)",
+      "Bash(passwd:*)",
+      "Bash(history:*)",
+      "Bash(ssh:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push --force:*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "say 'Claude has completed the task.'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "say 'Claude needs your permission.'"
+          }
+        ]
+      },
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "say 'Claude is waiting on your input.'"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-wrapper.sh"
+  }
+}
