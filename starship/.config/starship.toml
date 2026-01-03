@@ -89,7 +89,7 @@ $character"""
 [cmd_duration]
 format = "took [$duration](fg) "
 show_notifications = true
-min_time_to_notify = 60000
+min_time_to_notify = 15000
 min_time = 5000
 disabled = true
 
@@ -98,7 +98,7 @@ disabled = true
 
 [hostname]
 ssh_only = false
-format = '[$ssh_symbol](blue)[<$hostname> ](white)'
+format = '[$ssh_symbol](blue)[<$hostname> ](fg)'
 trim_at = '.'
 disabled = false
 
@@ -163,7 +163,7 @@ symbol = " "
 symbol = " "
 always_show_remote = false
 ignore_branches = ["main"]
-truncation_length = 20
+truncation_length = 30
 
 [git_status]
 
