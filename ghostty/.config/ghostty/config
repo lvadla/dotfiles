@@ -1,17 +1,22 @@
 auto-update-channel = tip
 scrollback-limit = 104857600
 
-theme = GruvboxDarkHard
+theme = Vercel
+# theme=dark:nord,light:nord light
+
 font-family = "Maple Mono NF"
 font-feature = zero ss01 cv11
 font-size = 12.667
 bold-is-bright = true
-adjust-underline-position = 3
-adjust-underline-thickness = 2
+adjust-cursor-thickness = 2
+adjust-underline-position = 2
+adjust-underline-thickness = 1
 
 mouse-scroll-multiplier = 2.0
 mouse-hide-while-typing = false
 focus-follows-mouse = true
+
+quick-terminal-autohide = false
 
 shell-integration-features = no-cursor
 cursor-invert-fg-bg = true
@@ -24,18 +29,17 @@ window-padding-y = 1
 window-padding-balance = true
 window-padding-color = extend
 
-
 clipboard-read = allow
 clipboard-write = allow
 clipboard-trim-trailing-spaces = true
+clipboard-paste-protection = true
 
 macos-titlebar-style = tabs
-macos-icon = custom-style
-macos-icon-ghost-color = 44EB44
-macos-icon-screen-color = 000000
 
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+j=goto_split:bottom
 keybind = ctrl+k=goto_split:top
 keybind = ctrl+l=goto_split:right
 keybind = ctrl+shift+w=close_surface
+keybind = shift+enter=text:\n
+keybind = global:ctrl+backquote=toggle_quick_terminal
