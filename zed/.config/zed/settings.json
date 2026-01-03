@@ -1,7 +1,12 @@
 {
+	"word_diff_enabled": true,
+	"when_closing_with_no_tabs": "keep_window_open",
+	"redact_private_values": true,
+	"helix_mode": true,
+	"vim_mode": true,
 	"agent": {
 		"default_model": {
-			"model": "gemini-2.5-pro",
+			"model": "gemini-3-pro-preview",
 			"provider": "google",
 		},
 		"default_profile": "ask",
@@ -14,10 +19,11 @@
 	},
 	"auto_update": false,
 	"autosave": "off",
-	"buffer_font_family": "Zed Plex Mono",
+	"buffer_font_family": "Lilex",
+	"buffer_font_features": { "calt": false },
 	"buffer_line_height": "comfortable",
-	"chat_panel": { "default_width": 250 },
-	"collaboration_panel": { "default_width": 250 },
+	"resize_all_panels_in_dock": ["bottom", "left", "right"],
+	"collaboration_panel": { "default_width": 290 },
 	"confirm_quit": true,
 	"context_servers": {
 		"mcp-server-linear": {
@@ -25,14 +31,13 @@
 			"command": "pnpx",
 			"enabled": true,
 			"env": {},
-			"source": "custom"
 		},
 	},
 	"current_line_highlight": "all",
 	"diagnostics": {
 		"include_warnings": true,
 		"inline": {
-			"enabled": true,
+			"enabled": false,
 			"min_column": 0,
 			"update_debounce_ms": 150,
 		},
@@ -40,12 +45,6 @@
 	"edit_predictions": { "disabled_globs": [".env"], "mode": "subtle" },
 	"ensure_final_newline_on_save": true,
 	"file_finder": { "modal_max_width": "medium" },
-	"file_scan_exclusions": [
-		"**/security-catalog/raw-data/**",
-		"**/static/mitre/**",
-		"**/.git",
-		"**/build/**"
-	],
 	"format_on_save": "on",
 	"git": {
 		"git_gutter": "tracked_files",
@@ -78,13 +77,6 @@
 		},
 	},
 	"lsp": {
-		"eslint": {
-			"settings": {
-				"rulesCustomizations": [
-					{ "rule": "prettier/prettier", "severity": "off" }
-				]
-			}
-		},
 		"vtsls": {
 			"settings": {
 				"javascript": {
@@ -97,13 +89,13 @@
 		},
 	},
 	"lsp_highlight_debounce": 25,
-	"notification_panel": { "default_width": 250, "dock": "left" },
-	"outline_panel": { "default_width": 250 },
-	"project_panel": { "default_width": 250 },
+	"notification_panel": { "default_width": 290, "dock": "left" },
+	"outline_panel": { "default_width": 290 },
+	"project_panel": { "default_width": 290, "scrollbar": { "show": "never" } },
 	"scroll_beyond_last_line": "off",
 	"show_completion_documentation": true,
 	"show_completions_on_input": true,
-	"show_edit_predictions": false,
+	"show_edit_predictions": true,
 	"show_whitespaces": "selection",
 	"show_wrap_guides": true,
 	"tab_size": 4,
