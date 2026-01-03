@@ -25,12 +25,12 @@ alt - l : yabai -m window --focus east
 # alt - e : yabai -m window --focus north
 # alt - f : yabai -m window --focus east
 
-# focus next display
-alt - n : yabai -m display --focus next || yabai -m display --focus prev || yabai -m display --focus first
+# focus next display (cycles through all displays including internal and external)
+alt - n : yabai -m display --focus next || yabai -m display --focus first || yabai -m display --focus prev
 
 # move window to the next display and follow
-shift + alt - n : yabai -m window --display next || yabai -m window --display prev || yabai -m window --display first;\
-                  yabai -m display --focus next || yabai -m display --focus prev || yabai -m display --focus first
+shift + alt - n : yabai -m window --display next || yabai -m window --display first || yabai -m window --display prev;\
+                  yabai -m display --focus next || yabai -m display --focus first || yabai -m display --focus prev
 
 # move window to the next/previous desktop and follow
 # ctrl + cmd - h : yabai -m window --space prev; yabai -m space --focus prev
@@ -43,7 +43,7 @@ shift + alt - k : yabai -m window --focus north && yabai -m window --swap south 
 shift + alt - l : yabai -m window --focus east && yabai -m window --swap west && yabai -m window --focus east || yabai -m window --move rel:8:0
 
 # float / unfloat window and center on screen
-alt - t : yabai -m window --toggle float;\
+alt - v : yabai -m window --toggle float;\
           yabai -m window --grid 9:16:3:1:10:7
 
 # balance size of windows
