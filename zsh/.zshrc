@@ -1,19 +1,18 @@
-export PATH="/opt/homebrew/opt/node@22/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_PICTURES_DIR="$HOME/pictures"
 export PYENV_ROOT="$HOME/.pyenv"
-export BROWSER=zen-browser
-export EDITOR=zed
+export BROWSER=firefox
+export EDITOR=hx
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 export QT_STYLE_OVERRIDE=breeze
 
 alias cat="bat"
-alias ls="eza --group-directories-first"
-alias ll="eza --group-directories-first -lah"
-alias zed="zeditor"
+alias ls="eza --hyperlink --group-directories-first"
+alias ll="eza --hyperlink --group-directories-first -lah"
 
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$(pyenv init - --no-rehash)"
 eval "$(starship init zsh)"
 
 HOMEBREW_NO_INSTALL_UPGRADE=1
@@ -67,10 +66,6 @@ fi
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-
-if [[ $(uname) == "Darwin" ]]; then
-	defaults write dev.warp.Warp-Stable ApplePressAndHoldEnabled -bool false
-fi
 
 function smite() {
     setopt LOCAL_OPTIONS ERR_RETURN PIPE_FAIL
