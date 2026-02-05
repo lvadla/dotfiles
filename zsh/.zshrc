@@ -87,3 +87,25 @@ function smite() {
             fc -p $HISTFILE $HISTSIZE $SAVEHIST
         done
 }
+
+preexec() {
+  # Start timer before each command
+  TIMER=$(date +%s)
+}
+
+precmd() {
+  # Check duration after command finishes
+	if [[ -n $TIMER ]]; then
+		NOW=$(date +%s)
+		DURATION=$((NOW - TIMER))
+    	if [[ $DURATION -ge 10 ]]; then
+    		echo -ne "\a"
+        osascript -e "beep"
+    	fi
+     	unset TIMER
+  	fi
+
+	# Detect terminal theme for git diff
+	export TERM_THEME=$(~/scripts/term-theme)
+}
+
