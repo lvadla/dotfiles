@@ -20,19 +20,20 @@
 	"auto_update": false,
 	"autosave": "off",
 	"buffer_font_family": "Lilex",
-	"buffer_font_features": { "calt": false },
-	"buffer_line_height": "comfortable",
-	"resize_all_panels_in_dock": ["bottom", "left", "right"],
-	"collaboration_panel": { "default_width": 290 },
-	"confirm_quit": true,
-	"context_servers": {
-		"mcp-server-linear": {
-			"args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"],
-			"command": "pnpx",
-			"enabled": true,
-			"env": {},
-		},
+	"buffer_font_features": {
+		"calt": false,
 	},
+	"buffer_line_height": "comfortable",
+	"resize_all_panels_in_dock": [
+		"bottom",
+		"left",
+		"right"
+	],
+	"collaboration_panel": {
+		"default_width": 290,
+	},
+	"confirm_quit": true,
+	"context_servers": {},
 	"current_line_highlight": "all",
 	"diagnostics": {
 		"include_warnings": true,
@@ -42,16 +43,29 @@
 			"update_debounce_ms": 150,
 		},
 	},
-	"edit_predictions": { "disabled_globs": [".env"], "mode": "subtle" },
+	"edit_predictions": {
+		"disabled_globs": [
+			".env"
+		],
+		"mode": "subtle",
+	},
 	"ensure_final_newline_on_save": true,
-	"file_finder": { "modal_max_width": "medium" },
+	"file_finder": {
+		"modal_max_width": "medium"
+	},
 	"format_on_save": "on",
 	"git": {
 		"git_gutter": "tracked_files",
 		"hunk_style": "unstaged_hollow",
-		"inline_blame": { "enabled": false, "show_commit_summary": false },
+		"inline_blame": {
+			"enabled": false,
+			"show_commit_summary": false,
+		},
 	},
-	"git_panel": { "default_width": 600, "dock": "right" },
+	"git_panel": {
+		"default_width": 600,
+		"dock": "right",
+	},
 	"hard_tabs": true,
 	"hide_mouse": "on_typing",
 	"indent_guides": {
@@ -59,39 +73,46 @@
 		"enabled": true,
 		"line_width": 1,
 	},
-	"inlay_hints": { "show_background": true },
+	"inlay_hints": {
+		"show_background": true,
+	},
 	"languages": {
 		"Svelte": {
 			"inlay_hints": {
 				"enabled": false,
-				"toggle_on_modifiers_press": { "alt": true, "control": true },
+				"toggle_on_modifiers_press": {
+					"alt": true,
+					"control": true,
+				},
 			},
-			"language_servers": ["!biome", "..."],
 		},
 		"TypeScript": {
 			"inlay_hints": {
 				"enabled": false,
-				"toggle_on_modifiers_press": { "alt": true, "control": true },
-			},
-			"language_servers": ["vtsls"], // "vtsls", "tsgo"
-		},
-	},
-	"lsp": {
-		"vtsls": {
-			"settings": {
-				"javascript": {
-					"tsserver": { "maxTsServerMemory": 8092 },
-				},
-				"typescript": {
-					"tsserver": { "maxTsServerMemory": 8092 },
+				"toggle_on_modifiers_press": {
+					"alt": true,
+					"control": true,
 				},
 			},
+			"language_servers": [
+				"vtsls"
+			], // "vtsls", "tsgo"
 		},
 	},
 	"lsp_highlight_debounce": 25,
-	"notification_panel": { "default_width": 290, "dock": "left" },
-	"outline_panel": { "default_width": 290 },
-	"project_panel": { "default_width": 290, "scrollbar": { "show": "never" } },
+	"notification_panel": {
+		"default_width": 290,
+		"dock": "left",
+	},
+	"outline_panel": {
+		"default_width": 290,
+	},
+	"project_panel": {
+		"default_width": 290,
+		"scrollbar": {
+			"show": "never",
+		},
+	},
 	"scroll_beyond_last_line": "off",
 	"show_completion_documentation": true,
 	"show_completions_on_input": true,
@@ -104,16 +125,25 @@
 		"git_status": true,
 		"show_diagnostics": "errors",
 	},
-	"telemetry": { "diagnostics": false, "metrics": false },
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false,
+	},
 	"terminal": {
 		"detect_venv": "off",
 		"blinking": "on",
 		"copy_on_select": false,
 		"dock": "bottom",
-		"env": { "EDITOR": "zed --wait" },
+		"env": {
+			"EDITOR": "zed --wait",
+		},
 		"font_family": "Maple Mono NF",
-		"scrollbar": { "show": "never" },
-		"toolbar": { "breadcrumbs": true },
+		"scrollbar": {
+			"show": "never"
+		},
+		"toolbar": {
+			"breadcrumbs": true
+		},
 		"working_directory": "current_project_directory",
 	},
 	"theme": {
@@ -122,18 +152,19 @@
 		"mode": "system",
 	},
 	"experimental.theme_overrides": {
-		"editor.active_line.background": "#262626"
 		// "border": "#C9C9CA",
 		// "panel.background": "#EBEBEC",
 		// "status_bar.background": "#EBEBEC",
-		// "syntax": {
-		// "keyword": { "color": "#ec6262" }
-		// "comment": { "color": "#999999" }
-		// },
+		"syntax": {
+			// "comment": { "color": "#999999" }
+			// "keyword": { "color": "#ec6262" }
+		},
 		// "tab_bar.background": "#EBEBEC",
 		// "tab.inactive_background": "#EBEBEC",
-		// "title_bar.background": "#DCDCDD"
+		// "title_bar.background": "#DCDCDD",
 	},
 	"unnecessary_code_fade": 0.7,
-	"wrap_guides": [80],
+	"wrap_guides": [
+		80
+	],
 }
