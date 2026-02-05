@@ -274,7 +274,7 @@ quitOnTopLevelReturn: false
 # Config relating to things outside of Lazygit like how files are opened, copying to clipboard, etc
 os:
   # Whether lazygit suspends until an edit process returns
-  editInTerminal: false
+  editInTerminal: true
 # If true, don't display introductory popups upon opening Lazygit.
 disableStartupPopups: false
 # What to do when opening Lazygit outside of a git repo.
