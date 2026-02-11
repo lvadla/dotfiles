@@ -147,21 +147,9 @@
 		"working_directory": "current_project_directory",
 	},
 	"theme": {
-		"dark": "Vercel Dark",
-		"light": "Vercel Light",
+		"dark": "GitHub Dark Dimmed",
+		"light": "GitHub Light",
 		"mode": "system",
-	},
-	"experimental.theme_overrides": {
-		// "border": "#C9C9CA",
-		// "panel.background": "#EBEBEC",
-		// "status_bar.background": "#EBEBEC",
-		"syntax": {
-			// "comment": { "color": "#999999" }
-			// "keyword": { "color": "#ec6262" }
-		},
-		// "tab_bar.background": "#EBEBEC",
-		// "tab.inactive_background": "#EBEBEC",
-		// "title_bar.background": "#DCDCDD",
 	},
 	"unnecessary_code_fade": 0.7,
 	"wrap_guides": [
