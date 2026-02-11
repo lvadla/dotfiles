@@ -106,6 +106,6 @@ precmd() {
   	fi
 
 	# Detect terminal theme for git diff
-	export TERM_THEME=$(~/scripts/term-theme)
+	export TERM_THEME=$(~/scripts/term-theme.sh)
 }
 
