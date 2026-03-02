@@ -55,6 +55,7 @@
       "Bash(passwd:*)",
       "Bash(history:*)",
       "Bash(ssh:*)",
+      "Bash(git push:*)",
       "Bash(git push -f:*)",
       "Bash(git push --force:*)"
     ]
@@ -79,20 +80,12 @@
             "command": "say 'Claude needs your permission.'"
           }
         ]
-      },
-      {
-        "matcher": "idle_prompt",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "say 'Claude is waiting on your input.'"
-          }
-        ]
       }
     ]
   },
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/statusline-wrapper.sh"
-  }
+  },
+  "promptSuggestionEnabled": false
 }
