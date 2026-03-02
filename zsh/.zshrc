@@ -1,9 +1,10 @@
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.bun/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_PICTURES_DIR="$HOME/pictures"
 export PYENV_ROOT="$HOME/.pyenv"
 export BROWSER=firefox
 export EDITOR=hx
+export VISUAL=hx
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 export QT_STYLE_OVERRIDE=breeze
 
@@ -108,4 +109,3 @@ precmd() {
 	# Detect terminal theme for git diff
 	export TERM_THEME=$(~/scripts/term-theme.sh)
 }
-
