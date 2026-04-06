@@ -96,16 +96,18 @@ preexec() {
 
 precmd() {
   # Check duration after command finishes
-	if [[ -n $TIMER ]]; then
-		NOW=$(date +%s)
-		DURATION=$((NOW - TIMER))
-    	if [[ $DURATION -ge 10 ]]; then
-    		echo -ne "\a"
+  if [[ -n $TIMER ]]; then
+    NOW=$(date +%s)
+    DURATION=$((NOW - TIMER))
+    if [[ $DURATION -ge 10 ]]; then
+      echo -ne "\a"
+      if [[ "$(uname)" == "Darwin" ]]; then
         osascript -e "beep"
-    	fi
-     	unset TIMER
-  	fi
+      fi
+    fi
+    unset TIMER
+  fi
 
-	# Refresh terminal theme cache for git/lazygit pager
-	~/scripts/term-theme > /dev/null
+  # Refresh terminal theme cache for git/lazygit pager
+  ~/scripts/term-theme > /dev/null
 }
