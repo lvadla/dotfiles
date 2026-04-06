@@ -1,0 +1,11 @@
+{
+    "KPlugin": {
+        "Id": "pip-no-focus-steal",
+        "Name": "PiP No Focus Steal",
+        "Description": "Prevents Picture-in-Picture windows from stealing focus when they open",
+        "Version": "1.0"
+    },
+    "KPackageStructure": "KWin/Script",
+    "X-Plasma-API": "javascript",
+    "X-Plasma-MainScript": "code/main.js"
+}
