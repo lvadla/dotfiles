@@ -106,6 +106,6 @@ precmd() {
      	unset TIMER
   	fi
 
-	# Detect terminal theme for git diff
-	export TERM_THEME=$(~/scripts/term-theme.sh)
+	# Refresh terminal theme cache for git/lazygit pager
+	~/scripts/term-theme > /dev/null
 }
