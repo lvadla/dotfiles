@@ -1,4 +1,5 @@
 {
+	"diff_view_style": "unified",
 	"word_diff_enabled": true,
 	"when_closing_with_no_tabs": "keep_window_open",
 	"redact_private_values": true,
@@ -38,7 +39,7 @@
 	"diagnostics": {
 		"include_warnings": true,
 		"inline": {
-			"enabled": false,
+			"enabled": true,
 			"min_column": 0,
 			"update_debounce_ms": 150,
 		},
@@ -74,6 +75,7 @@
 		"line_width": 1,
 	},
 	"inlay_hints": {
+		"show_value_hints": true,
 		"show_background": true,
 	},
 	"languages": {
