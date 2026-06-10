@@ -1,4 +1,9 @@
 {
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
       "Read(**)",
@@ -61,16 +66,7 @@
     ]
   },
   "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "say 'Claude has completed the task.'"
-          }
-        ]
-      }
-    ],
+    "Stop": [],
     "Notification": [
       {
         "matcher": "permission_prompt",
