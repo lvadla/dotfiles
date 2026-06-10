@@ -17,13 +17,14 @@
 	"helix_mode": true,
 	"vim_mode": true,
 	"agent": {
+		"dock": "left",
 		"show_turn_stats": true,
 		"message_editor_min_lines": 3,
 		"use_modifier_to_send": true,
 		"expand_terminal_card": false,
 		"enable_feedback": false,
 		"default_profile": "ask",
-		"default_width": 600,
+		"default_width": 400,
 		"play_sound_when_agent_done": "when_hidden",
 	},
 	"auto_update": false,
@@ -39,7 +40,8 @@
 		"right"
 	],
 	"collaboration_panel": {
-		"default_width": 290,
+		"dock": "right",
+		"default_width": 300,
 	},
 	"confirm_quit": true,
 	"context_servers": {},
@@ -72,8 +74,8 @@
 		},
 	},
 	"git_panel": {
-		"default_width": 600,
-		"dock": "right",
+		"default_width": 400,
+		"dock": "left",
 	},
 	"hard_tabs": true,
 	"hide_mouse": "on_typing",
@@ -110,18 +112,17 @@
 		},
 	},
 	"lsp_highlight_debounce": 25,
-	"notification_panel": {
-		"default_width": 290,
-		"dock": "left",
-	},
 	"outline_panel": {
-		"default_width": 290,
+		"dock": "right",
+		"default_width": 300,
 	},
 	"project_panel": {
-		"default_width": 290,
+		"dock": "right",
+		"default_width": 300,
 		"scrollbar": {
 			"show": "never",
 		},
+		"diagnostic_badges": true
 	},
 	"scroll_beyond_last_line": "off",
 	"show_completion_documentation": true,
