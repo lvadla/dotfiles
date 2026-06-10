@@ -48,7 +48,7 @@ shift + alt + ctrl - l : yabai -m window --resize right:-20:0
 
 # float / unfloat window and center on screen
 alt - v : yabai -m window --toggle float;\
-          yabai -m window --grid 9:16:3:1:10:7
+          yabai -m window --grid 100:100:25:20:51:60
 
 # balance size of windows
 alt + shift - 0 : yabai -m space --balance
