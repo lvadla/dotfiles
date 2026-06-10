@@ -21,7 +21,6 @@ yabai -m config                                 \
     window_zoom_persist          on             \
     window_shadow                on             \
     window_opacity               off            \
-    window_border                off            \
     insert_feedback_color        0xffd75f5f     \
     split_ratio                  0.50           \
     split_type                   auto           \
