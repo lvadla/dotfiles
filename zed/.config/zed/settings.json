@@ -1,22 +1,30 @@
 {
 	"diff_view_style": "unified",
+	"agent_servers": {
+		"cursor": {
+			"favorite_config_option_values": {
+				"model": [
+					"composer-2[fast=true]",
+					"composer-2.5[fast=true]"
+				]
+			},
+			"type": "registry"
+		},
+	},
 	"word_diff_enabled": true,
 	"when_closing_with_no_tabs": "keep_window_open",
 	"redact_private_values": true,
 	"helix_mode": true,
 	"vim_mode": true,
 	"agent": {
-		"default_model": {
-			"model": "gemini-3-pro-preview",
-			"provider": "google",
-		},
+		"show_turn_stats": true,
+		"message_editor_min_lines": 3,
+		"use_modifier_to_send": true,
+		"expand_terminal_card": false,
+		"enable_feedback": false,
 		"default_profile": "ask",
 		"default_width": 600,
-		"inline_assistant_model": {
-			"model": "gemini-2.5-flash",
-			"provider": "google",
-		},
-		"play_sound_when_agent_done": true,
+		"play_sound_when_agent_done": "when_hidden",
 	},
 	"auto_update": false,
 	"autosave": "off",
