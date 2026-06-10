@@ -21,14 +21,18 @@ if git -C "$cwd" rev-parse --git-dir > /dev/null 2>&1; then
     unstaged=$(echo "$status_output" | grep -c '^.[MDRC]')
     untracked=$(echo "$status_output" | grep -c '^??')
 
-    # Get line changes vs main (or master as fallback)
-    main_branch="main"
-    if ! git -C "$cwd" rev-parse --verify main >/dev/null 2>&1; then
-    	main_branch="master"
-    fi
+    # Get line changes vs main (prefer origin/main, fall back to local main, then origin/master, then master)
+    main_branch=""
+    for candidate in origin/main main origin/master master; do
+        if git -C "$cwd" rev-parse --verify "$candidate" >/dev/null 2>&1; then
+            main_branch="$candidate"
+            break
+        fi
+    done
 
-    # Only show diff stats if not on main/master and if main/master exists
-    if [ "$branch" != "$main_branch" ] && git -C "$cwd" rev-parse --verify "$main_branch" >/dev/null 2>&1; then
+    # Only show diff stats if we found a baseline and we're not on it
+    base_branch_short="${main_branch#origin/}"
+    if [ -n "$main_branch" ] && [ "$branch" != "$base_branch_short" ]; then
 	    # Use numstat to calculate added, modified, and deleted lines
 	    added=0
 	    modified=0
