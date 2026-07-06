@@ -8,7 +8,7 @@ This is a personal dotfiles repository containing configuration files for variou
 
 - Configuration files are organized by package in subdirectories that mirror $HOME
 - Shell scripts use `#!/bin/bash` and follow POSIX conventions
-- General shell scripts are executable and located in `scripts/` directory
+- General shell scripts are executable and located in `scripts/scripts/` directory
 
 ## Code Style Guidelines
 
@@ -18,5 +18,5 @@ This is a personal dotfiles repository containing configuration files for variou
 
 - Directory structure is designed for stow compatibility
 - Use stow to symlink configurations: `stow -vR <package> -t ~` (e.g., `stow -vR lazygit -t ~`)
-- Scripts are meant to be run directly: `./scripts/script-name.sh`
+- Scripts are meant to be run directly: `./scripts/scripts/script-name.sh`
 - No build process required - files are used as-is

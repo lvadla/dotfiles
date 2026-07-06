@@ -109,5 +109,5 @@ precmd() {
   fi
 
   # Refresh terminal theme cache for git/lazygit pager
-  ~/scripts/term-theme > /dev/null
+  ~/scripts/term-theme.sh > /dev/null
 }
