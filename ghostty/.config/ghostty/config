@@ -1,5 +1,5 @@
 auto-update-channel = tip
-scrollback-limit = 104857600
+scrollback-limit = 209715200
 
 theme = Vercel
 
