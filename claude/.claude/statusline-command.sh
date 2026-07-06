@@ -52,11 +52,11 @@ if git -C "$cwd" rev-parse --git-dir > /dev/null 2>&1; then
 	        fi
 	    done <<< "$(git -C "$cwd" --no-optional-locks diff --numstat "$main_branch"...HEAD 2>/dev/null)"
 
-	    printf '\033[01;36m%s\033[0m | \033[01;34m%s\033[0m \033[0;32m+%s\033[0m/\033[38;5;208m~%s\033[0m/\033[0;31m-%s\033[0m | +%s ~%s ?%s\033[0m' \
-	    "$repo_name" "$branch" "$added" "$modified" "$deleted" "$staged" "$unstaged" "$untracked"
+	    printf '\033[01;36m%s\033[0m | \033[01;34m%s\033[0m \033[0;32m+%s\033[0m/\033[38;5;208m~%s\033[0m/\033[0;31m-%s\033[0m' \
+	    "$repo_name" "$branch" "$added" "$modified" "$deleted"
     else
-	    printf '\033[01;36m%s\033[0m | \033[01;34m%s\033[0m | +%s ~%s ?%s\033[0m' \
-	    "$repo_name" "$branch" "$staged" "$unstaged" "$untracked"
+	    printf '\033[01;36m%s\033[0m | \033[01;34m%s\033[0m' \
+	    "$repo_name" "$branch"
     fi
 else
 	# Not a git repo
