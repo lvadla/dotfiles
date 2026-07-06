@@ -49,9 +49,7 @@ yabai -m rule --add app="^Dictionary$" manage=off
 yabai -m rule --add app="^DiskImages UI Agent$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Firefox$" title!=".+" manage=off
-yabai -m rule --add app="^Firefox$" title=".*Sharing Indicator.*" manage=off
-yabai -m rule --add app="^Firefox$" title=".*Launch Application.*" manage=off
-yabai -m rule --add app="^Firefox$" title=".*Opening.*" manage=off
+yabai -m rule --add app="^Firefox$" title=".*(Sharing Indicator|Launch Application|Opening).*" manage=off
 yabai -m rule --add app="^Firefox$" title="Picture-in-Picture" manage=off grid=50:120:60:0:25:48
 yabai -m rule --add app="^Ghostty$" manage=off
 yabai -m rule --add app="^Installer$" manage=off
@@ -70,7 +68,6 @@ yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Tailscale$" title="^(About Tailscale|Tailscale Settings)$" manage=off
 yabai -m rule --add app="^Tailscale$" title="" manage=off
 yabai -m rule --add app="^Wireless Diagnostics$" manage=off
-yabai -m rule --add app="^Zen Browser$" manage=off
 yabai -m rule --add app="^Zed$" title="^(Open|Save)$" manage=off
 
 ## signals
