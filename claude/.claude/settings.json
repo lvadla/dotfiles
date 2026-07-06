@@ -87,5 +87,7 @@
   "awaySummaryEnabled": false,
   "theme": "auto",
   "preferredNotifChannel": "auto",
+  "switchModelsOnFlag": false,
+  "fileCheckpointingEnabled": false,
   "skipAutoPermissionPrompt": true
 }
