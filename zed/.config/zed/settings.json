@@ -3,12 +3,9 @@
 	"agent_servers": {
 		"cursor": {
 			"favorite_config_option_values": {
-				"model": [
-					"composer-2[fast=true]",
-					"composer-2.5[fast=true]"
-				]
+				"model": ["composer-2.5[fast=true]"],
 			},
-			"type": "registry"
+			"type": "registry",
 		},
 	},
 	"word_diff_enabled": true,
@@ -34,11 +31,7 @@
 		"calt": false,
 	},
 	"buffer_line_height": "comfortable",
-	"resize_all_panels_in_dock": [
-		"bottom",
-		"left",
-		"right"
-	],
+	"resize_all_panels_in_dock": ["bottom", "left", "right"],
 	"collaboration_panel": {
 		"dock": "right",
 		"default_width": 300,
@@ -55,14 +48,12 @@
 		},
 	},
 	"edit_predictions": {
-		"disabled_globs": [
-			".env"
-		],
+		"disabled_globs": [".env"],
 		"mode": "subtle",
 	},
 	"ensure_final_newline_on_save": true,
 	"file_finder": {
-		"modal_max_width": "medium"
+		"modal_max_width": "medium",
 	},
 	"format_on_save": "on",
 	"git": {
@@ -106,9 +97,7 @@
 					"control": true,
 				},
 			},
-			"language_servers": [
-				"vtsls"
-			], // "vtsls", "tsgo"
+			"language_servers": ["vtsls"], // "vtsls", "tsgo"
 		},
 	},
 	"lsp_highlight_debounce": 25,
@@ -122,7 +111,7 @@
 		"scrollbar": {
 			"show": "never",
 		},
-		"diagnostic_badges": true
+		"diagnostic_badges": true,
 	},
 	"scroll_beyond_last_line": "off",
 	"show_completion_documentation": true,
@@ -150,10 +139,10 @@
 		},
 		"font_family": "Maple Mono NF",
 		"scrollbar": {
-			"show": "never"
+			"show": "never",
 		},
 		"toolbar": {
-			"breadcrumbs": true
+			"breadcrumbs": true,
 		},
 		"working_directory": "current_project_directory",
 	},
@@ -163,7 +152,5 @@
 		"mode": "system",
 	},
 	"unnecessary_code_fade": 0.7,
-	"wrap_guides": [
-		80
-	],
+	"wrap_guides": [80],
 }
