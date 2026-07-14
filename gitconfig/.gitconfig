@@ -1,5 +1,6 @@
 [includeIf "gitdir:~/dev/github/"]
   path = ~/.gitconfig-github
+  path = ~/.gitconfig-github-local
 [includeIf "gitdir:~/dev/gitlab/"]
   path = ~/.gitconfig-gitlab
 
