@@ -27,6 +27,7 @@
     conflictstyle = diff3
 
 [diff]
+    algorithm = histogram
     colorMoved = zebra
 
 [pull]
