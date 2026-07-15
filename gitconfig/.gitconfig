@@ -11,22 +11,17 @@
 	required = true
 
 [core]
-	pager = delta --features "$(~/scripts/term-theme.sh)-mode"
+	pager = delta
 	editor = hx
 
 [interactive]
-	diffFilter = delta --line-numbers --features "$(~/scripts/term-theme.sh)-mode"
+	diffFilter = delta --line-numbers
 
 [delta]
     navigate = true    # n and N navigation
     side-by-side = false
+    line-numbers = true
     syntax-theme = ansi
-
-[delta "light-mode"]
-    light = true
-
-[delta "dark-mode"]
-    light = false
 
 [merge]
     conflictstyle = diff3

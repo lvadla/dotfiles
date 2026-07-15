@@ -86,7 +86,4 @@ precmd() {
     fi
     unset TIMER
   fi
-
-  # Refresh terminal theme cache for git/lazygit pager
-  ~/scripts/term-theme.sh > /dev/null
 }
