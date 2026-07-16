@@ -26,12 +26,19 @@ gui:
   skipRewordInEditorWarning: false
   # Fraction of the total screen width to use for the left side section. You may want to pick a small number (e.g. 0.2) if you're using a narrow screen, so that you can see more of the main section.
   # Number from 0 to 1.0.
-  sidePanelWidth: 0.3
+  sidePanelWidth: 0.25
   # If true, increase the height of the focused side window; creating an accordion effect.
-  expandFocusedSidePanel: false
+  expandFocusedSidePanel: true
   # The weight of the expanded side panel, relative to the other panels. 2 means
   # twice as tall as the other panels. Only relevant if `expandFocusedSidePanel` is true.
   expandedSidePanelWeight: 2
+  shrinkSidePanelsToContent: true
+  sidePanels:
+    - [status, worktrees]
+    - [files]
+    - [branches, remotes]
+    - [commits, reflog]
+    - [stash]
   # Sometimes the main window is split in two (e.g. when the selected file has both staged and unstaged changes). This setting controls how the two sections are split.
   # Options are:
   # - 'horizontal': split the window horizontally
