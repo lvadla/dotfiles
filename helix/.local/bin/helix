@@ -1,0 +1,42 @@
+#!/bin/bash
+
+wrapper_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+case "$(uname -s)" in
+  Linux)
+    native_name=helix
+    ;;
+  Darwin)
+    native_name=hx
+    ;;
+  *)
+    echo "Unsupported operating system: $(uname -s)" >&2
+    exit 1
+    ;;
+esac
+
+find_native() {
+  old_ifs=$IFS
+  IFS=:
+
+  for dir in $PATH; do
+    [ -n "$dir" ] || dir=.
+    [ "$dir" = "$wrapper_dir" ] && continue
+
+    if [ -x "$dir/$1" ] && [ ! -d "$dir/$1" ]; then
+      printf '%s\n' "$dir/$1"
+      IFS=$old_ifs
+      return 0
+    fi
+  done
+
+  IFS=$old_ifs
+  return 1
+}
+
+native_path=$(find_native "$native_name") || {
+  echo "Could not find native $native_name executable" >&2
+  exit 1
+}
+
+exec "$native_path" "$@"

@@ -3,8 +3,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_PICTURES_DIR="$HOME/pictures"
 export PYENV_ROOT="$HOME/.pyenv"
 export BROWSER=firefox
-export EDITOR=hx
-export VISUAL=hx
+export EDITOR=helix
+export VISUAL=helix
 export SSH_ASKPASS=/usr/bin/ksshaskpass
 export QT_STYLE_OVERRIDE=breeze
 
