@@ -12,35 +12,7 @@ prevent_idle_sleep = true
 responses_websockets_v2 = true
 terminal_resize_reflow = true
 
-[projects."/home/lance/dev/github/omny-frontend"]
-trust_level = "trusted"
 
-[projects."/home/lance"]
-trust_level = "trusted"
-
-[projects."/home/lance/documents"]
-trust_level = "trusted"
-
-[projects."/home/lance/dev/github/openwhoop"]
-trust_level = "trusted"
-
-[projects."/home/lance/dev/github/my-whoop"]
-trust_level = "trusted"
-
-[projects."/home/lance/dev/github/noop"]
-trust_level = "trusted"
-
-[projects."/home/lance/dev/github/noop/tools/linux-capture"]
-trust_level = "trusted"
-
-[projects."/home/lance/dev/github/resume"]
-trust_level = "trusted"
-
-[projects."/home/lance/music"]
-trust_level = "trusted"
-
-[projects."/home/lance/dev/github/dotfiles"]
-trust_level = "trusted"
 
 [agents]
 max_threads = 4
