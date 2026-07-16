@@ -7,9 +7,6 @@
   "permissions": {
     "allow": [
       "Read(**)",
-      "Glob(**)",
-      "Grep(**)",
-      "LS(**)",
       "TodoRead",
       "TodoWrite(**)",
       "Bash(git status:*)",
@@ -49,10 +46,10 @@
       "Read(**/.env)",
       "Read(**/.env.*)",
       "Read(**/credentials.json)",
-      "Write(**/.ssh/**)",
-      "Write(//etc/**)",
-      "Write(//usr/**)",
-      "Write(//System/**)",
+      "Edit(**/.ssh/**)",
+      "Edit(//etc/**)",
+      "Edit(//usr/**)",
+      "Edit(//System/**)",
       "Bash(su:*)",
       "Bash(sudo:*)",
       "Bash(env:*)",
@@ -61,8 +58,28 @@
       "Bash(history:*)",
       "Bash(git push:*)",
       "Bash(git push -f:*)",
-      "Bash(git push --force:*)"
+      "Bash(git push --force:*)",
+      "EnterPlanMode",
+      "ExitPlanMode",
+      "DesignSync",
+      "NotebookEdit",
+      "SendMessage",
+      "PushNotification",
+      "RemoteTrigger",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "AskUserQuestion",
+      "CronCreate",
+      "CronDelete",
+      "CronList"
     ]
+  },
+  "disableClaudeAiConnectors": true,
+  "skillOverrides": {
+    "dataviz": "off",
+    "claude-api": "off",
+    "schedule": "off",
+    "run": "off"
   },
   "hooks": {
     "Stop": [],
@@ -78,6 +95,9 @@
       }
     ]
   },
+  "disableRemoteControl": true,
+  "disableWorkflows": true,
+  "disableArtifact": true,
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/statusline-wrapper.sh"
