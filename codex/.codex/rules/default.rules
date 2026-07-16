@@ -13,3 +13,16 @@ prefix_rule(
         "git commit",
     ],
 )
+prefix_rule(pattern=["pnpm", "i"], decision="allow")
+prefix_rule(pattern=["pnpm", "dev"], decision="allow")
+prefix_rule(pattern=["pnpm", "format"], decision="allow")
+prefix_rule(pattern=["pnpm", "lint"], decision="allow")
+prefix_rule(pattern=["pnpm", "check"], decision="allow")
+prefix_rule(pattern=["gh", "pr", "view"], decision="allow")
+prefix_rule(pattern=["gh", "repo", "view"], decision="allow")
+prefix_rule(pattern=["gh", "repo", "clone"], decision="allow")
+prefix_rule(pattern=["git", "add"], decision="allow")
+prefix_rule(pattern=["git", "commit"], decision="allow")
+prefix_rule(pattern=["git", "checkout"], decision="allow")
+prefix_rule(pattern=["git", "branch"], decision="allow")
+prefix_rule(pattern=["git", "fetch", "origin", "main"], decision="allow")
