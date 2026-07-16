@@ -83,17 +83,7 @@
   },
   "hooks": {
     "Stop": [],
-    "Notification": [
-      {
-        "matcher": "permission_prompt",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "say 'Claude needs your permission.'"
-          }
-        ]
-      }
-    ]
+    "Notification": []
   },
   "disableRemoteControl": true,
   "disableWorkflows": true,
