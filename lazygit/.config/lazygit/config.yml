@@ -61,7 +61,7 @@ gui:
   timeFormat: 02 Jan 06
   # Format used when displaying time if the time is less than 24 hours ago.
   # Uses Go's time format syntax: https://pkg.go.dev/time#Time.Format
-  shortTimeFormat: 3:04PM
+  shortTimeFormat: 15:04
   # Config relating to colors and styles.
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#color-attributes
   theme:
@@ -114,7 +114,7 @@ gui:
   # This can be toggled from within Lazygit with the '`' key, but that will not change the default.
   showFileTree: true
   # If true, show the number of lines changed per file in the Files view
-  showNumstatInFilesView: false
+  showNumstatInFilesView: true
   # If true, show a random tip in the command log when Lazygit starts
   showRandomTip: true
   # If true, show the command log
@@ -161,7 +161,7 @@ gui:
   portraitMode: auto
   # How things are filtered when typing '/'.
   # One of 'substring' (default) | 'fuzzy'
-  filterMode: substring
+  filterMode: fuzzy
   # Config relating to the spinner.
   spinner:
     # The frames of the spinner animation.
