@@ -12,7 +12,7 @@
 
 [core]
 	pager = delta
-	editor = hx
+	editor = helix
 
 [interactive]
 	diffFilter = delta --line-numbers
