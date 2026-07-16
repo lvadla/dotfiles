@@ -4,15 +4,21 @@ model_verbosity = "low"
 hide_agent_reasoning = true
 personality = "pragmatic"
 service_tier = "default"
-approvals_reviewer = "guardian_subagent"
+approvals_reviewer = "auto_review"
 network_access = true
 notify = ["turn-ended"]
 web_search = "live"
-prevent_idle_sleep = true
+sandbox_mode = "workspace-write"
 responses_websockets_v2 = true
 terminal_resize_reflow = true
 
+[features]
+prevent_idle_sleep = true
+memories = false
 
+[memories]
+use_memories = false
+generate_memories = false
 
 [agents]
 max_threads = 4
@@ -20,6 +26,7 @@ max_depth = 2
 job_max_runtime_seconds = 7200
 
 [tui]
+notifications = true
 status_line = ["model-with-reasoning", "context-used", "git-branch", "pull-request-number", "branch-changes", "fast-mode"]
 status_line_use_colors = true
 session_picker_view = "comfortable"
@@ -34,4 +41,15 @@ theme = "ansi"
 enabled = true
 
 [notice]
+fast_default_opt_out = true
 hide_rate_limit_model_nudge = true
+
+[plugins."sites@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[desktop.open-in-target-preferences]
+global = "zed"
+
