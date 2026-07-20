@@ -36,9 +36,9 @@ clipboard-paste-protection = true
 macos-titlebar-style = tabs
 shell-integration-features = no-cursor
 
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+j=goto_split:bottom
-keybind = ctrl+k=goto_split:top
-keybind = ctrl+l=goto_split:right
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+l=goto_split:right
 keybind = ctrl+shift+w=close_surface
 keybind = shift+enter=text:\n
