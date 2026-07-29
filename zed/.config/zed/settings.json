@@ -1,5 +1,5 @@
 {
-	"diff_view_style": "unified",
+	"diff_view_style": "split",
 	"agent_servers": {
 		"cursor": {
 			"favorite_config_option_values": {
@@ -14,6 +14,7 @@
 	"helix_mode": true,
 	"vim_mode": true,
 	"agent": {
+		"flexible": true,
 		"dock": "left",
 		"show_turn_stats": true,
 		"message_editor_min_lines": 3,
@@ -65,7 +66,8 @@
 		},
 	},
 	"git_panel": {
-		"default_width": 400,
+		"tree_view": true,
+		"default_width": 600,
 		"dock": "left",
 	},
 	"hard_tabs": true,
