@@ -26,8 +26,9 @@ max_depth = 2
 job_max_runtime_seconds = 7200
 
 [tui]
+show_tooltips = false
 notifications = true
-status_line = ["model-with-reasoning", "context-used", "git-branch", "pull-request-number", "branch-changes", "fast-mode"]
+status_line = ["model-with-reasoning", "context-used", "weekly-limit", "pull-request-number", "fast-mode", "approval-mode"]
 status_line_use_colors = true
 session_picker_view = "comfortable"
 terminal_title = ["activity", "app-name", "codex-version", "project-name"]
@@ -43,9 +44,6 @@ enabled = true
 [notice]
 fast_default_opt_out = true
 hide_rate_limit_model_nudge = true
-
-[plugins."sites@openai-bundled"]
-enabled = true
 
 [plugins."browser@openai-bundled"]
 enabled = true
