@@ -1,0 +1,29 @@
+--- src/index.ts
++++ src/index.ts
+@@ -783,7 +783,7 @@
+     },
+ 
+     renderResult(result, options, theme, context) {
+-      return renderTextResult(result, options, theme, context, 15);
++      return renderTextResult(result, options, theme, context, 5);
+     },
+   });
+ 
+@@ -933,7 +933,7 @@
+     },
+ 
+     renderResult(result, options, theme, context) {
+-      return renderTextResult(result, options, theme, context, 20);
++      return renderTextResult(result, options, theme, context, 5);
+     },
+   });
+ 
+@@ -1033,7 +1033,7 @@
+       },
+ 
+       renderResult(result, options, theme, context) {
+-        return renderTextResult(result, options, theme, context, 15);
++        return renderTextResult(result, options, theme, context, 5);
+       },
+     });
+   } // end if (enableMultiGrep)
