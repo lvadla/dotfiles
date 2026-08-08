@@ -59,20 +59,6 @@ alt - e : yabai -m window --toggle split
 # rotate tree
 alt - r : yabai -m space --rotate 90
 
-# toggle window padding for the space
-alt - p : yabai -m config top_padding 16;\
-          yabai -m config right_padding 16;\
-          yabai -m config bottom_padding 16;\
-          yabai -m config left_padding 16;\
-          yabai -m space --toggle padding;\
-          yabai -m space --toggle gap
-
-# toggle large/small window padding for the space
-shift + alt - p : yabai -m config top_padding 128;\
-                  yabai -m config right_padding 128;\
-                  yabai -m config bottom_padding 128;\
-                  yabai -m config left_padding 128;
-
 # toggle window zoom fullscreen
 alt - f : yabai -m window --toggle zoom-fullscreen
 
