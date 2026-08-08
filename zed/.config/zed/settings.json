@@ -146,6 +146,10 @@
 		"light": "GitHub Light",
 		"mode": "system",
 	},
+	"theme_overrides": {
+		"GitHub Dark Dimmed": { "elevated_surface.background": "#2d333b" },
+		"GitHub Light": { "elevated_surface.background": "#f6f8fa" },
+	},
 	"unnecessary_code_fade": 0.5,
 	"wrap_guides": [80],
 }
