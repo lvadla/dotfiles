@@ -47,8 +47,14 @@ alt + ctrl - l : yabai -m window --resize right:20:0
 shift + alt + ctrl - l : yabai -m window --resize right:-20:0
 
 # float / unfloat window and center on screen
-alt - v : yabai -m window --toggle float;\
-          yabai -m window --grid 100:100:25:20:51:60
+alt - v : if yabai -m query --windows --window | jq -e '.app == "Ghostty" and ."is-floating" == false' >/dev/null; then \
+              yabai -m window --toggle float; \
+              yabai -m window --resize abs:755:549; \
+              yabai -m window --move abs:$(yabai -m query --displays --display | jq '.frame.x + ((.frame.w - 755) / 2)'):$(yabai -m query --displays --display | jq '.frame.y + ((.frame.h - 549) / 2)'); \
+          else \
+              yabai -m window --toggle float; \
+              yabai -m window --grid 100:100:25:20:51:60; \
+          fi
 
 # balance size of windows
 alt + shift - 0 : yabai -m space --balance
