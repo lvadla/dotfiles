@@ -17,7 +17,7 @@ eval "$(pyenv init - --no-rehash)"
 eval "$(starship init zsh)"
 
 HOMEBREW_NO_INSTALL_UPGRADE=1
-HISTORY_IGNORE="(ls|pwd|exit)*"
+HISTORY_IGNORE="(cd|ls|pwd|exit)*"
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
