@@ -2,3 +2,8 @@
 name = "svelte"
 language-servers = [ "svelteserver", "tailwindcss-ls", "typescript-language-server" ]
 auto-format = true
+
+[[language]]
+name = "json"
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "%{buffer_name}"] }
+auto-format = true
