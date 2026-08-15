@@ -20,16 +20,16 @@ while IFS= read -r patch_file; do
     exit 1
   fi
 
-  if (cd "$package_dir" && patch --dry-run -p0 < "$patch_file" >/dev/null 2>&1); then
+  if (cd "$package_dir" && patch --dry-run -f -p0 < "$patch_file" >/dev/null 2>&1); then
     echo "Applying $relative_file"
-    (cd "$package_dir" && patch -p0 < "$patch_file" >/dev/null)
+    (cd "$package_dir" && patch -f -p0 < "$patch_file" >/dev/null)
     continue
   fi
 
-  if (cd "$package_dir" && patch --dry-run -R -p0 < "$patch_file" >/dev/null 2>&1); then
+  if (cd "$package_dir" && patch --dry-run -f -R -p0 < "$patch_file" >/dev/null 2>&1); then
     continue
   fi
 
   echo "Patch does not match the installed package: $relative_file" >&2
   exit 1
-done < <(find "$patch_root" -type f -name '*.patch' -print | sort)
+done < <(find -L "$patch_root" -type f -name '*.patch' -print | sort)
