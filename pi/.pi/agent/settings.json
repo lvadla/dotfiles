@@ -1,22 +1,27 @@
 {
-	"editorPaddingX": 1,
-	"hideThinkingBlock": true,
-	"collapseChangelog": false,
-	"quietStartup": false,
-	"enableInstallTelemetry": false,
-	"defaultThinkingLevel": "high",
-	"theme": "dark",
-	"terminal": { "showImages": false },
-	"autocompleteMaxVisible": 7,
-	"defaultProvider": "openai-codex",
-	"defaultModel": "gpt-5.6-luna",
-	"enabledModels": [
-		"gpt-5.6-luna",
-		"gpt-5.6-terra",
-		"gpt-5.6-sol",
-	],
-	"treeFilterMode": "no-tools",
-	"showCacheMissNotices": true,
-	"transport": "auto",
-	"packages": ["npm:@ff-labs/pi-fff", "npm:pi-web-access"]
+  "editorPaddingX": 1,
+  "hideThinkingBlock": true,
+  "collapseChangelog": false,
+  "quietStartup": false,
+  "enableInstallTelemetry": false,
+  "defaultThinkingLevel": "high",
+  "theme": "dark",
+  "terminal": {
+    "showImages": false
+  },
+  "autocompleteMaxVisible": 7,
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-terra",
+  "enabledModels": [
+    "gpt-5.6-luna",
+    "gpt-5.6-terra",
+    "gpt-5.6-sol",
+  ],
+  "treeFilterMode": "no-tools",
+  "showCacheMissNotices": true,
+  "transport": "auto",
+  "packages": [
+    "npm:@ff-labs/pi-fff",
+    "npm:pi-web-access"
+  ],
 }
