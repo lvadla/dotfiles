@@ -1,27 +1,33 @@
 {
-  "editorPaddingX": 1,
-  "hideThinkingBlock": true,
-  "collapseChangelog": false,
-  "quietStartup": false,
-  "enableInstallTelemetry": false,
-  "defaultThinkingLevel": "high",
-  "theme": "dark",
-  "terminal": {
-    "showImages": false
-  },
   "autocompleteMaxVisible": 7,
-  "defaultProvider": "openai-codex",
+  "collapseChangelog": false,
   "defaultModel": "gpt-5.6-terra",
+  "defaultProvider": "openai-codex",
+  "defaultThinkingLevel": "high",
+  "editorPaddingX": 2,
+  "enableInstallTelemetry": false,
   "enabledModels": [
     "gpt-5.6-luna",
     "gpt-5.6-terra",
-    "gpt-5.6-sol",
+    "gpt-5.6-sol"
   ],
-  "treeFilterMode": "no-tools",
-  "showCacheMissNotices": true,
-  "transport": "auto",
+  "hideThinkingBlock": true,
   "packages": [
     "npm:@ff-labs/pi-fff",
+    "npm:@plannotator/pi-extension",
     "npm:pi-web-access"
   ],
+  "quietStartup": false,
+  "showCacheMissNotices": true,
+  "steeringMode": "all",
+  "terminal": {
+    "showImages": false,
+    "showTerminalProgress": true
+  },
+  "theme": "dark",
+  "transport": "auto",
+  "treeFilterMode": "user-only",
+  "warnings": {
+    "anthropicExtraUsage": true
+  }
 }
