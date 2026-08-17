@@ -2,17 +2,16 @@ export PATH="$HOME/.local/bin:$HOME/.bun/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_PICTURES_DIR="$HOME/pictures"
 export PYENV_ROOT="$HOME/.pyenv"
-export BROWSER=firefox
-export EDITOR=helix
-export VISUAL=helix
-export SSH_ASKPASS=/usr/bin/ksshaskpass
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -x /usr/bin/ksshaskpass ]] && export SSH_ASKPASS=/usr/bin/ksshaskpass
+command -v firefox >/dev/null && export BROWSER=firefox
+command -v helix >/dev/null && export EDITOR=helix VISUAL=helix
 export QT_STYLE_OVERRIDE=breeze
 
 alias cat="bat"
 alias ls="eza --hyperlink --group-directories-first"
 alias ll="eza --hyperlink --group-directories-first -lah"
 
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - --no-rehash)"
 eval "$(starship init zsh)"
 
@@ -21,6 +20,7 @@ HISTORY_IGNORE="(cd|ls|pwd|exit)*"
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
+
 setopt INC_APPEND_HISTORY     # Immediately append to history file.
 setopt EXTENDED_HISTORY       # Record timestamp in history.
 setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
