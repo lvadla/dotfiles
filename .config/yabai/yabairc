@@ -73,8 +73,6 @@ yabai -m rule --add app="^Zed$" title="^(Open|Save)$" manage=off
 ## signals
 yabai -m rule --add app="^(coreautha|universalAccessAuthWarn)$" manage=off
 yabai -m signal --add event=window_created app="^(coreautha|universalAccessAuthWarn)$" action='yabai -m window --focus ${YABAI_WINDOW_ID}'
-yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
-yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
 
 ## note: refocus the next window when the previous is hidden, minimized, etc
 # yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus first"
