@@ -22,6 +22,15 @@ model_bg='\033[48;2;217;119;87m'
 # Branch block background: light blue when git tree is clean, gold when dirty
 git_bg='\033[48;5;75m'
 
+# Abbreviate a $HOME prefix to ~ for display
+abbrev_home() {
+    case $1 in
+        "$HOME") echo "~";;
+        "$HOME"/*) echo "~${1#"$HOME"}";;
+        *) echo "$1";;
+    esac
+}
+
 # Git information (skip optional locks for performance)
 if git -C "$cwd" rev-parse --git-dir > /dev/null 2>&1; then
 	# Get just the repo name (the git root directory basename)
@@ -85,6 +94,7 @@ if git -C "$cwd" rev-parse --git-dir > /dev/null 2>&1; then
 	    "$model" "$repo_name" "$branch"
     fi
 else
-	# Not a git repo: model block, then cwd on blue block
-	printf "$model_bg"'\033[1;30m %s \033[0m@5H@\033[44m\033[30m @TRUNC@ \033[0m\n%s' "$model" "$cwd"
+	# Not a git repo: model block, then cwd on blue block ($HOME shown as ~)
+	display_cwd=$(abbrev_home "$cwd")
+	printf "$model_bg"'\033[1;30m %s \033[0m@5H@\033[44m\033[30m @TRUNC@ \033[0m\n%s' "$model" "$display_cwd"
 fi
