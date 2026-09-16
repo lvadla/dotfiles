@@ -6,13 +6,13 @@ personality = "pragmatic"
 service_tier = "default"
 approvals_reviewer = "auto_review"
 network_access = true
-notify = ["turn-ended"]
 web_search = "live"
 sandbox_mode = "workspace-write"
 responses_websockets_v2 = true
 terminal_resize_reflow = true
 
 [features]
+hooks = true
 prevent_idle_sleep = true
 memories = false
 
@@ -28,7 +28,7 @@ job_max_runtime_seconds = 7200
 [tui]
 show_tooltips = false
 notifications = true
-status_line = ["model-with-reasoning", "context-used", "weekly-limit", "pull-request-number", "fast-mode", "approval-mode"]
+status_line = ["model-with-reasoning", "context-remaining", "weekly-limit", "pull-request-number", "fast-mode", "approval-mode"]
 status_line_use_colors = true
 session_picker_view = "comfortable"
 terminal_title = ["activity", "app-name", "codex-version", "project-name"]
@@ -50,4 +50,12 @@ enabled = true
 
 [desktop.open-in-target-preferences]
 global = "zed"
+
+[desktop.appearanceLightChromeTheme.fonts]
+code = '"Maple Mono NF"'
+ui = "Geist, Inter"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+code = '"Maple Mono NF"'
+ui = "Geist, Inter"
 

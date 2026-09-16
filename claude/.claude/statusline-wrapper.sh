@@ -132,7 +132,7 @@ if [ "$avail" -gt 0 ] && [ -n "$trunc_val" ]; then
         [ "$keep" -lt 6 ] && keep=6
         if [ "$keep" -lt ${#trunc_val} ]; then
             case $trunc_val in
-                /*) short="…${trunc_val:$(( ${#trunc_val} - keep ))}";;
+                /* | "~"*) short="…${trunc_val:$(( ${#trunc_val} - keep ))}";;
                 *)  short="${trunc_val:0:$keep}…";;
             esac
             left=$(compose_left "${line_tpl//@TRUNC@/$short}")
