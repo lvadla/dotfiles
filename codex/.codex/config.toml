@@ -1,4 +1,4 @@
-model = "gpt-5.6-terra"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "medium"
 model_verbosity = "low"
 hide_agent_reasoning = true
@@ -28,10 +28,10 @@ job_max_runtime_seconds = 7200
 [tui]
 show_tooltips = false
 notifications = true
-status_line = ["model-with-reasoning", "context-remaining", "weekly-limit", "pull-request-number", "fast-mode", "approval-mode"]
+status_line = ["model-with-reasoning", "estimated-thread-cost", "context-remaining", "weekly-limit", "pull-request-number", "fast-mode", "approval-mode"]
 status_line_use_colors = true
 session_picker_view = "comfortable"
-terminal_title = ["activity", "app-name", "codex-version", "project-name"]
+terminal_title = ["activity", "app-name", "codex-version", "project-name", "thread-title"]
 theme = "ansi"
 
 [tui.model_availability_nux]
