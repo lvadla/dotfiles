@@ -4,6 +4,7 @@ export XDG_PICTURES_DIR="$HOME/pictures"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 [[ -x /usr/bin/ksshaskpass ]] && export SSH_ASKPASS=/usr/bin/ksshaskpass
+[[ -n $SSH_ASKPASS ]] && export SUDO_ASKPASS="$SSH_ASKPASS"
 command -v firefox >/dev/null && export BROWSER=firefox
 command -v helix >/dev/null && export EDITOR=helix VISUAL=helix
 export QT_STYLE_OVERRIDE=breeze
