@@ -1,15 +1,15 @@
 {
   "autocompleteMaxVisible": 7,
   "collapseChangelog": false,
-  "defaultModel": "gpt-5.6-terra",
+  "defaultModel": "gpt-6.1-sol",
   "defaultProvider": "openai-codex",
   "defaultThinkingLevel": "high",
   "editorPaddingX": 2,
   "enableInstallTelemetry": false,
   "enabledModels": [
-    "gpt-5.6-luna",
-    "gpt-5.6-terra",
-    "gpt-5.6-sol"
+    "openai-codex/gpt-6-astra",
+    "openai-codex/gpt-6.1-sol",
+    "openai-codex/gpt-6-luna"
   ],
   "hideThinkingBlock": true,
   "packages": [
@@ -27,14 +27,9 @@
   "theme": "light/dark",
   "transport": "auto",
   "treeFilterMode": "no-tools",
-  "warnings": {
-    "anthropicExtraUsage": true
-  },
-  "lastChangelogVersion": "0.85.1",
+  "lastChangelogVersion": "1.0.0",
   "outputPad": 1,
   "modelThinkingLevels": {
-    "openai-codex/gpt-5.6-sol": "medium",
-    "openai-codex/gpt-5.6-terra": "high",
-    "openai-codex/gpt-5.6-luna": "high"
+    "openai-codex/gpt-6-astra": "low"
   }
 }
