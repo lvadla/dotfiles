@@ -82,9 +82,13 @@
   },
   "disableClaudeAiConnectors": true,
   "skillOverrides": {
-    "code-review": "user-invocable-only",
+    "anthropic-skills:docs": "off",
+    "anthropic-skills:pptx": "off",
+    "anthropic-skills:google-workspace": "off",
+    "anthropic-skills:xlsx": "off",
+    "anthropic-skills:docx": "off",
+    "code-review": "off",
     "dataviz": "off",
-    "claude-api": "off",
     "schedule": "off",
     "run": "off"
   },
