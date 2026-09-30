@@ -72,7 +72,8 @@ $spack\
 $memory_usage\
 $env_var\
 $crystal\
-$custom\
+${custom.pnpm}\
+${custom.typescript}\
 $sudo\
 $aws\
 $openstack\
@@ -130,6 +131,7 @@ discharging_symbol = ''
 
 [gcloud]
 symbol = "️ "
+disabled = true
 format = "(as [$symbol$account(@$domain)]($style) )"
 style = "blue"
 
@@ -139,6 +141,7 @@ asia-northeast1 = 'an1'
 
 [buf]
 symbol = " "
+disabled = true
 
 [c]
 symbol = " "
@@ -163,7 +166,7 @@ symbol = " "
 symbol = " "
 always_show_remote = false
 ignore_branches = ["main"]
-truncation_length = 30
+truncation_length = 26
 
 [git_status]
 
@@ -208,7 +211,7 @@ symbol = " "
 version_format = "v${major}"
 not_capable_style = "bold red"
 style = "040"
-format = '[\($symbol($version)\)]($style) '
+format = '[$symbol($version)]($style) '
 
 [os.symbols]
 Alpine = " "
@@ -250,7 +253,7 @@ Windows = " "
 
 [package]
 symbol = "📦 "
-disabled = false
+disabled = true
 style = "6"
 format = "[$symbol$version]($style) "
 
@@ -265,6 +268,8 @@ symbol = "🪺 "
 
 [python]
 symbol = " "
+version_format = "v${major}.${minor}"
+format = "[$symbol$version]($style) "
 
 [rlang]
 symbol = "ﳒ "
@@ -283,3 +288,14 @@ symbol = " "
 
 [spack]
 symbol = "🅢 "
+
+[custom.pnpm]
+command = "node -p 'require(\"./package.json\").packageManager.split(\"@\")[1].split(\"+\")[0].replace(/^(\\d+\\.\\d+)\\.\\d+$/, \"$1\")'"
+when = "test -f package.json && node -e 'process.exit(require(\"./package.json\").packageManager?.startsWith(\"pnpm@\") ? 0 : 1)'"
+format = '[ v$output](bright-yellow) '
+
+[custom.typescript]
+command = "node -p 'const p=require(\"./package.json\"); let version=p.devDependencies?.typescript ?? p.dependencies?.typescript; try { version=require(\"typescript/package.json\").version } catch {} const match=version.match(/(\\d+)\\.(\\d+)/); if (!match) process.exit(1); match[2] === \"0\" ? match[1] : match[1] + \".\" + match[2]'"
+when = "test -f package.json && node -e 'const p=require(\"./package.json\"); process.exit(p.devDependencies?.typescript || p.dependencies?.typescript ? 0 : 1)'"
+format = '[ v$output](blue) '
+
