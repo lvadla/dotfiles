@@ -1,10 +1,10 @@
 {
-  "autocompleteMaxVisible": 7,
+  "autocompleteMaxVisible": 10,
   "collapseChangelog": false,
   "defaultModel": "gpt-6.1-sol",
   "defaultProvider": "openai-codex",
   "defaultThinkingLevel": "high",
-  "editorPaddingX": 2,
+  "editorPaddingX": 1,
   "enableInstallTelemetry": false,
   "enabledModels": [
     "openai-codex/gpt-6-astra",
@@ -22,14 +22,16 @@
   "steeringMode": "all",
   "terminal": {
     "showImages": false,
-    "showTerminalProgress": true
+    "showTerminalProgress": false
   },
-  "theme": "light/dark",
+  "theme": "system",
   "transport": "auto",
   "treeFilterMode": "no-tools",
-  "lastChangelogVersion": "1.0.0",
+  "lastChangelogVersion": "1.4.0",
   "outputPad": 1,
+  "tuiMode": "fullscreen",
   "modelThinkingLevels": {
-    "openai-codex/gpt-6-astra": "low"
+    "openai-codex/gpt-6-astra": "low",
+    "openai-codex/gpt-6.1-sol": "medium"
   }
 }
