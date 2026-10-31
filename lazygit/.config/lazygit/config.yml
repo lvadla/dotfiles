@@ -1,7 +1,5 @@
 # Config relating to the Lazygit UI
 gui:
-  authorColors:
-    "Lance Vadla": "#B845FF"
   # The number of lines you scroll by when scrolling the main window
   scrollHeight: 1
   # If true, allow scrolling past the bottom of the content in the main window
@@ -53,7 +51,7 @@ gui:
   # If true, wrap lines in the staging view to the width of the view. This
   # makes it much easier to work with diffs that have long lines, e.g.
   # paragraphs of markdown text.
-  wrapLinesInStagingView: true
+  wrapLinesInDiffView: true
   # One of 'auto' (default) | 'en' | 'zh-CN' | 'zh-TW' | 'pl' | 'nl' | 'ja' | 'ko' | 'ru'
   language: en
   # Format used when displaying time e.g. commit time.
@@ -104,6 +102,8 @@ gui:
     # Default text color
     defaultFgColor:
       - default
+    authorColors:
+      "Lance Vadla": "#B845FF"
   # Config relating to the commit length indicator
   commitLength:
     # If true, show an indicator of commit message length
