@@ -1,0 +1,4 @@
+- Keep APIs small, behavior explicit, and naming clear and descriptive. Avoid cleverness unless it clearly improves the outcome.
+- Write code that another engineer can quickly understand, safely extend, and confidently ship.
+- New test files, test helpers, and fixtures are by default opt-in instead of opt-out. Do not create them out of routine unless the user explicitly requests them. A request to implement, fix, test, or verify something does not by itself authorize new test files.
+- Prefer running existing tests and direct browser or runtime checks. When test changes are in scope, exercise observable behavior rather than source-code strings, implementation shapes, or the mere existence of tests.

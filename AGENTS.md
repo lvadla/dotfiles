@@ -1,16 +1,16 @@
 # Agent Guidelines for Dotfiles Repository
 
-## Repository Overview
+## Overview
 
 This is a personal dotfiles repository containing configuration files for various tools and desktop environments (macOS, hyprland, KDE). The [TODO.md](TODO.md) file tracks outstanding work and improvements needed.
 
-## File Structure & Conventions
+## Conventions
 
 - Configuration files are organized by package in subdirectories that mirror $HOME
 - Shell scripts use `#!/bin/bash` and follow POSIX conventions
 - General shell scripts are executable and located in `scripts/scripts/` directory
 
-## Code Style Guidelines
+## Code Style
 
 - **Comments**: Minimal inline comments, self-documenting code preferred
 
