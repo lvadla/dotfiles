@@ -1,0 +1,2 @@
+- Do not overengineer. Do not introduce heavy abstractions, extra layers, speculative features, or large dependencies for small work. Choose the smallest solution that solves the problem well.
+- Do not make important assumptions silently. Surface tradeoffs, ask when guessing would be risky, and push back when the requested path is unnecessarily complex.
