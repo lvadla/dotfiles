@@ -11,7 +11,7 @@ adjust-cursor-thickness = 2
 adjust-underline-position = 2
 adjust-underline-thickness = 1
 
-mouse-scroll-multiplier = 2.0
+mouse-scroll-multiplier = precision:1,discrete:2
 mouse-hide-while-typing = false
 focus-follows-mouse = true
 
