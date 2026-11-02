@@ -1,7 +1,5 @@
 export PATH="$HOME/.local/bin:$HOME/.bun/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 [[ -x /usr/bin/ksshaskpass ]] && export SSH_ASKPASS=/usr/bin/ksshaskpass
 [[ -n $SSH_ASKPASS ]] && export SUDO_ASKPASS="$SSH_ASKPASS"
 command -v firefox >/dev/null && export BROWSER=firefox
@@ -12,7 +10,6 @@ alias ls="eza --hyperlink --group-directories-first"
 alias ll="eza --hyperlink --group-directories-first -lah"
 command -v xdg-open >/dev/null 2>&1 && alias open="xdg-open"
 
-eval "$(pyenv init - --no-rehash)"
 eval "$(starship init zsh)"
 
 HOMEBREW_NO_INSTALL_UPGRADE=1
